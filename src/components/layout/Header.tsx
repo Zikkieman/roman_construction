@@ -29,7 +29,7 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        isScrolled
+        isScrolled || isMenuOpen
           ? "border-b border-white/8 bg-[#16120e]/96 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
@@ -104,8 +104,10 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
       </div>
 
       <div
-        className={`overflow-hidden border-t border-white/10 bg-[#120f0b]/96 transition-all duration-500 lg:hidden ${
-          isMenuOpen ? "max-h-[420px]" : "max-h-0"
+        className={`absolute inset-x-0 top-full border-t border-white/10 bg-[#120f0b]/98 shadow-[0_30px_70px_rgba(0,0,0,0.42)] backdrop-blur-xl transition-all duration-500 lg:hidden ${
+          isMenuOpen
+            ? "pointer-events-auto visible translate-y-0 opacity-100"
+            : "pointer-events-none invisible -translate-y-2 opacity-0"
         }`}
       >
         <nav className="mx-auto flex max-w-[1910px] flex-col gap-5 px-8 py-6 sm:px-10">

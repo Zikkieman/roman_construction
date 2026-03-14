@@ -1,98 +1,346 @@
-import { IconArrow } from '../common/icons'
-import { SectionEyebrow } from '../common/SectionEyebrow'
+import { useState, type ChangeEvent, type FormEvent } from 'react'
+
+type ContactFormValues = {
+  name: string
+  email: string
+  phone: string
+  message: string
+  website: string
+}
+
+type ContactFieldProps = {
+  label: string
+  name: keyof ContactFormValues
+  value: string
+  placeholder?: string
+  type?: string
+  multiline?: boolean
+  onChange: (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void
+}
+
+const INITIAL_FORM_VALUES: ContactFormValues = {
+  name: '',
+  email: '',
+  phone: '',
+  message: '',
+  website: '',
+}
+
+function ContactField({
+  label,
+  name,
+  value,
+  placeholder,
+  type = 'text',
+  multiline = false,
+  onChange,
+}: ContactFieldProps) {
+  return (
+    <label className="block">
+      <span className="block text-[14px] font-semibold uppercase tracking-[0.12em] text-[#f2ede7]">
+        {label}
+      </span>
+      {multiline ? (
+        <textarea
+          className="mt-7 h-[98px] w-full resize-none border-b border-white/14 bg-transparent pb-4 text-[16px] leading-[1.8] text-[#d4ccc3] outline-none placeholder:text-[#8f867d] focus:border-[#C39B7B]"
+          name={name}
+          onChange={onChange}
+          placeholder={placeholder}
+          required
+          value={value}
+        />
+      ) : (
+        <input
+          className="mt-7 h-10 w-full border-b border-white/14 bg-transparent pb-4 text-[16px] text-[#d4ccc3] outline-none placeholder:text-[#8f867d] focus:border-[#C39B7B]"
+          name={name}
+          onChange={onChange}
+          placeholder={placeholder}
+          required
+          type={type}
+          value={value}
+        />
+      )}
+    </label>
+  )
+}
+
+function IconFacebook() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-[18px]"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path d="M13.5 21v-8.2H16l.4-3h-2.9V7.9c0-.9.3-1.5 1.6-1.5h1.5V3.7c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 4v2.2H8v3h2.5V21h3Z" />
+    </svg>
+  )
+}
+
+function IconInstagram() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-[18px]"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <rect x="4.5" y="4.5" width="15" height="15" rx="4.2" />
+      <circle cx="12" cy="12" r="3.8" />
+      <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+function IconTwitter() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-[18px]"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+    >
+      <path d="M22 6.1c-.7.4-1.5.6-2.4.7a4.1 4.1 0 0 0 1.8-2.3 8.4 8.4 0 0 1-2.7 1A4.1 4.1 0 0 0 11.7 9a11.5 11.5 0 0 1-8.4-4.3 4.1 4.1 0 0 0 1.3 5.5c-.6 0-1.2-.2-1.8-.5 0 2 1.4 3.7 3.3 4.1-.3.1-.7.2-1.1.2-.3 0-.6 0-.8-.1.6 1.7 2.2 2.9 4 3A8.3 8.3 0 0 1 2 18.5 11.7 11.7 0 0 0 8.3 20c7.5 0 11.6-6.4 11.6-11.9v-.5c.8-.6 1.5-1.3 2.1-2.1Z" />
+    </svg>
+  )
+}
 
 export function ContactSection() {
-  return (
-    <section id="contact" className="bg-[#17120d] text-white">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10 lg:py-32">
-        <div className="grid gap-10 lg:grid-cols-[1.05fr,0.95fr]">
-          <div className="reveal" data-reveal="true">
-            <SectionEyebrow>Contact, Let&apos;s Talk</SectionEyebrow>
-            <h2 className="mt-6 font-serif text-4xl leading-tight sm:text-5xl">
-              Let&apos;s bring your project to life.
-            </h2>
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/72">
-              Let us know how we can best help you. We are a leading architecture
-              firm dedicated to creating designs.
-            </p>
+  const [formValues, setFormValues] =
+    useState<ContactFormValues>(INITIAL_FORM_VALUES)
+  const [submitState, setSubmitState] = useState<
+    'idle' | 'sending' | 'success' | 'error'
+  >('idle')
 
-            <form className="mt-10 grid gap-5 sm:grid-cols-2">
-              <label className="block">
-                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.28em] text-white/52">
-                  Your Name*
-                </span>
-                <input
-                  className="h-14 w-full rounded-full border border-white/12 bg-white/6 px-6 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-[#d6a26c]"
-                  defaultValue="Jonathon Ronan"
-                  type="text"
-                />
-              </label>
-              <label className="block">
-                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.28em] text-white/52">
-                  Email Address*
-                </span>
-                <input
-                  className="h-14 w-full rounded-full border border-white/12 bg-white/6 px-6 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-[#d6a26c]"
-                  defaultValue="jonathonronana63@gmail.com"
-                  type="email"
-                />
-              </label>
-              <label className="block sm:col-span-2">
-                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.28em] text-white/52">
-                  Phone No*
-                </span>
-                <input
-                  className="h-14 w-full rounded-full border border-white/12 bg-white/6 px-6 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-[#d6a26c]"
-                  defaultValue="+0 321 546 2345"
-                  type="tel"
-                />
-              </label>
-              <label className="block sm:col-span-2">
-                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.28em] text-white/52">
-                  Your Message Here*
-                </span>
-                <textarea
-                  className="min-h-40 w-full rounded-[28px] border border-white/12 bg-white/6 px-6 py-5 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-[#d6a26c]"
-                  defaultValue=""
-                  placeholder="Tell us about your architectural vision..."
-                />
-              </label>
-              <button
-                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#d6a26c] px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#17120d] transition hover:-translate-y-1 hover:bg-[#e4b27f] sm:col-span-2 sm:w-fit"
-                type="button"
-              >
-                Send Message Now
-                <IconArrow />
-              </button>
-            </form>
+  function handleChange(
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) {
+    const { name, value } = event.target
+
+    setFormValues((current) => ({
+      ...current,
+      [name]: value,
+    }))
+
+    if (submitState !== 'idle') {
+      setSubmitState('idle')
+    }
+  }
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    if (formValues.website) {
+      return
+    }
+
+    setSubmitState('sending')
+
+    const payload = new FormData()
+
+    payload.append('name', formValues.name)
+    payload.append('email', formValues.email)
+    payload.append('phone', formValues.phone)
+    payload.append('message', formValues.message)
+    payload.append('_subject', 'New Traz architecture contact message')
+    payload.append('_replyto', formValues.email)
+    payload.append('_template', 'table')
+    payload.append('_captcha', 'false')
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/horlarmeydeileh50@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+          },
+          body: payload,
+        },
+      )
+
+      const data = (await response.json().catch(() => null)) as
+        | { success?: boolean | string }
+        | null
+
+      if (
+        !response.ok ||
+        data?.success === false ||
+        data?.success === 'false'
+      ) {
+        throw new Error('Unable to send message')
+      }
+
+      setFormValues(INITIAL_FORM_VALUES)
+      setSubmitState('success')
+    } catch {
+      setSubmitState('error')
+    }
+  }
+
+  return (
+    <section id="contact" className="overflow-hidden bg-[#17120d] text-white">
+      <div className="mx-auto max-w-[1460px] px-8 py-24 sm:px-12 lg:px-20 lg:py-32 xl:px-24 xl:py-[138px]">
+        <div className="grid gap-16 lg:grid-cols-[494px_minmax(0,1fr)] lg:items-stretch lg:gap-20 xl:grid-cols-[520px_minmax(0,1fr)] xl:gap-24">
+          <div
+            className="reveal relative mx-auto w-full max-w-[494px] lg:mx-0 lg:h-full lg:max-w-none"
+            data-reveal="true"
+          >
+            <div className="absolute bottom-[-56px] right-[-52px] hidden h-[52%] w-[44%] overflow-hidden bg-[#2a2621] lg:block">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1.5px_1.5px,rgba(255,255,255,0.08)_1.4px,transparent_0)] bg-[length:20px_20px]" />
+              <div className="absolute left-0 top-0 h-[42%] w-full bg-[linear-gradient(145deg,#36322c_0%,#27231d_52%,transparent_52%)]" />
+              <div className="absolute bottom-[18%] left-0 h-[18px] w-full bg-[#6b553e]/35" />
+            </div>
+            <img
+              alt="Dark modern building facade"
+              className="relative z-10 h-[500px] w-full object-cover object-center grayscale contrast-[1.05] sm:h-[620px] lg:h-full lg:min-h-[700px] xl:min-h-[724px]"
+              src="https://images.pexels.com/photos/29459590/pexels-photo-29459590.jpeg?cs=srgb&dl=pexels-blackstoneray-29459590.jpg&fm=jpg"
+            />
           </div>
 
-          <div className="reveal flex flex-col gap-6" data-reveal="true">
-            <div className="overflow-hidden rounded-[34px] bg-white/5 p-4 backdrop-blur">
-              <img
-                alt="Contact architecture"
-                className="h-[420px] w-full rounded-[26px] object-cover"
-                src="https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?auto=format&fit=crop&w=1200&q=80"
-              />
-            </div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div className="rounded-[28px] border border-white/10 bg-white/5 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#d6a26c]">
-                  Address
-                </p>
-                <p className="mt-4 text-base leading-8 text-white/78">
-                  123 Maple Street Toronto, Ontario M1A 1A1 Canada
-                </p>
-              </div>
-              <div className="rounded-[28px] border border-white/10 bg-white/5 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#d6a26c]">
-                  Contact
-                </p>
-                <p className="mt-4 text-base leading-8 text-white/78">
-                  [email protected]
-                  <br />
-                  +1 555-123-4567
-                </p>
+          <div className="reveal relative lg:flex lg:min-h-[700px] lg:flex-col xl:min-h-[724px]" data-reveal="true">
+            <div className="pointer-events-none absolute right-[3%] top-[8px] hidden h-[64px] w-[108px] border-r border-t border-dashed border-white/14 xl:block" />
+
+            <h2 className="max-w-[640px] font-sans text-[32px] font-extrabold leading-[1.08] tracking-[-0.05em] text-[#dfd8d1] sm:text-[38px] lg:text-[46px]">
+              <span className="contact-outline-text">Contact,</span>
+              <span className="text-[#dfd8d1]"> Let&apos;s Talk</span>
+            </h2>
+
+            <p className="mt-8 max-w-[720px] text-[17px] leading-[1.9] text-[#8f867d]">
+              Let&apos;s bring your project to life. Let us know how we can best
+              help you. We are a leading architecture firm dedicated to
+              creating designs.
+            </p>
+
+            <div className="mt-12 grid gap-x-12 gap-y-12 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_246px] xl:gap-x-14">
+              <form className="space-y-10" onSubmit={handleSubmit}>
+                <input
+                  autoComplete="off"
+                  className="hidden"
+                  name="website"
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  value={formValues.website}
+                />
+
+                <ContactField
+                  label="Your Name*"
+                  name="name"
+                  onChange={handleChange}
+                  placeholder="Jonathon Ronan"
+                  value={formValues.name}
+                />
+                <ContactField
+                  label="Email Address*"
+                  name="email"
+                  onChange={handleChange}
+                  placeholder="jonathonronana63@gmail.com"
+                  type="email"
+                  value={formValues.email}
+                />
+                <ContactField
+                  label="Phone No*"
+                  name="phone"
+                  onChange={handleChange}
+                  placeholder="+0 321 546 2345"
+                  type="tel"
+                  value={formValues.phone}
+                />
+                <ContactField
+                  label="Your Message Here*"
+                  multiline
+                  name="message"
+                  onChange={handleChange}
+                  placeholder="Write your message here..."
+                  value={formValues.message}
+                />
+
+                <div className="flex flex-col items-start gap-4">
+                  <button
+                    className="inline-flex h-[58px] items-center justify-center bg-[#C39B7B] px-10 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-white hover:text-[#17120d] disabled:cursor-not-allowed disabled:opacity-80"
+                    disabled={submitState === 'sending'}
+                    type="submit"
+                  >
+                    {submitState === 'sending'
+                      ? 'Sending...'
+                      : 'Send Message Now'}
+                  </button>
+
+                  <p
+                    aria-live="polite"
+                    className={`text-[14px] leading-[1.7] ${
+                      submitState === 'success'
+                        ? 'text-[#C39B7B]'
+                        : submitState === 'error'
+                          ? 'text-[#e0b19a]'
+                          : 'text-transparent'
+                    }`}
+                  >
+                    {submitState === 'success'
+                      ? 'Message sent successfully.'
+                      : submitState === 'error'
+                        ? 'Unable to send right now. Please try again.'
+                        : 'Status'}
+                  </p>
+                </div>
+              </form>
+
+              <div className="space-y-12 lg:pt-[134px] xl:pt-[136px]">
+                <div>
+                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
+                    Address
+                  </h3>
+                  <p className="mt-6 text-[16px] leading-[1.6] text-[#968d84]">
+                    123 Maple Street Toronto, Ontario
+                    <br />
+                    M1A 1A1 Canada
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
+                    Contact
+                  </h3>
+                  <p className="mt-6 break-words text-[16px] leading-[2] text-[#968d84]">
+                    horlarmeydeileh50@gmail.com
+                    <br />
+                    +1 555-123-4567
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
+                    Social Media
+                  </h3>
+                  <div className="mt-6 flex items-center gap-7 text-white">
+                    <a
+                      className="transition-colors duration-300 hover:text-[#C39B7B]"
+                      href="#contact"
+                    >
+                      <IconFacebook />
+                    </a>
+                    <a
+                      className="transition-colors duration-300 hover:text-[#C39B7B]"
+                      href="#contact"
+                    >
+                      <IconInstagram />
+                    </a>
+                    <a
+                      className="transition-colors duration-300 hover:text-[#C39B7B]"
+                      href="#contact"
+                    >
+                      <IconTwitter />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -145,6 +145,12 @@ img {
   text-stroke: 1.15px rgba(236, 231, 226, 0.38);
 }
 
+.contact-outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.1px rgba(236, 231, 226, 0.32);
+  text-stroke: 1.1px rgba(236, 231, 226, 0.32);
+}
+
 .projects-marquee-track {
   display: flex;
   width: max-content;
