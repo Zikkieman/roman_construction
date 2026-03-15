@@ -5,10 +5,19 @@ import { IconClose, IconMenu } from "../common/icons";
 interface HeaderProps {
   isScrolled: boolean;
   navigationItems: NavigationItem[];
+  variant?: "dark" | "light";
+  activeLabel?: string;
 }
 
-export function Header({ isScrolled, navigationItems }: HeaderProps) {
+export function Header({
+  isScrolled,
+  navigationItems,
+  variant = "dark",
+  activeLabel,
+}: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isLight = variant === "light";
+  const headerIsSolid = isLight || isScrolled || isMenuOpen;
 
   useEffect(() => {
     if (!isMenuOpen) {
@@ -29,13 +38,18 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        isScrolled || isMenuOpen
-          ? "border-b border-white/8 bg-[#16120e]/96 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+        headerIsSolid
+          ? isLight
+            ? "border-b border-black/6 bg-white/96 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-xl"
+            : "border-b border-white/8 bg-[#16120e]/96 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-[1910px] items-center justify-between px-8 py-7 sm:px-10 lg:px-14">
-        <a className="flex items-center gap-3 text-white" href="#home">
+        <a
+          className={`flex items-center gap-3 ${isLight ? "text-[#17120d]" : "text-white"}`}
+          href="/"
+        >
           <span className="relative block h-12 w-12 text-[#C39B7B]">
             <span className="absolute inset-y-1 left-1/2 w-px -translate-x-1/2 bg-current/85" />
             <span className="absolute bottom-1 left-2 right-2 h-px bg-current/55" />
@@ -44,7 +58,9 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
             <span className="absolute bottom-4 left-[1.15rem] h-4 w-4 border-r border-t border-current/80" />
             <span className="absolute bottom-1 right-2 h-5 w-3 border border-current/80" />
           </span>
-          <span className="text-[29px] font-bold leading-none text-white">
+          <span
+            className={`text-[29px] font-bold leading-none ${isLight ? "text-[#17120d]" : "text-white"}`}
+          >
             Traz
           </span>
         </a>
@@ -53,40 +69,45 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
           {navigationItems.map((item) => (
             <a
               key={item.label}
-              className="text-[15px] font-medium text-white transition-colors duration-300 hover:text-[#C39B7B]"
+              className={`text-[15px] font-medium transition-colors duration-300 hover:text-[#C39B7B] ${
+                activeLabel === item.label
+                  ? "text-[#C39B7B]"
+                  : isLight
+                    ? "text-[#17120d]"
+                    : "text-white"
+              }`}
               href={item.href}
             >
-              <p className="text-white transition-colors duration-300 hover:text-[#C39B7B]">
+              <p
+                className={`transition-colors duration-300 hover:text-[#C39B7B] ${
+                  activeLabel === item.label
+                    ? "text-[#C39B7B]"
+                    : isLight
+                      ? "text-[#17120d]"
+                      : "text-white"
+                }`}
+              >
                 {item.label}
               </p>
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-7 lg:flex ">
-          <button
-            aria-label="Search"
-            className="inline-flex size-10 items-center justify-center text-white transition-colors duration-300 hover:text-[#C39B7B]"
-            type="button"
-          >
-            <svg
-              aria-hidden="true"
-              className="size-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-            >
-              <circle cx="11" cy="11" r="7" />
-              <path d="m20 20-3.5-3.5" />
-            </svg>
-          </button>
+        <div className="hidden items-center lg:flex ">
           <div className="group text-black hover:text-white">
             <a
-              className="inline-flex h-[58px] items-center justify-center border border-[#C39B7B] bg-[#C39B7B] px-8 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-transparent"
-              href="#contact"
+              className={`inline-flex h-[58px] items-center justify-center border border-[#C39B7B] px-8 text-[15px] font-semibold transition-colors duration-300 ${
+                isLight
+                  ? "bg-[#C39B7B] hover:bg-[#17120d]"
+                  : "bg-[#C39B7B] hover:bg-transparent"
+              }`}
+              href="/contact"
             >
-              <p className="text-black transition-colors duration-300 group-hover:text-white">
+              <p
+                className={`transition-colors duration-300 group-hover:text-white ${
+                  isLight ? "text-white" : "text-black"
+                }`}
+              >
                 Request A Quote
               </p>
             </a>
@@ -95,7 +116,11 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
 
         <button
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="inline-flex size-11 items-center justify-center border border-white/15 bg-white/5 text-white backdrop-blur lg:hidden"
+          className={`inline-flex size-11 items-center justify-center backdrop-blur lg:hidden ${
+            isLight
+              ? "border border-black/10 bg-[#f5f0ea] text-[#17120d]"
+              : "border border-white/15 bg-white/5 text-white"
+          }`}
           onClick={() => setIsMenuOpen((current) => !current)}
           type="button"
         >
@@ -104,7 +129,11 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
       </div>
 
       <div
-        className={`absolute inset-x-0 top-full border-t border-white/10 bg-[#120f0b]/98 shadow-[0_30px_70px_rgba(0,0,0,0.42)] backdrop-blur-xl transition-all duration-500 lg:hidden ${
+        className={`absolute inset-x-0 top-full shadow-[0_30px_70px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-all duration-500 lg:hidden ${
+          isLight
+            ? "border-t border-black/8 bg-white/98"
+            : "border-t border-white/10 bg-[#120f0b]/98"
+        } ${
           isMenuOpen
             ? "pointer-events-auto visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-2 opacity-0"
@@ -114,7 +143,13 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
           {navigationItems.map((item) => (
             <a
               key={item.label}
-              className="text-sm font-medium uppercase tracking-[0.18em] text-white transition-colors hover:text-[#C39B7B]"
+              className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-300 hover:text-[#C39B7B] ${
+                activeLabel === item.label
+                  ? "text-[#C39B7B]"
+                  : isLight
+                    ? "text-[#17120d]"
+                    : "text-white"
+              }`}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -122,11 +157,21 @@ export function Header({ isScrolled, navigationItems }: HeaderProps) {
             </a>
           ))}
           <a
-            className="mt-2 inline-flex w-fit items-center border border-[#C39B7B] bg-[#C39B7B] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-transparent hover:text-[#C39B7B]"
-            href="#contact"
+            className={`group mt-2 inline-flex w-fit items-center border border-[#C39B7B] px-5 py-3 text-sm font-semibold transition-colors duration-300 ${
+              isLight
+                ? "bg-[#C39B7B] hover:bg-[#17120d]"
+                : "bg-[#C39B7B] hover:bg-transparent"
+            }`}
+            href="/contact"
             onClick={() => setIsMenuOpen(false)}
           >
-            Request A Quote
+            <span
+              className={`transition-colors duration-300 group-hover:text-white ${
+                isLight ? "text-white" : "text-black"
+              }`}
+            >
+              Request A Quote
+            </span>
           </a>
         </nav>
       </div>

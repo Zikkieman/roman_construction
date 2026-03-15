@@ -10,12 +10,12 @@ import type {
 } from '../types/architecture'
 
 export const navigationItems: NavigationItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Portfolio', href: '#projects' },
-  { label: 'Pages', href: '#process' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Portfolio', href: '/#projects' },
+  { label: 'Pages', href: '/#process' },
+  { label: 'Blog', href: '/#blog' },
+  { label: 'Contact Us', href: '/contact' },
 ]
 
 export const aboutPoints: string[] = [

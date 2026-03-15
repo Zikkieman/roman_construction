@@ -8,6 +8,10 @@ type ContactFormValues = {
   website: string
 }
 
+type ContactSectionProps = {
+  variant?: 'home' | 'page'
+}
+
 type ContactFieldProps = {
   label: string
   name: keyof ContactFormValues
@@ -18,6 +22,8 @@ type ContactFieldProps = {
   onChange: (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void
+  labelClassName: string
+  fieldClassName: string
 }
 
 const INITIAL_FORM_VALUES: ContactFormValues = {
@@ -36,15 +42,17 @@ function ContactField({
   type = 'text',
   multiline = false,
   onChange,
+  labelClassName,
+  fieldClassName,
 }: ContactFieldProps) {
   return (
     <label className="block">
-      <span className="block text-[14px] font-semibold uppercase tracking-[0.12em] text-[#f2ede7]">
+      <span className={`block text-[14px] font-semibold uppercase tracking-[0.12em] ${labelClassName}`}>
         {label}
       </span>
       {multiline ? (
         <textarea
-          className="mt-7 h-[98px] w-full resize-none border-b border-white/14 bg-transparent pb-4 text-[16px] leading-[1.8] text-[#d4ccc3] outline-none placeholder:text-[#8f867d] focus:border-[#C39B7B]"
+          className={`mt-7 h-[98px] w-full resize-none border-b bg-transparent pb-4 text-[16px] leading-[1.8] outline-none ${fieldClassName}`}
           name={name}
           onChange={onChange}
           placeholder={placeholder}
@@ -53,7 +61,7 @@ function ContactField({
         />
       ) : (
         <input
-          className="mt-7 h-10 w-full border-b border-white/14 bg-transparent pb-4 text-[16px] text-[#d4ccc3] outline-none placeholder:text-[#8f867d] focus:border-[#C39B7B]"
+          className={`mt-7 h-10 w-full border-b bg-transparent pb-4 text-[16px] outline-none ${fieldClassName}`}
           name={name}
           onChange={onChange}
           placeholder={placeholder}
@@ -113,12 +121,27 @@ function IconTwitter() {
   )
 }
 
-export function ContactSection() {
+export function ContactSection({ variant = 'home' }: ContactSectionProps) {
   const [formValues, setFormValues] =
     useState<ContactFormValues>(INITIAL_FORM_VALUES)
   const [submitState, setSubmitState] = useState<
     'idle' | 'sending' | 'success' | 'error'
   >('idle')
+
+  const isPage = variant === 'page'
+  const sectionClassName = isPage
+    ? 'overflow-hidden bg-[#f7f4ef] text-[#17120d]'
+    : 'overflow-hidden bg-[#17120d] text-white'
+  const containerClassName = isPage
+    ? 'mx-auto max-w-[1520px] px-8 py-24 sm:px-12 lg:px-20 lg:py-28 xl:px-24'
+    : 'mx-auto max-w-[1460px] px-8 py-24 sm:px-12 lg:px-20 lg:py-32 xl:px-24'
+  const labelClassName = isPage ? 'text-[#17120d]' : 'text-[#f2ede7]'
+  const fieldClassName = isPage
+    ? 'border-[#ddd6cb] text-[#8a847d] placeholder:text-[#a29a92] focus:border-[#C39B7B]'
+    : 'border-white/14 text-[#d4ccc3] placeholder:text-[#8f867d] focus:border-[#C39B7B]'
+  const infoTextClassName = isPage ? 'text-[#6c655e]' : 'text-[#968d84]'
+  const titleClassName = isPage ? 'text-[#17120d]' : 'text-[#dfd8d1]'
+  const descriptionClassName = isPage ? 'text-[#6f685f]' : 'text-[#8f867d]'
 
   function handleChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -187,38 +210,101 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="overflow-hidden bg-[#17120d] text-white">
-      <div className="mx-auto max-w-[1460px] px-8 py-24 sm:px-12 lg:px-20 lg:py-32 xl:px-24 xl:py-[138px]">
+    <section id="contact" className={sectionClassName}>
+      <div className={containerClassName}>
         <div className="grid gap-16 lg:grid-cols-[494px_minmax(0,1fr)] lg:items-stretch lg:gap-20 xl:grid-cols-[520px_minmax(0,1fr)] xl:gap-24">
           <div
             className="reveal relative mx-auto w-full max-w-[494px] lg:mx-0 lg:h-full lg:max-w-none"
             data-reveal="true"
           >
-            <div className="absolute bottom-[-56px] right-[-52px] hidden h-[52%] w-[44%] overflow-hidden bg-[#2a2621] lg:block">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1.5px_1.5px,rgba(255,255,255,0.08)_1.4px,transparent_0)] bg-[length:20px_20px]" />
-              <div className="absolute left-0 top-0 h-[42%] w-full bg-[linear-gradient(145deg,#36322c_0%,#27231d_52%,transparent_52%)]" />
-              <div className="absolute bottom-[18%] left-0 h-[18px] w-full bg-[#6b553e]/35" />
+            <div
+              className={`absolute bottom-[-56px] right-[-52px] hidden h-[52%] w-[44%] overflow-hidden lg:block ${
+                isPage ? 'bg-[#ece7df]' : 'bg-[#2a2621]'
+              }`}
+            >
+              <div
+                className={`absolute inset-0 bg-[radial-gradient(circle_at_1.5px_1.5px,rgba(255,255,255,0.08)_1.4px,transparent_0)] bg-[length:20px_20px] ${
+                  isPage ? 'opacity-60' : ''
+                }`}
+              />
+              <div
+                className={`absolute left-0 top-0 h-[42%] w-full ${
+                  isPage
+                    ? 'bg-[linear-gradient(145deg,#f0ece6_0%,#e6e0d7_52%,transparent_52%)]'
+                    : 'bg-[linear-gradient(145deg,#36322c_0%,#27231d_52%,transparent_52%)]'
+                }`}
+              />
+              <div
+                className={`absolute bottom-[18%] left-0 h-[18px] w-full ${
+                  isPage ? 'bg-[#d2bea7]/35' : 'bg-[#6b553e]/35'
+                }`}
+              />
             </div>
             <img
               alt="Dark modern building facade"
-              className="relative z-10 h-[500px] w-full object-cover object-center grayscale contrast-[1.05] sm:h-[620px] lg:h-full lg:min-h-[700px] xl:min-h-[724px]"
+              className={`relative z-10 h-[500px] w-full object-cover object-center grayscale contrast-[1.05] sm:h-[620px] ${
+                isPage
+                  ? 'lg:h-full lg:min-h-[620px] xl:min-h-[640px]'
+                  : 'lg:h-full lg:min-h-[700px] xl:min-h-[724px]'
+              }`}
               src="https://images.pexels.com/photos/29459590/pexels-photo-29459590.jpeg?cs=srgb&dl=pexels-blackstoneray-29459590.jpg&fm=jpg"
             />
           </div>
 
-          <div className="reveal relative lg:flex lg:min-h-[700px] lg:flex-col xl:min-h-[724px]" data-reveal="true">
-            <div className="pointer-events-none absolute right-[3%] top-[8px] hidden h-[64px] w-[108px] border-r border-t border-dashed border-white/14 xl:block" />
+          <div
+            className={`reveal relative lg:flex lg:flex-col ${
+              isPage
+                ? 'lg:min-h-[620px] xl:min-h-[640px]'
+                : 'lg:min-h-[700px] xl:min-h-[724px]'
+            }`}
+            data-reveal="true"
+          >
+            <div
+              className={`pointer-events-none absolute right-[3%] top-[8px] hidden h-[64px] w-[108px] border-r border-t border-dashed xl:block ${
+                isPage ? 'border-black/12' : 'border-white/14'
+              }`}
+            />
 
-            <h2 className="max-w-[640px] font-sans text-[32px] font-extrabold leading-[1.08] tracking-[-0.05em] text-[#dfd8d1] sm:text-[38px] lg:text-[46px]">
-              <span className="contact-outline-text">Contact,</span>
-              <span className="text-[#dfd8d1]"> Let&apos;s Talk</span>
-            </h2>
+            <div className="relative">
+              {isPage ? (
+                <div className="absolute left-[-44px] top-[12px] hidden lg:block">
+                  <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.18em] text-[#C39B7B]">
+                    Contact
+                  </span>
+                </div>
+              ) : null}
 
-            <p className="mt-8 max-w-[720px] text-[17px] leading-[1.9] text-[#8f867d]">
-              Let&apos;s bring your project to life. Let us know how we can best
-              help you. We are a leading architecture firm dedicated to
-              creating designs.
-            </p>
+              <h2
+                className={`max-w-[720px] font-sans font-extrabold leading-[1.12] tracking-[-0.05em] ${titleClassName} ${
+                  isPage
+                    ? 'text-[32px] sm:text-[38px] lg:text-[46px]'
+                    : 'text-[32px] sm:text-[38px] lg:text-[46px]'
+                }`}
+              >
+                {isPage ? (
+                  <>
+                    Contact Us Anytime, We Are
+                    <br />
+                    Always There For You
+                  </>
+                ) : (
+                  <>
+                    <span className="contact-outline-text">Contact,</span>
+                    <span className={titleClassName}> Let&apos;s Talk</span>
+                  </>
+                )}
+              </h2>
+            </div>
+
+            {isPage ? null : (
+              <p
+                className={`mt-8 max-w-[720px] text-[17px] leading-[1.9] ${descriptionClassName}`}
+              >
+                Let&apos;s bring your project to life. Let us know how we can
+                best help you. We are a leading architecture firm dedicated to
+                creating designs.
+              </p>
+            )}
 
             <div className="mt-12 grid gap-x-12 gap-y-12 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_246px] xl:gap-x-14">
               <form className="space-y-10" onSubmit={handleSubmit}>
@@ -232,14 +318,18 @@ export function ContactSection() {
                 />
 
                 <ContactField
+                  fieldClassName={fieldClassName}
                   label="Your Name*"
+                  labelClassName={labelClassName}
                   name="name"
                   onChange={handleChange}
                   placeholder="Jonathon Ronan"
                   value={formValues.name}
                 />
                 <ContactField
+                  fieldClassName={fieldClassName}
                   label="Email Address*"
+                  labelClassName={labelClassName}
                   name="email"
                   onChange={handleChange}
                   placeholder="jonathonronana63@gmail.com"
@@ -247,7 +337,9 @@ export function ContactSection() {
                   value={formValues.email}
                 />
                 <ContactField
+                  fieldClassName={fieldClassName}
                   label="Phone No*"
+                  labelClassName={labelClassName}
                   name="phone"
                   onChange={handleChange}
                   placeholder="+0 321 546 2345"
@@ -255,7 +347,9 @@ export function ContactSection() {
                   value={formValues.phone}
                 />
                 <ContactField
+                  fieldClassName={fieldClassName}
                   label="Your Message Here*"
+                  labelClassName={labelClassName}
                   multiline
                   name="message"
                   onChange={handleChange}
@@ -293,12 +387,12 @@ export function ContactSection() {
                 </div>
               </form>
 
-              <div className="space-y-12 lg:pt-[134px] xl:pt-[136px]">
+              <div className={`space-y-12 lg:pt-[134px] xl:pt-[136px]`}>
                 <div>
                   <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
                     Address
                   </h3>
-                  <p className="mt-6 text-[16px] leading-[1.6] text-[#968d84]">
+                  <p className={`mt-6 text-[16px] leading-[1.6] ${infoTextClassName}`}>
                     123 Maple Street Toronto, Ontario
                     <br />
                     M1A 1A1 Canada
@@ -309,8 +403,10 @@ export function ContactSection() {
                   <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
                     Contact
                   </h3>
-                  <p className="mt-6 break-words text-[16px] leading-[2] text-[#968d84]">
-                    horlarmeydeileh50@gmail.com
+                  <p
+                    className={`mt-6 break-words text-[16px] leading-[2] ${infoTextClassName}`}
+                  >
+                    helltraz@gmail.com
                     <br />
                     +1 555-123-4567
                   </p>
@@ -320,7 +416,11 @@ export function ContactSection() {
                   <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
                     Social Media
                   </h3>
-                  <div className="mt-6 flex items-center gap-7 text-white">
+                  <div
+                    className={`mt-6 flex items-center gap-7 ${
+                      isPage ? 'text-[#17120d]' : 'text-white'
+                    }`}
+                  >
                     <a
                       className="transition-colors duration-300 hover:text-[#C39B7B]"
                       href="#contact"

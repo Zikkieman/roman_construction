@@ -5,6 +5,7 @@ import { HeroSection } from "../components/architecture/HeroSection";
 import { ProcessSection } from "../components/architecture/ProcessSection";
 import { ProjectsSection } from "../components/architecture/ProjectsSection";
 import { ServicesSection } from "../components/architecture/ServicesSection";
+import { ScrollToHeroButton } from "../components/common/ScrollToHeroButton";
 import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
 import { navigationItems } from "../data/architectureHome";
@@ -35,6 +36,7 @@ export function ArchitectureHomePage() {
         <ContactSection />
       </main>
       <Footer />
+      <ScrollToHeroButton />
     </div>
   );
 }

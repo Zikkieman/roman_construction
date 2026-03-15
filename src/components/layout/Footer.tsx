@@ -1,12 +1,18 @@
-export function Footer() {
+interface FooterProps {
+  variant?: "dark" | "light";
+}
+
+export function Footer({ variant = "dark" }: FooterProps) {
+  const isLight = variant === "light";
+
   return (
-    <footer className="bg-[#17120d] text-white">
-      <div className="mx-auto max-w-[1910px] px-8 pb-12 pt-20 sm:px-10 lg:px-14 lg:pb-14 lg:pt-[88px]">
+    <footer className={`${isLight ? "bg-[#f7f4ef]" : "bg-[#17120d]"} text-white`}>
+      <div className="mx-auto max-w-[1910px] px-8 pb-12 pt-24 sm:px-10 lg:px-14 lg:pb-14 lg:pt-32">
         <div className="bg-[#26231d] px-8 py-14 sm:px-12 sm:py-16 lg:px-12 lg:py-[78px] xl:px-14 xl:py-[86px]">
           <div className="mx-auto max-w-[1288px]">
             <div className="grid gap-14 lg:grid-cols-[1.18fr_0.62fr_0.72fr_1fr] lg:items-start lg:gap-16 xl:gap-20">
               <div className="reveal max-w-[332px]" data-reveal="true">
-                <a className="flex items-center gap-3 text-white" href="#home">
+                <a className="flex items-center gap-3 text-white" href="/">
                   <span className="relative block h-12 w-12 text-[#C39B7B]">
                     <span className="absolute inset-y-1 left-1/2 w-px -translate-x-1/2 bg-current/85" />
                     <span className="absolute bottom-1 left-2 right-2 h-px bg-current/55" />
@@ -36,7 +42,7 @@ export function Footer() {
                       <a
                         key={item}
                         className="group inline-flex items-center gap-3 transition-colors duration-300 hover:text-[#C39B7B]"
-                        href="#home"
+                        href="/"
                       >
                         <span className="text-[#C39B7B] transition-transform duration-300 group-hover:translate-x-1">
                           →
@@ -55,25 +61,25 @@ export function Footer() {
                 <div className="mt-8 grid gap-5 text-[16px] text-[#9a9187]">
                   <a
                     className="transition-colors duration-300 hover:text-[#C39B7B]"
-                    href="#projects"
+                    href="/#projects"
                   >
                     Projects
                   </a>
                   <a
                     className="transition-colors duration-300 hover:text-[#C39B7B]"
-                    href="#blog"
+                    href="/#blog"
                   >
                     News And Articles
                   </a>
                   <a
                     className="transition-colors duration-300 hover:text-[#C39B7B]"
-                    href="#contact"
+                    href="/contact"
                   >
                     Request a Quote
                   </a>
                   <a
                     className="transition-colors duration-300 hover:text-[#C39B7B]"
-                    href="#services"
+                    href="/#services"
                   >
                     Services
                   </a>
@@ -95,7 +101,7 @@ export function Footer() {
 
                 <a
                   className="group mt-8 inline-flex items-center gap-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B] transition-colors duration-300 hover:text-white"
-                  href="#contact"
+                  href="/contact"
                 >
                   <span className="text-[20px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                     →

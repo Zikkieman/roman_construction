@@ -17,21 +17,21 @@ export function AboutSection() {
       </div>
 
       <div className="mx-auto max-w-[1460px] px-8 py-24 sm:px-12 lg:px-20 lg:py-32 xl:px-24">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-center xl:gap-24">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16 xl:gap-24">
           <div
             className="reveal relative lg:w-[40%] xl:w-[41%]"
             data-reveal="true"
           >
-            <div className="relative mx-auto max-w-[760px] lg:mx-0">
+            <div className="relative mx-auto w-full lg:mx-0">
               <div className="overflow-hidden bg-[#1f1a15] shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
                 <img
                   alt="Cliffside architectural residence"
-                  className="h-[440px] w-full object-cover sm:h-[540px] lg:h-[620px]"
+                  className="h-[300px] w-full object-cover sm:h-[360px] lg:h-[620px]"
                   src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80"
                 />
               </div>
 
-              <div className="relative z-10 mt-6 ml-auto w-[78%] overflow-hidden border border-white/6 bg-[#231d17] shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:-mt-28 sm:mr-[-2%] sm:w-[62%] lg:absolute lg:-bottom-10 lg:right-[-4%] lg:mt-0 lg:w-[54%]">
+              <div className="relative z-10 hidden overflow-hidden border border-white/6 bg-[#231d17] shadow-[0_24px_80px_rgba(0,0,0,0.28)] lg:absolute lg:-bottom-10 lg:right-[-4%] lg:block lg:w-[54%]">
                 <img
                   alt="Modern black home exterior"
                   className="h-[250px] w-full object-cover sm:h-[300px] lg:h-[320px]"
@@ -61,7 +61,15 @@ export function AboutSection() {
               </span>
             </h2>
 
-            <p className="mt-8 max-w-[670px] text-[17px] leading-[1.9] text-[#ada39a]">
+            <div className="mt-10 overflow-hidden border border-white/6 bg-[#231d17] shadow-[0_24px_80px_rgba(0,0,0,0.28)] lg:hidden">
+              <img
+                alt="Modern black home exterior"
+                className="h-[300px] w-full object-cover sm:h-[360px]"
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+              />
+            </div>
+
+            <p className="mt-10 max-w-[670px] text-[17px] leading-[1.9] text-[#ada39a]">
               We are a leading architecture firm dedicated to creating visionary
               designs that transcend expectations. With our team of highly
               skilled architects and designers, we specialize in crafting.
