@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import type { NavigationItem } from "../../types/architecture";
 import { IconClose, IconMenu } from "../common/icons";
 
@@ -46,9 +47,9 @@ export function Header({
       }`}
     >
       <div className="mx-auto flex max-w-[1910px] items-center justify-between px-8 py-7 sm:px-10 lg:px-14">
-        <a
+        <Link
           className={`flex items-center gap-3 ${isLight ? "text-[#17120d]" : "text-white"}`}
-          href="/"
+          to="/"
         >
           <span className="relative block h-12 w-12 text-[#C39B7B]">
             <span className="absolute inset-y-1 left-1/2 w-px -translate-x-1/2 bg-current/85" />
@@ -63,11 +64,11 @@ export function Header({
           >
             Traz
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-11 lg:flex">
           {navigationItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               className={`text-[15px] font-medium transition-colors duration-300 hover:text-[#C39B7B] ${
                 activeLabel === item.label
@@ -76,7 +77,7 @@ export function Header({
                     ? "text-[#17120d]"
                     : "text-white"
               }`}
-              href={item.href}
+              to={item.href}
             >
               <p
                 className={`transition-colors duration-300 hover:text-[#C39B7B] ${
@@ -89,19 +90,19 @@ export function Header({
               >
                 {item.label}
               </p>
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden items-center lg:flex ">
           <div className="group text-black hover:text-white">
-            <a
+            <Link
               className={`inline-flex h-[58px] items-center justify-center border border-[#C39B7B] px-8 text-[15px] font-semibold transition-colors duration-300 ${
                 isLight
                   ? "bg-[#C39B7B] hover:bg-[#17120d]"
                   : "bg-[#C39B7B] hover:bg-transparent"
               }`}
-              href="/contact"
+              to="/contact"
             >
               <p
                 className={`transition-colors duration-300 group-hover:text-white ${
@@ -110,7 +111,7 @@ export function Header({
               >
                 Request A Quote
               </p>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -141,7 +142,7 @@ export function Header({
       >
         <nav className="mx-auto flex max-w-[1910px] flex-col gap-5 px-8 py-6 sm:px-10">
           {navigationItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-300 hover:text-[#C39B7B] ${
                 activeLabel === item.label
@@ -150,19 +151,19 @@ export function Header({
                     ? "text-[#17120d]"
                     : "text-white"
               }`}
-              href={item.href}
+              to={item.href}
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             className={`group mt-2 inline-flex w-fit items-center border border-[#C39B7B] px-5 py-3 text-sm font-semibold transition-colors duration-300 ${
               isLight
                 ? "bg-[#C39B7B] hover:bg-[#17120d]"
                 : "bg-[#C39B7B] hover:bg-transparent"
             }`}
-            href="/contact"
+            to="/contact"
             onClick={() => setIsMenuOpen(false)}
           >
             <span
@@ -172,7 +173,7 @@ export function Header({
             >
               Request A Quote
             </span>
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

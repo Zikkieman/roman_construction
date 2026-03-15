@@ -13,8 +13,8 @@ export const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/#about' },
   { label: 'Portfolio', href: '/#projects' },
-  { label: 'Pages', href: '/#process' },
-  { label: 'Blog', href: '/#blog' },
+  { label: 'Services', href: '/services' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Contact Us', href: '/contact' },
 ]
 

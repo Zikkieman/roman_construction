@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ContactSection } from "../components/architecture/ContactSection";
 import { ScrollToHeroButton } from "../components/common/ScrollToHeroButton";
 import { Footer } from "../components/layout/Footer";
@@ -23,7 +24,9 @@ export function ContactPage() {
         <section className="bg-[#f7f4ef]">
           <div className="mx-auto max-w-[1910px] px-8 pb-8 pt-6 sm:px-10 lg:px-14 lg:pb-10 lg:pt-8">
             <div className="bg-[#ece7df] px-8 py-8 text-[13px] font-medium uppercase tracking-[0.06em] text-[#6f685f] sm:px-10 lg:px-8">
-              <span className="text-[#17120d]">Home</span>
+              <Link className="text-[#17120d]" to="/">
+                Home
+              </Link>
               <span className="mx-3 text-[#9b9389]">-</span>
               <span>Contact Us</span>
             </div>
