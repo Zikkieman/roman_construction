@@ -173,7 +173,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
     payload.append('email', formValues.email)
     payload.append('phone', formValues.phone)
     payload.append('message', formValues.message)
-    payload.append('_subject', 'New Traz architecture contact message')
+    payload.append('_subject', 'New Roman architecture contact message')
     payload.append('_replyto', formValues.email)
     payload.append('_template', 'table')
     payload.append('_captcha', 'false')

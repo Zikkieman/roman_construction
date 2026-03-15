@@ -12,7 +12,6 @@ import type {
 export const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/#about' },
-  { label: 'Portfolio', href: '/#projects' },
   { label: 'Services', href: '/services' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Contact Us', href: '/contact' },
@@ -199,7 +198,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Interior',
     date: 'Jul 14, 2023',
     title:
-      'From Concept to Construction: The Creative Journey of Traz In A Nutshell Architectural Marvels',
+      'From Concept to Construction: The Creative Journey of Roman In A Nutshell Architectural Marvels',
     image:
       'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80',
   },
@@ -215,7 +214,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Interior',
     date: 'Jul 16, 2023',
     title:
-      'From Concept to Construction: The Creative Journey of Traz In A Nutshell Architectural Marvels',
+      'From Concept to Construction: The Creative Journey of Roman In A Nutshell Architectural Marvels',
     image:
       'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80',
   },

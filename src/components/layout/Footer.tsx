@@ -24,7 +24,7 @@ export function Footer({ variant = "dark" }: FooterProps) {
                     <span className="absolute bottom-1 right-2 h-5 w-3 border border-current/80" />
                   </span>
                   <span className="text-[29px] font-bold leading-none text-white">
-                    Traz
+                    Roman
                   </span>
                 </Link>
 

@@ -62,7 +62,7 @@ export function Header({
           <span
             className={`text-[29px] font-bold leading-none ${isLight ? "text-[#17120d]" : "text-white"}`}
           >
-            Traz
+            Roman
           </span>
         </Link>
 

@@ -11,7 +11,7 @@ export function BlogSection() {
           data-reveal="true"
         >
           <div>
-            <SectionEyebrow>Blog &amp; Articles Of Traz</SectionEyebrow>
+            <SectionEyebrow>Blog &amp; Articles Of Roman</SectionEyebrow>
             <h2 className="mt-6 font-serif text-4xl leading-tight text-[#1b140e] sm:text-5xl">
               Latest insights on architecture, interiors, and design culture.
             </h2>
