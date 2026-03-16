@@ -15,6 +15,7 @@ type GalleryMediaItem = {
   kind: "image" | "video";
   heightClassName: string;
   previewSrc?: string;
+  previewFallbacks?: string[];
 };
 
 const mediaModules = import.meta.glob("../assets/images/*", {
@@ -57,20 +58,17 @@ const hostedVideos = [
   {
     title: "Before and After Walkthrough",
     src: "https://drive.google.com/file/d/1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q/preview",
-    previewSrc:
-      "https://drive.google.com/thumbnail?id=1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q&sz=w1600",
+    fileId: "1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q",
   },
   {
     title: "Interior Progress Video",
     src: "https://drive.google.com/file/d/151YwkiwSphUC9HOTU7tPvY3isme80RAQ/preview",
-    previewSrc:
-      "https://drive.google.com/thumbnail?id=151YwkiwSphUC9HOTU7tPvY3isme80RAQ&sz=w1600",
+    fileId: "151YwkiwSphUC9HOTU7tPvY3isme80RAQ",
   },
   {
     title: "Project Reveal Video",
     src: "https://drive.google.com/file/d/1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR/preview",
-    previewSrc:
-      "https://drive.google.com/thumbnail?id=1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR&sz=w1600",
+    fileId: "1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR",
   },
 ] as const;
 
@@ -94,6 +92,14 @@ function titleFromFileName(fileName: string) {
     .trim();
 }
 
+function buildDrivePreviewSources(fileId: string) {
+  return [
+    `https://drive.usercontent.google.com/thumbnail?id=${fileId}&sz=w1600`,
+    `https://drive.google.com/thumbnail?id=${fileId}&sz=w1600`,
+    `https://lh3.googleusercontent.com/d/${fileId}=w1600`,
+  ];
+}
+
 function VideoBadge() {
   return (
     <div className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-brand-accent)] text-white shadow-[0_14px_32px_rgba(0,0,0,0.2)]">
@@ -104,12 +110,42 @@ function VideoBadge() {
   );
 }
 
+function VideoPreviewImage({
+  item,
+  fallbackSrc,
+}: {
+  item: GalleryMediaItem;
+  fallbackSrc: string;
+}) {
+  const sources = item.previewFallbacks?.length
+    ? item.previewFallbacks
+    : item.previewSrc
+      ? [item.previewSrc]
+      : [fallbackSrc];
+  const [sourceIndex, setSourceIndex] = useState(0);
+
+  return (
+    <img
+      alt={item.title}
+      className={`${item.heightClassName} w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]`}
+      src={sources[sourceIndex] ?? fallbackSrc}
+      onError={() => {
+        setSourceIndex((current) =>
+          current < sources.length - 1 ? current + 1 : sources.length,
+        );
+      }}
+    />
+  );
+}
+
 function GalleryColumn({
   items,
   onOpenVideo,
+  fallbackVideoPoster,
 }: {
   items: GalleryMediaItem[];
   onOpenVideo: (item: GalleryMediaItem) => void;
+  fallbackVideoPoster: string;
 }) {
   return (
     <div className="flex flex-col gap-7">
@@ -127,11 +163,7 @@ function GalleryColumn({
           >
             {isVideo ? <VideoBadge /> : null}
             {isVideo ? (
-              <img
-                alt={item.title}
-                className={`${item.heightClassName} w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]`}
-                src={item.previewSrc ?? item.src}
-              />
+              <VideoPreviewImage item={item} fallbackSrc={fallbackVideoPoster} />
             ) : (
               <img
                 alt={item.title}
@@ -196,6 +228,9 @@ export function GalleryPage() {
   useRevealOnScroll();
 
   const galleryColumns = useMemo(() => {
+    const fallbackVideoPoster = Object.entries(mediaModules).find(([path]) =>
+      fileNameFromPath(path) === "MASTER_LOUNGE_CC.jpg",
+    )?.[1];
     const items = orderedMediaNames.reduce<GalleryMediaItem[]>(
       (collection, name, index) => {
         const entry = Object.entries(mediaModules).find(([path]) =>
@@ -222,10 +257,12 @@ export function GalleryPage() {
     );
 
     hostedVideos.forEach((video, index) => {
+      const previewFallbacks = buildDrivePreviewSources(video.fileId);
       items.push({
         title: video.title,
         src: video.src,
-        previewSrc: video.previewSrc,
+        previewSrc: previewFallbacks[0],
+        previewFallbacks,
         kind: "video",
         heightClassName: String(
           heightCycle[(orderedMediaNames.length + index) % heightCycle.length],
@@ -239,7 +276,12 @@ export function GalleryPage() {
       columns[index % 3].push(item);
     });
 
-    return columns;
+    return {
+      columns,
+      fallbackVideoPoster:
+        fallbackVideoPoster ??
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80",
+    };
   }, []);
 
   return (
@@ -279,9 +321,10 @@ export function GalleryPage() {
         <section className="bg-[#f7f4ef]">
           <div className="mx-auto max-w-[1340px] px-8 pb-24 sm:px-12 lg:px-16 lg:pb-32">
             <div className="grid gap-7 lg:grid-cols-3 lg:items-start">
-              {galleryColumns.map((column, index) => (
+              {galleryColumns.columns.map((column, index) => (
                 <GalleryColumn
                   key={index}
+                  fallbackVideoPoster={galleryColumns.fallbackVideoPoster}
                   items={column}
                   onOpenVideo={setActiveVideo}
                 />
