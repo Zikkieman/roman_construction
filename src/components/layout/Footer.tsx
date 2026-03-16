@@ -19,7 +19,7 @@ export function Footer({ variant = "dark" }: FooterProps) {
                 <Link className="flex items-center gap-3 text-white" to="/">
                   <img
                     alt="Roman Contractors logo"
-                    className="h-[54px] w-auto object-contain"
+                    className="h-[72px] w-auto object-contain sm:h-[180px]"
                     src={logoImage}
                   />
                 </Link>

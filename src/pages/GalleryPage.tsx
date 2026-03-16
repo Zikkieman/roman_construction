@@ -14,6 +14,7 @@ type GalleryMediaItem = {
   src: string;
   kind: "image" | "video";
   heightClassName: string;
+  previewSrc?: string;
 };
 
 const mediaModules = import.meta.glob("../assets/images/*", {
@@ -50,9 +51,27 @@ const orderedMediaNames = [
   "WhatsApp Image 2026-02-23 at 12.05.26 (4).jpeg",
   "WhatsApp Image 2026-02-23 at 12.05.27.jpeg",
   "WhatsApp Image 2026-02-23 at 12.05.27 (1).jpeg",
-  "B&A.MOV",
-  "B&Aa.MOV",
-  "Before and after.MOV",
+] as const;
+
+const hostedVideos = [
+  {
+    title: "Before and After Walkthrough",
+    src: "https://drive.google.com/file/d/1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q/preview",
+    previewSrc:
+      "https://drive.google.com/thumbnail?id=1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q&sz=w1600",
+  },
+  {
+    title: "Interior Progress Video",
+    src: "https://drive.google.com/file/d/151YwkiwSphUC9HOTU7tPvY3isme80RAQ/preview",
+    previewSrc:
+      "https://drive.google.com/thumbnail?id=151YwkiwSphUC9HOTU7tPvY3isme80RAQ&sz=w1600",
+  },
+  {
+    title: "Project Reveal Video",
+    src: "https://drive.google.com/file/d/1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR/preview",
+    previewSrc:
+      "https://drive.google.com/thumbnail?id=1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR&sz=w1600",
+  },
 ] as const;
 
 const heightCycle = [
@@ -108,12 +127,10 @@ function GalleryColumn({
           >
             {isVideo ? <VideoBadge /> : null}
             {isVideo ? (
-              <video
+              <img
+                alt={item.title}
                 className={`${item.heightClassName} w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]`}
-                muted
-                playsInline
-                preload="metadata"
-                src={item.src}
+                src={item.previewSrc ?? item.src}
               />
             ) : (
               <img
@@ -160,12 +177,12 @@ function MediaModal({
         >
           <IconClose />
         </button>
-        <video
-          autoPlay
-          className="max-h-[82vh] w-full bg-black"
-          controls
-          playsInline
+        <iframe
+          allow="autoplay; encrypted-media; picture-in-picture"
+          className="h-[72vh] w-full bg-black"
+          referrerPolicy="strict-origin-when-cross-origin"
           src={item.src}
+          title={item.title}
         />
       </div>
     </div>
@@ -203,6 +220,18 @@ export function GalleryPage() {
       },
       [],
     );
+
+    hostedVideos.forEach((video, index) => {
+      items.push({
+        title: video.title,
+        src: video.src,
+        previewSrc: video.previewSrc,
+        kind: "video",
+        heightClassName: String(
+          heightCycle[(orderedMediaNames.length + index) % heightCycle.length],
+        ),
+      });
+    });
 
     const columns: GalleryMediaItem[][] = [[], [], []];
 

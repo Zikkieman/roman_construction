@@ -47,14 +47,14 @@ export function Header({
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-[1910px] items-center justify-between px-8 py-7 sm:px-10 lg:px-14">
+      <div className="mx-auto flex max-w-[1910px] items-center justify-between px-8 py-2 sm:px-10 sm:py-3 lg:px-14 lg:py-2">
         <Link
           className={`flex items-center gap-3 ${isLight ? "text-[#17120d]" : "text-white"}`}
           to="/"
         >
           <img
             alt="Roman Contractors logo"
-            className="h-[50px] w-auto object-contain sm:h-[56px]"
+            className="h-[100px] w-auto object-contain md:h-[180px]"
             src={logoImage}
           />
         </Link>
