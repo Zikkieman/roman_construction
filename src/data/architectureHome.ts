@@ -11,7 +11,7 @@ import type {
 
 export const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/#about' },
+  { label: 'About Us', href: '/about-us' },
   { label: 'Services', href: '/services' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Contact Us', href: '/contact' },

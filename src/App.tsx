@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import { AboutPage } from './pages/AboutPage'
 import { ArchitectureHomePage } from './pages/ArchitectureHomePage'
 import { ContactPage } from './pages/ContactPage'
 import { GalleryPage } from './pages/GalleryPage'
@@ -38,6 +39,7 @@ function App() {
       <ScrollManager />
       <Routes>
         <Route path="/" element={<ArchitectureHomePage />} />
+        <Route path="/about-us" element={<AboutPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
