@@ -1,5 +1,6 @@
 import { IconArrow } from "../common/icons";
 import { SectionEyebrow } from "../common/SectionEyebrow";
+import { COMPANY } from "../../data/company";
 
 export function HeroSection() {
   return (
@@ -33,8 +34,7 @@ export function HeroSection() {
             </defs>
             <text fill="currentColor">
               <textPath href="#hero-badge-path" startOffset="0%">
-                THE BEST ARCHITECTURE FIRM IN 2023 • THE BEST ARCHITECTURE FIRM
-                IN 2023 •
+                ROMAN CONTRACTORS LIMITED • ROMAN CONTRACTORS LIMITED •
               </textPath>
             </text>
           </svg>
@@ -108,10 +108,10 @@ export function HeroSection() {
 
       <div className="absolute right-0 top-[44%] hidden h-[48%] w-[79px] xl:block">
         <div className="hero-side-label absolute right-[22px] top-0 text-white/78">
-          CALL:+321 426 4567
+          CALL:{COMPANY.phone}
         </div>
         <div className="hero-side-label absolute bottom-14 right-[22px] text-white/78">
-          MAIL: Loremipsum@gmail.com
+          MAIL: {COMPANY.email}
         </div>
       </div>
 

@@ -1,4 +1,9 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
+import {
+  COMPANY,
+  COMPANY_OVERVIEW,
+  COMPANY_OVERVIEW_EXTENDED,
+} from '../../data/company'
 
 type ContactFormValues = {
   name: string
@@ -137,8 +142,8 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
     : 'mx-auto max-w-[1460px] px-8 py-24 sm:px-12 lg:px-20 lg:py-32 xl:px-24'
   const labelClassName = isPage ? 'text-[#17120d]' : 'text-[#f2ede7]'
   const fieldClassName = isPage
-    ? 'border-[#ddd6cb] text-[#8a847d] placeholder:text-[#a29a92] focus:border-[#C39B7B]'
-    : 'border-white/14 text-[#d4ccc3] placeholder:text-[#8f867d] focus:border-[#C39B7B]'
+    ? 'border-[#ddd6cb] text-[#8a847d] placeholder:text-[#a29a92] focus:border-[var(--color-brand-accent)]'
+    : 'border-white/14 text-[#d4ccc3] placeholder:text-[#8f867d] focus:border-[var(--color-brand-accent)]'
   const infoTextClassName = isPage ? 'text-[#6c655e]' : 'text-[#968d84]'
   const titleClassName = isPage ? 'text-[#17120d]' : 'text-[#dfd8d1]'
   const descriptionClassName = isPage ? 'text-[#6f685f]' : 'text-[#8f867d]'
@@ -173,14 +178,14 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
     payload.append('email', formValues.email)
     payload.append('phone', formValues.phone)
     payload.append('message', formValues.message)
-    payload.append('_subject', 'New Roman architecture contact message')
+    payload.append('_subject', 'New Roman Contractors contact message')
     payload.append('_replyto', formValues.email)
     payload.append('_template', 'table')
     payload.append('_captcha', 'false')
 
     try {
       const response = await fetch(
-        'https://formsubmit.co/ajax/horlarmeydeileh50@gmail.com',
+        `https://formsubmit.co/ajax/${COMPANY.email}`,
         {
           method: 'POST',
           headers: {
@@ -219,7 +224,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
           >
             <div
               className={`absolute bottom-[-56px] right-[-52px] hidden h-[52%] w-[44%] overflow-hidden lg:block ${
-                isPage ? 'bg-[#ece7df]' : 'bg-[#2a2621]'
+                isPage ? 'bg-[#ece7df]' : 'bg-[var(--color-brand-dark)]'
               }`}
             >
               <div
@@ -231,12 +236,14 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                 className={`absolute left-0 top-0 h-[42%] w-full ${
                   isPage
                     ? 'bg-[linear-gradient(145deg,#f0ece6_0%,#e6e0d7_52%,transparent_52%)]'
-                    : 'bg-[linear-gradient(145deg,#36322c_0%,#27231d_52%,transparent_52%)]'
+                    : 'bg-[linear-gradient(145deg,#3b3834_0%,#2b2a28_52%,transparent_52%)]'
                 }`}
               />
               <div
                 className={`absolute bottom-[18%] left-0 h-[18px] w-full ${
-                  isPage ? 'bg-[#d2bea7]/35' : 'bg-[#6b553e]/35'
+                  isPage
+                    ? 'bg-[var(--color-brand-accent)]/18'
+                    : 'bg-[var(--color-brand-accent)]/25'
                 }`}
               />
             </div>
@@ -268,7 +275,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
             <div className="relative">
               {isPage ? (
                 <div className="absolute left-[-44px] top-[12px] hidden lg:block">
-                  <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.18em] text-[#C39B7B]">
+                  <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.18em] text-[var(--color-brand-accent)]">
                     Contact
                   </span>
                 </div>
@@ -299,11 +306,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
             {isPage ? null : (
               <p
                 className={`mt-8 max-w-[720px] text-[17px] leading-[1.9] ${descriptionClassName}`}
-              >
-                Let&apos;s bring your project to life. Let us know how we can
-                best help you. We are a leading architecture firm dedicated to
-                creating designs.
-              </p>
+              />
             )}
 
             <div className="mt-12 grid gap-x-12 gap-y-12 lg:grid-cols-[minmax(0,1fr)_220px] xl:grid-cols-[minmax(0,1fr)_246px] xl:gap-x-14">
@@ -323,7 +326,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                   labelClassName={labelClassName}
                   name="name"
                   onChange={handleChange}
-                  placeholder="Jonathon Ronan"
+                  placeholder="Your full name"
                   value={formValues.name}
                 />
                 <ContactField
@@ -332,7 +335,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                   labelClassName={labelClassName}
                   name="email"
                   onChange={handleChange}
-                  placeholder="jonathonronana63@gmail.com"
+                  placeholder={COMPANY.email}
                   type="email"
                   value={formValues.email}
                 />
@@ -342,7 +345,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                   labelClassName={labelClassName}
                   name="phone"
                   onChange={handleChange}
-                  placeholder="+0 321 546 2345"
+                  placeholder={COMPANY.phone}
                   type="tel"
                   value={formValues.phone}
                 />
@@ -359,7 +362,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
 
                 <div className="flex flex-col items-start gap-4">
                   <button
-                    className="inline-flex h-[58px] items-center justify-center bg-[#C39B7B] px-10 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-white hover:text-[#17120d] disabled:cursor-not-allowed disabled:opacity-80"
+                    className="inline-flex h-[58px] items-center justify-center bg-[var(--color-brand-accent)] px-10 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-white hover:text-[var(--color-brand-dark)] disabled:cursor-not-allowed disabled:opacity-80"
                     disabled={submitState === 'sending'}
                     type="submit"
                   >
@@ -372,7 +375,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                     aria-live="polite"
                     className={`text-[14px] leading-[1.7] ${
                       submitState === 'success'
-                        ? 'text-[#C39B7B]'
+                        ? 'text-[var(--color-brand-accent)]'
                         : submitState === 'error'
                           ? 'text-[#e0b19a]'
                           : 'text-transparent'
@@ -389,31 +392,31 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
 
               <div className={`space-y-12 lg:pt-[134px] xl:pt-[136px]`}>
                 <div>
-                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
-                    Address
+                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-accent)]">
+                    Company
                   </h3>
                   <p className={`mt-6 text-[16px] leading-[1.6] ${infoTextClassName}`}>
-                    123 Maple Street Toronto, Ontario
+                    {COMPANY.name}
                     <br />
-                    M1A 1A1 Canada
+                    Contract-based construction and interior fit-out company
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
+                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-accent)]">
                     Contact
                   </h3>
                   <p
                     className={`mt-6 break-words text-[16px] leading-[2] ${infoTextClassName}`}
                   >
-                    helltraz@gmail.com
+                    {COMPANY.email}
                     <br />
-                    +1 555-123-4567
+                    {COMPANY.phone}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C39B7B]">
+                  <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-accent)]">
                     Social Media
                   </h3>
                   <div
@@ -422,19 +425,19 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                     }`}
                   >
                     <a
-                      className="transition-colors duration-300 hover:text-[#C39B7B]"
+                      className="transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
                       href="#contact"
                     >
                       <IconFacebook />
                     </a>
                     <a
-                      className="transition-colors duration-300 hover:text-[#C39B7B]"
+                      className="transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
                       href="#contact"
                     >
                       <IconInstagram />
                     </a>
                     <a
-                      className="transition-colors duration-300 hover:text-[#C39B7B]"
+                      className="transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
                       href="#contact"
                     >
                       <IconTwitter />

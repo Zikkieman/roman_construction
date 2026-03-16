@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { COMPANY_SERVICE_GROUPS } from "../data/company";
 import { ScrollToHeroButton } from "../components/common/ScrollToHeroButton";
 import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
@@ -18,44 +19,7 @@ type ServicePageCard = {
     | "model";
 };
 
-const servicePageCards: ServicePageCard[] = [
-  {
-    title: "Urban Design",
-    description:
-      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
-    icon: "urban",
-  },
-  {
-    title: "Architecture",
-    description:
-      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
-    icon: "architecture",
-  },
-  {
-    title: "Interior Design",
-    description:
-      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
-    icon: "interior",
-  },
-  {
-    title: "Exterior Design",
-    description:
-      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
-    icon: "exterior",
-  },
-  {
-    title: "Industrial Design",
-    description:
-      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
-    icon: "industrial",
-  },
-  {
-    title: "3D Modelling",
-    description:
-      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
-    icon: "model",
-  },
-];
+const servicePageCards: ServicePageCard[] = [...COMPANY_SERVICE_GROUPS];
 
 function ServicePageIcon({ icon }: { icon: ServicePageCard["icon"] }) {
   if (icon === "urban") {
@@ -167,12 +131,12 @@ function ServicesPageGrid() {
           {servicePageCards.map((item, index) => (
             <article
               key={item.title}
-              className="reveal relative min-h-[378px] overflow-hidden bg-[#ece7df] px-12 pb-12 pt-12"
+              className="reveal relative min-h-[378px] overflow-hidden bg-[var(--color-brand-light)] px-12 pb-12 pt-12"
               data-reveal="true"
               style={{ transitionDelay: `${index * 70}ms` }}
             >
               <div className="pointer-events-none absolute inset-y-0 left-0 w-[48%] bg-[radial-gradient(circle_at_1.5px_1.5px,rgba(255,255,255,0.8)_1.6px,transparent_0)] bg-[length:16px_16px]" />
-              <div className="relative z-10 text-[#C39B7B]">
+              <div className="relative z-10 text-[var(--color-brand-accent)]">
                 <ServicePageIcon icon={item.icon} />
               </div>
               <h2 className="relative z-10 mt-10 font-sans text-[25px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#17120d]">
@@ -181,7 +145,7 @@ function ServicesPageGrid() {
               <p className="relative z-10 mt-8 max-w-[292px] text-[17px] leading-[1.65] text-[#6f685f]">
                 {item.description}
               </p>
-              <div className="relative z-10 mt-10 text-[28px] leading-none text-[#C39B7B]">
+              <div className="relative z-10 mt-10 text-[28px] leading-none text-[var(--color-brand-accent)]">
                 →
               </div>
             </article>
@@ -222,15 +186,14 @@ export function ServicesPage() {
           <div className="mx-auto max-w-[1340px] px-8 pb-18 pt-14 sm:px-12 lg:px-16 lg:pb-24 lg:pt-18">
             <div className="reveal relative lg:pl-[44px]" data-reveal="true">
               <div className="absolute left-0 top-[10px] hidden lg:block">
-                <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.14em] text-[#C39B7B]">
+                <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.14em] text-[var(--color-brand-accent)]">
                   Services
                 </span>
               </div>
-              <h1 className="max-w-[880px] font-sans text-[34px] font-extrabold leading-[1.32] tracking-[-0.045em] text-[#17120d] sm:text-[44px] lg:text-[56px]" />
               <h1 className="max-w-[820px] font-sans text-[32px] font-semibold leading-[1.28] tracking-[-0.045em] text-[#17120d] sm:text-[38px] lg:text-[42px]">
-                We are here to guide you from the beginning
+                We execute fit-out and finishing contracts from the beginning
                 <br />
-                to the end of your project.
+                to the final delivery of your project.
               </h1>
             </div>
           </div>

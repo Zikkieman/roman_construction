@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import type { NavigationItem } from "../../types/architecture";
+import logoImage from "../../assets/images/Logo-transparent.png";
 import { IconClose, IconMenu } from "../common/icons";
 
 interface HeaderProps {
@@ -51,28 +52,20 @@ export function Header({
           className={`flex items-center gap-3 ${isLight ? "text-[#17120d]" : "text-white"}`}
           to="/"
         >
-          <span className="relative block h-12 w-12 text-[#C39B7B]">
-            <span className="absolute inset-y-1 left-1/2 w-px -translate-x-1/2 bg-current/85" />
-            <span className="absolute bottom-1 left-2 right-2 h-px bg-current/55" />
-            <span className="absolute inset-x-2 top-1 h-px bg-current/55" />
-            <span className="absolute bottom-1 left-2 h-7 w-4 border border-current/80" />
-            <span className="absolute bottom-4 left-[1.15rem] h-4 w-4 border-r border-t border-current/80" />
-            <span className="absolute bottom-1 right-2 h-5 w-3 border border-current/80" />
-          </span>
-          <span
-            className={`text-[29px] font-bold leading-none ${isLight ? "text-[#17120d]" : "text-white"}`}
-          >
-            Roman
-          </span>
+          <img
+            alt="Roman Contractors logo"
+            className="h-[50px] w-auto object-contain sm:h-[56px]"
+            src={logoImage}
+          />
         </Link>
 
         <nav className="hidden items-center gap-11 lg:flex">
           {navigationItems.map((item) => (
             <Link
               key={item.label}
-              className={`text-[15px] font-medium transition-colors duration-300 hover:text-[#C39B7B] ${
+              className={`text-[15px] font-medium transition-colors duration-300 hover:text-[var(--color-brand-accent)] ${
                 activeLabel === item.label
-                  ? "text-[#C39B7B]"
+                  ? "text-[var(--color-brand-accent)]"
                   : isLight
                     ? "text-[#17120d]"
                     : "text-white"
@@ -80,9 +73,9 @@ export function Header({
               to={item.href}
             >
               <p
-                className={`transition-colors duration-300 hover:text-[#C39B7B] ${
+                className={`transition-colors duration-300 hover:text-[var(--color-brand-accent)] ${
                   activeLabel === item.label
-                    ? "text-[#C39B7B]"
+                    ? "text-[var(--color-brand-accent)]"
                     : isLight
                       ? "text-[#17120d]"
                       : "text-white"
@@ -97,10 +90,10 @@ export function Header({
         <div className="hidden items-center lg:flex ">
           <div className="group text-black hover:text-white">
             <Link
-              className={`inline-flex h-[58px] items-center justify-center border border-[#C39B7B] px-8 text-[15px] font-semibold transition-colors duration-300 ${
+              className={`inline-flex h-[58px] items-center justify-center border border-[var(--color-brand-accent)] px-8 text-[15px] font-semibold transition-colors duration-300 ${
                 isLight
-                  ? "bg-[#C39B7B] hover:bg-[#17120d]"
-                  : "bg-[#C39B7B] hover:bg-transparent"
+                  ? "bg-[var(--color-brand-accent)] hover:bg-[var(--color-brand-dark)]"
+                  : "bg-[var(--color-brand-accent)] hover:bg-transparent"
               }`}
               to="/contact"
             >
@@ -144,9 +137,9 @@ export function Header({
           {navigationItems.map((item) => (
             <Link
               key={item.label}
-              className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-300 hover:text-[#C39B7B] ${
+              className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-300 hover:text-[var(--color-brand-accent)] ${
                 activeLabel === item.label
-                  ? "text-[#C39B7B]"
+                  ? "text-[var(--color-brand-accent)]"
                   : isLight
                     ? "text-[#17120d]"
                     : "text-white"
@@ -158,10 +151,10 @@ export function Header({
             </Link>
           ))}
           <Link
-            className={`group mt-2 inline-flex w-fit items-center border border-[#C39B7B] px-5 py-3 text-sm font-semibold transition-colors duration-300 ${
+            className={`group mt-2 inline-flex w-fit items-center border border-[var(--color-brand-accent)] px-5 py-3 text-sm font-semibold transition-colors duration-300 ${
               isLight
-                ? "bg-[#C39B7B] hover:bg-[#17120d]"
-                : "bg-[#C39B7B] hover:bg-transparent"
+                ? "bg-[var(--color-brand-accent)] hover:bg-[var(--color-brand-dark)]"
+                : "bg-[var(--color-brand-accent)] hover:bg-transparent"
             }`}
             to="/contact"
             onClick={() => setIsMenuOpen(false)}

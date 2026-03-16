@@ -4,6 +4,9 @@
 @theme {
   --font-sans: "Manrope", "Segoe UI", sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
+  --color-brand-light: #d8d3cf;
+  --color-brand-accent: #9c8463;
+  --color-brand-dark: #2b2a28;
 }
 
 html {
@@ -22,7 +25,7 @@ body {
 }
 
 *::selection {
-  background: rgba(214, 162, 108, 0.28);
+  background: rgba(156, 132, 99, 0.28);
   color: #17120d;
 }
 

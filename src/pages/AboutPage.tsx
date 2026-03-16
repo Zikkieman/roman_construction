@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { aboutPoints, awardItems } from "../data/architectureHome";
+import { awardItems } from "../data/architectureHome";
+import {
+  COMPANY,
+  COMPANY_MISSION_POINTS,
+  COMPANY_OVERVIEW,
+  COMPANY_OVERVIEW_EXTENDED,
+  COMPANY_VISION,
+} from "../data/company";
 import { ScrollToHeroButton } from "../components/common/ScrollToHeroButton";
 import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
@@ -11,11 +18,11 @@ import { useScrollState } from "../hooks/useScrollState";
 const aboutAccordions = [
   {
     title: "Our Mission",
-    body: "Our organizational sprit believes that where design meets passion & love with space, good architecture happens here. We are a leading architecture firm dedicated to creating visionary designs.",
+    body: "Executing contracts with strict adherence to scope, timelines, and budgets while maintaining high standards of workmanship, material selection, and transparent communication.",
   },
   {
     title: "Our Vision",
-    body: "Our organizational sprit believes that where design meets passion & love with space, good architecture happens here. We are a leading architecture firm dedicated to creating visionary designs.",
+    body: COMPANY_VISION,
   },
 ];
 
@@ -95,13 +102,13 @@ export function AboutPage() {
           <div className="mx-auto max-w-[1340px] px-8 pb-24 pt-14 sm:px-12 lg:px-16 lg:pb-28 lg:pt-16">
             <div className="reveal relative lg:pl-[46px]" data-reveal="true">
               <div className="absolute left-0 top-[12px] hidden lg:block">
-                <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.14em] text-[#C39B7B]">
+                <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.14em] text-[var(--color-brand-accent)]">
                   About Us
                 </span>
               </div>
               <h1 className="max-w-[1120px] font-sans text-[34px] font-medium leading-[1.34] tracking-[-0.05em] text-[#17120d] sm:text-[38px] lg:text-[40px]">
-                We Are <span className="font-extrabold">Roman.</span> We Create
-                Unique And Sustainable Living Spaces, Designed For Sharing
+                We Are <span className="font-extrabold">{COMPANY.shortName}.</span>{" "}
+                We Build And Deliver Well Managed Spaces With Precision
               </h1>
             </div>
 
@@ -127,17 +134,14 @@ export function AboutPage() {
             <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
               <div className="reveal lg:pr-12" data-reveal="true">
                 <p className="max-w-[660px] text-[17px] leading-[1.7] text-[#6f685f]">
-                  We are leading architecture firm dedicated to creating
-                  visionary designs that transcend expectations. With our team
-                  of highly skilled architects and designers, we specialize in
-                  crafting.
+                  {COMPANY_OVERVIEW} {COMPANY_OVERVIEW_EXTENDED}
                 </p>
 
                 <div className="mt-10 grid gap-7">
-                  {aboutPoints.map((point) => (
+                  {COMPANY_MISSION_POINTS.map((point) => (
                     <div key={point} className="flex items-start gap-4">
                       <div className="mt-1 flex items-center gap-3 text-[#c7b2a0]">
-                        <span className="block h-[8px] w-[8px] bg-[#ddd1c6]" />
+                        <span className="block h-[8px] w-[8px] bg-[var(--color-brand-light)]" />
                         <span className="text-sm">→</span>
                       </div>
                       <p className="text-[17px] font-semibold leading-[1.55] text-[#7c746b]">
@@ -218,17 +222,12 @@ export function AboutPage() {
                     Love Our Job
                   </h2>
                   <p className="mt-7 text-[17px] leading-[1.7] text-[#6f685f]">
-                    Roman is a full-service design firm providing architecture,
-                    master planning, urban design, interior architecture, space
-                    planning and programming. Our portfolio of completed work
-                    includes highly acclaimed and award-winning projects.
+                    {COMPANY_OVERVIEW}
                   </p>
                   <p className="mt-6 text-[17px] leading-[1.7] text-[#6f685f]">
-                    At Roman, we believe that architecture goes beyond mere
-                    structures, it is an art form that shapes the way we live,
-                    work, and interact with our surroundings. With a deep
-                    understanding of the built environment and an unwavering
-                    commitment.
+                    {COMPANY_OVERVIEW_EXTENDED} We focus on dependable execution,
+                    superior finishing, and professional delivery across
+                    residential, office, retail, and renovation projects.
                   </p>
                 </div>
               </div>
@@ -248,11 +247,9 @@ export function AboutPage() {
                 src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80&sat=-20&exp=10"
               />
 
-              <div className="pointer-events-none absolute right-0 top-full hidden lg:block lg:h-[430px] lg:w-[39%]">
-                <div className="absolute left-0 top-[132px] h-[290px] w-full bg-[radial-gradient(circle_at_2px_2px,rgba(218,208,197,0.75)_1.6px,transparent_0)] bg-[length:16px_16px]" />
-
-                <div className="absolute left-[6%] top-[-108px] z-20 w-[56%] bg-[#d1a57f] px-8 py-9 text-white lg:px-9 lg:py-10">
-                  <div className="text-[58px] font-medium leading-none tracking-[-0.05em] sm:text-[64px]">
+              <div className="pointer-events-none absolute inset-0 hidden lg:block">
+                <div className="absolute bottom-[-132px] right-[240px] z-20 w-[236px] bg-[#d1a57f] px-8 py-10 text-white">
+                  <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
                     21
                   </div>
                   <div className="mt-5 text-[16px] font-medium uppercase leading-[1.45] tracking-[0.08em] text-white/95">
@@ -262,11 +259,11 @@ export function AboutPage() {
                   </div>
                 </div>
 
-                <div className="absolute bottom-[6px] right-0 z-30 w-[48%] overflow-hidden bg-[#25211c] px-8 pb-7 pt-8 text-white lg:px-9">
-                  <div className="text-[58px] font-medium leading-none tracking-[-0.05em] sm:text-[64px]">
+                <div className="absolute bottom-[-338px] right-0 z-30 w-[240px] overflow-hidden bg-[#25211c] px-8 pb-8 pt-9 text-white">
+                  <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
                     35
                   </div>
-                  <div className="mt-6 text-[15px] font-medium uppercase leading-[1.45] tracking-[0.12em] text-white/72">
+                  <div className="mt-6 text-[15px] font-medium uppercase leading-[1.5] tracking-[0.12em] text-white/72">
                     Years Of
                     <br />
                     Experience
@@ -293,8 +290,8 @@ export function AboutPage() {
                   className="reveal relative lg:pl-[48px]"
                   data-reveal="true"
                 >
-                  <div className="absolute left-0 top-0 hidden lg:block">
-                    <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.14em] text-[#C39B7B]">
+                  <div className="absolute left-0 top-[2px] hidden lg:block">
+                    <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.14em] text-[var(--color-brand-accent)]">
                       Awards
                     </span>
                   </div>
@@ -317,7 +314,7 @@ export function AboutPage() {
                           {item.year}
                         </div>
                         <div className="flex items-center justify-between gap-6">
-                          <span className="text-[18px] font-bold text-[#C39B7B]">
+                          <span className="text-[18px] font-bold text-[var(--color-brand-accent)]">
                             {item.title.split(" ")[0]}
                           </span>
                           <span className="text-right text-[20px] font-extrabold tracking-[-0.03em] text-[#5b544d] sm:text-[18px] lg:min-w-[230px] lg:text-left">
@@ -334,7 +331,7 @@ export function AboutPage() {
                   data-reveal="true"
                   style={{ transitionDelay: "120ms" }}
                 >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(218,208,197,0.75)_1.6px,transparent_0)] bg-[length:16px_16px] lg:hidden" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(218,208,197,0.75)_1.6px,transparent_0)] bg-[length:16px_16px]" />
 
                   <div className="absolute left-[4%] top-0 z-20 w-[58%] bg-[#d1a57f] px-8 py-9 text-white sm:w-[52%] lg:hidden">
                     <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
