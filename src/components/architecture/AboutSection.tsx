@@ -1,5 +1,5 @@
 import { aboutPoints } from "../../data/architectureHome";
-import { IconArrow } from "../common/icons";
+import { COMPANY_OVERVIEW_EXTENDED, COMPANY_SHORT_OVERVIEW } from "../../data/company";
 
 export function AboutSection() {
   return (
@@ -51,13 +51,13 @@ export function AboutSection() {
             data-reveal="true"
           >
             <h2 className="max-w-none font-sans text-[34px] font-extrabold leading-[1.22] tracking-[-0.045em] text-[#ece7e2] sm:text-[34px] lg:text-[48px] xl:text-[52px]">
-              <span className="text-[#ece7e2]">Who We Are: Leading </span>
-              <span className="about-outline-text">Architectural</span>
+              <span className="text-[#ece7e2]">Who We Are: Reliable </span>
+              <span className="about-outline-text">Construction</span>
               <br className="hidden sm:block" />
-              <span className="about-outline-text">Agency</span>
+              <span className="about-outline-text">Partner</span>
               <span className="text-[#ece7e2]">
                 {" "}
-                Who Create Unique Living Spaces
+                For Fit-Out And Building Delivery
               </span>
             </h2>
 
@@ -70,9 +70,7 @@ export function AboutSection() {
             </div>
 
             <p className="mt-10 max-w-[670px] text-[17px] leading-[1.9] text-[#ada39a]">
-              We are a leading architecture firm dedicated to creating visionary
-              designs that transcend expectations. With our team of highly
-              skilled architects and designers, we specialize in crafting.
+              {COMPANY_SHORT_OVERVIEW} {COMPANY_OVERVIEW_EXTENDED}
             </p>
 
             <div className="mt-10 grid max-w-[760px] gap-7">

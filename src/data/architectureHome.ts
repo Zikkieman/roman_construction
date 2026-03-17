@@ -18,27 +18,27 @@ export const navigationItems: NavigationItem[] = [
 ]
 
 export const aboutPoints: string[] = [
-  'Innovative Design Approach',
-  'Highly Skilled Expertise and Specialization',
-  'A client-centric approach for an architectural company',
-  'Sustainable Design Practices',
+  'Structured project execution from concept to completion',
+  'Skilled workmanship with dependable finishing standards',
+  'Client-focused coordination with transparent communication',
+  'Reliable delivery across construction and interior fit-out works',
 ]
 
 export const serviceCards: ServiceCard[] = [
   {
-    title: 'Design',
+    title: 'Fit-Out Delivery',
     description:
-      'We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.',
+      'Complete interior fit-out execution for residential, office, retail, and short-let spaces with structured delivery.',
   },
   {
     title: 'Construction',
     description:
-      'We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.',
+      'Reliable project execution with coordinated site management, workmanship control, and timely completion.',
   },
   {
-    title: 'Engineering',
+    title: 'Finishing Works',
     description:
-      'We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.',
+      'Ceilings, wall finishes, flooring, joinery, lighting, and final installations completed to a high finishing standard.',
   },
 ]
 
@@ -56,10 +56,10 @@ export const highlightCards: HighlightCard[] = [
 ]
 
 export const awardItems: AwardItem[] = [
-  { title: '1x Pritzker Architecture', year: '2023' },
-  { title: '2x Architecture MasterPrize', year: '2022, 2021' },
-  { title: '3x AIA Gold Medal', year: '2020, 2019' },
-  { title: '4x Ribba Architecture', year: '2017' },
+  { title: '1x Interior Fit-Out Excellence', year: '2023' },
+  { title: '2x Project Delivery Recognition', year: '2022, 2021' },
+  { title: '3x Finishing Quality Commendation', year: '2020, 2019' },
+  { title: '4x Trusted Contractor Mention', year: '2017' },
 ]
 
 export const projectCards: ProjectCard[] = [
@@ -120,7 +120,7 @@ export const processSteps: ProcessStep[] = [
     number: '01',
     title: 'Align With Goals',
     description:
-      'We are a leading architecture firm dedicated to creating designs.',
+      'We define scope, priorities, timelines, and the project direction before execution begins.',
     image:
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
   },
@@ -128,7 +128,7 @@ export const processSteps: ProcessStep[] = [
     number: '02',
     title: 'Guide The Design',
     description:
-      'We are a leading architecture firm dedicated to creating designs.',
+      'We coordinate design intent, finishes, and technical decisions to keep the project clear and buildable.',
     image:
       'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80',
   },
@@ -136,7 +136,7 @@ export const processSteps: ProcessStep[] = [
     number: '03',
     title: 'Digitally Build',
     description:
-      'We are a leading architecture firm dedicated to creating designs.',
+      'We organize drawings, measurements, and planning details needed for accurate execution on site.',
     image:
       'https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=900&q=80',
   },
@@ -144,7 +144,7 @@ export const processSteps: ProcessStep[] = [
     number: '04',
     title: 'Construct The Best',
     description:
-      'We are a leading architecture firm dedicated to creating designs.',
+      'We deliver the work with close supervision, dependable workmanship, and attention to finishing quality.',
     image:
       'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80',
   },
@@ -153,33 +153,33 @@ export const processSteps: ProcessStep[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'We are a leading architecture firm dedicated to creating visionary designs that transcend expectations. With our team of highly skilled architects and designers, we specialize in crafting.',
-    name: 'Jonathon Ronan',
-    role: 'CEO of HiBootstrap',
+      'Roman Contractors handled our fit-out with strong coordination, clear communication, and a finishing quality that matched what was promised.',
+    name: 'Aisha Bello',
+    role: 'Residential Client',
     image:
       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
   },
   {
     quote:
-      'We are a leading architecture firm dedicated to creating visionary designs that transcend expectations. With our team of highly skilled architects and designers, we specialize in crafting.',
-    name: 'Angela Carter',
-    role: 'CEO of EnvyTheme',
+      'The team stayed focused on delivery, managed the site professionally, and kept the project moving within the expected timeline.',
+    name: 'Chinedu Okafor',
+    role: 'Commercial Client',
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80',
   },
   {
     quote:
-      'We are a leading architecture firm dedicated to creating visionary designs that transcend expectations. With our team of highly skilled architects and designers, we specialize in crafting.',
-    name: 'Skyler White',
-    role: 'CEO of HiboTheme',
+      'Their workmanship, material finishing, and responsiveness made the execution process easier than we expected.',
+    name: 'Fatima Yusuf',
+    role: 'Private Client',
     image:
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80',
   },
   {
     quote:
-      'We are a leading architecture firm dedicated to creating visionary designs that transcend expectations. With our team of highly skilled architects and designers, we specialize in crafting.',
-    name: 'Angela Carter',
-    role: 'CEO of Abc',
+      'Roman Contractors delivered a well-managed project with dependable supervision and good attention to the final details.',
+    name: 'Emeka Daniels',
+    role: 'Project Partner',
     image:
       'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80',
   },
@@ -187,44 +187,44 @@ export const testimonials: Testimonial[] = [
 
 export const blogPosts: BlogPost[] = [
   {
-    category: 'Interior',
+    category: 'Fit-Out',
     date: 'Jul 13, 2023',
     title:
-      'Transforming Spaces: How [Architecture Agency] Redefines the Built Environment',
+      'What It Takes To Deliver A Well-Finished Interior Fit-Out Project',
     image:
       'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    category: 'Interior',
+    category: 'Construction',
     date: 'Jul 14, 2023',
     title:
-      'From Concept to Construction: The Creative Journey of Roman In A Nutshell Architectural Marvels',
+      'From Planning To Handover: Roman Contractors Project Delivery Approach',
     image:
       'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    category: 'Interior',
+    category: 'Finishing',
     date: 'Jul 15, 2023',
     title:
-      "Unveiling Architectural Marvels: [Architecture Agency]'s Impressive Portfolio",
+      'How Quality Finishing Improves Residential And Commercial Spaces',
     image:
       'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    category: 'Interior',
+    category: 'Execution',
     date: 'Jul 16, 2023',
     title:
-      'From Concept to Construction: The Creative Journey of Roman In A Nutshell Architectural Marvels',
+      'Why Structured Coordination Matters In Construction And Fit-Out Works',
     image:
       'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80',
   },
 ]
 
 export const marqueeItems: string[] = [
-  'Creative Architecture Design Agency',
-  'Best Architecture Design Agency',
-  'Creative Interior Design Agency',
-  'Trusted Architecture Design Agency',
-  'Award Winning Architecture Design Company',
-  'Best Service Provider Architecture Design Agency',
+  'Trusted Construction Partner',
+  'Reliable Interior Fit-Out Company',
+  'Professional Project Delivery Team',
+  'Quality Finishing And Execution',
+  'Structured Construction Coordination',
+  'Dependable Fit-Out And Building Solutions',
 ]

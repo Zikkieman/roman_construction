@@ -1,4 +1,5 @@
 import { aboutPoints } from "../../data/architectureHome";
+import { COMPANY_OVERVIEW_EXTENDED, COMPANY_SHORT_OVERVIEW } from "../../data/company";
 
 export function ExperienceSection() {
   return (
@@ -79,9 +80,7 @@ export function ExperienceSection() {
             data-reveal="true"
           >
             <p className="max-w-[560px] text-[17px] leading-[1.85] text-[#b0a69d]">
-              We are a leading architecture firm dedicated to creating visionary
-              designs that transcend expectations. With our team of highly
-              skilled architects and designers, we specialize in crafting.
+              {COMPANY_SHORT_OVERVIEW} {COMPANY_OVERVIEW_EXTENDED}
             </p>
 
             <div className="mt-10 grid gap-7">
