@@ -393,12 +393,10 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
               <div className={`space-y-12 lg:pt-[134px] xl:pt-[136px]`}>
                 <div>
                   <h3 className="text-[14px] font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-accent)]">
-                    Company
+                    Address
                   </h3>
-                  <p className={`mt-6 text-[16px] leading-[1.6] ${infoTextClassName}`}>
-                    {COMPANY.name}
-                    <br />
-                    Contract-based construction and interior fit-out company
+                  <p className={`mt-6 text-[16px] leading-[1.9] ${infoTextClassName}`}>
+                    {COMPANY.address}
                   </p>
                 </div>
 

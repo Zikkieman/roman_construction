@@ -1,5 +1,4 @@
 import { IconArrow } from "../common/icons";
-import { SectionEyebrow } from "../common/SectionEyebrow";
 import { COMPANY } from "../../data/company";
 
 export function HeroSection() {
@@ -126,17 +125,17 @@ export function HeroSection() {
         <div className="max-w-[900px]">
           {/* <SectionEyebrow>Architecture Home</SectionEyebrow> */}
           <h1 className="mt-11 max-w-[900px] font-sans text-[60px] font-extrabold leading-[1.30] tracking-[-0.06em] text-[#ece7e2] sm:text-[45px] lg:text-[60px]">
-            Aesthetix: Redefining
+            Roman: Delivering
             <br />
-            <span className="text-[#ece7e2] mt-5">Spaces with </span>
-            <span className="hero-outline-text">Architectural</span>
+            <span className="text-[#ece7e2] mt-5">Projects with </span>
+            <span className="hero-outline-text">Precision</span>
             <br />
-            <span className="hero-outline-text">Magic</span>
+            <span className="hero-outline-text">Excellence</span>
           </h1>
           <p className="mt-7 max-w-[640px] text-[16px] leading-[2] text-white/76">
-            Welcome to Esta Architects, where innovation meets elegance. We are
-            a leading architecture firm dedicated to creating visionary designs
-            that transcend expectations.
+            Roman Contractors delivers high-quality construction and interior
+            fit-out solutions with precision, integrity, and dependable
+            end-to-end project execution.
           </p>
           <a
             className="mt-8 inline-flex h-[60px] items-center justify-center border border-[#C39B7B] px-10 text-[16px] font-bold text-white transition-colors duration-300 hover:bg-[#C39B7B]"

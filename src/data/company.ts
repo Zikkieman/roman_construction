@@ -1,8 +1,9 @@
 export const COMPANY = {
   name: "Roman Contractors",
   shortName: "Roman",
-  email: "help@romancontractors.com",
+  email: "help@romancontractorsltd.com",
   phone: "08101165440",
+  address: "J86C Kabusa Garden Estate, Kabusa, Abuja.",
   colors: {
     light: "#D8D3CF",
     accent: "#9C8463",
@@ -12,6 +13,12 @@ export const COMPANY = {
 
 export const COMPANY_OVERVIEW =
   "Roman Contractors is a contract-based construction and interior fit-out company committed to delivering high-quality, well managed building solutions with precision, integrity, and professionalism.";
+
+export const COMPANY_SHORT_OVERVIEW =
+  "Roman Contractors delivers construction and interior fit-out solutions with precision, professionalism, and reliable project execution.";
+
+export const COMPANY_FOOTER_BLURB =
+  "Roman Contractors delivers reliable construction and interior fit-out solutions with precision and professionalism.";
 
 export const COMPANY_OVERVIEW_EXTENDED =
   "We operate as a design-build and project execution partner, providing clients with reliable end-to-end coordination from concept to completion.";

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/images/Logo-transparent.png";
-import { COMPANY, COMPANY_OVERVIEW } from "../../data/company";
+import { COMPANY, COMPANY_FOOTER_BLURB } from "../../data/company";
 
 interface FooterProps {
   variant?: "dark" | "light";
@@ -19,13 +19,13 @@ export function Footer({ variant = "dark" }: FooterProps) {
                 <Link className="flex items-center gap-3 text-white" to="/">
                   <img
                     alt="Roman Contractors logo"
-                    className="h-[72px] w-auto object-contain sm:h-[180px]"
+                    className="h-[58px] w-auto object-contain sm:h-[64px] md:h-[70px]"
                     src={logoImage}
                   />
                 </Link>
 
-                <p className="mt-8 text-[17px] leading-[1.75] text-[#b7aea5]">
-                  {COMPANY_OVERVIEW}
+                <p className="mt-8 text-[16px] leading-[1.75] text-[#b7aea5]">
+                  {COMPANY_FOOTER_BLURB}
                 </p>
               </div>
 

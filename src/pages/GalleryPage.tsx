@@ -14,44 +14,41 @@ type GalleryMediaItem = {
   src: string;
   kind: "image" | "video";
   heightClassName: string;
-  previewSrc?: string;
-  previewFallbacks?: string[];
+  previewFallbacks: string[];
 };
 
-const mediaModules = import.meta.glob("../assets/images/*", {
-  eager: true,
-  import: "default",
-}) as Record<string, string>;
-
-const orderedMediaNames = [
-  "6032721174774615117.jpg",
-  "PHOTO-2026-02-23-03-04-41.jpg",
-  "PHOTO-2026-02-23-03-04-42.jpg",
-  "PHOTO-2026-02-23-03-04-43.jpg",
-  "PHOTO-2026-02-23-03-04-44.jpg",
-  "PHOTO-2026-02-23-03-04-45.jpg",
-  "KITCHEN_01_CC.jpg",
-  "KITCHEN_02_CC.jpg",
-  "MASTER_LOUNGE_CC.jpg",
-  "Visitors W.C 1.png",
-  "family lounge 1..png",
-  "family lounge 2.png",
-  "family lounge 3.png",
-  "masters bath 1.png",
-  "masters bath 2.png",
-  "masters bath 3.png",
-  "stair 2.png",
-  "typical bed.jpg",
-  "typical bedroom 1.jpg",
-  "WhatsApp Image 2026-02-23 at 12.05.25.jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.25 (1).jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.26.jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.26 (1).jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.26 (2).jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.26 (3).jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.26 (4).jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.27.jpeg",
-  "WhatsApp Image 2026-02-23 at 12.05.27 (1).jpeg",
+const hostedImages = [
+  { title: "Roman Project 01", fileId: "1mJ__zB-XhbJILbS82Vpe5KUhGj1DNCfy" },
+  { title: "Roman Project 02", fileId: "1AkTOPcVIVa9YH9MQMcZns_ZNyDfqBU7E" },
+  { title: "Roman Project 03", fileId: "1KjVc4lZyXBpC_dyliX42jmQ24MTpkqdA" },
+  { title: "Roman Project 04", fileId: "19JiWnpUttLt73YYe_0m5B2IG4nto9G5p" },
+  { title: "Roman Project 05", fileId: "1cYUAiq3unVcsUw1MS4gUSBo8qR5AoBPP" },
+  { title: "Roman Project 06", fileId: "1BbOqQ_zUWMy-e8CgnmDLPj3BbvYJ6Bei" },
+  { title: "Roman Project 07", fileId: "1gESTcTH_kg8vk5wYqakbUEiyNTj1vzOX" },
+  { title: "Roman Project 08", fileId: "1cmuWGfo3nBwP3WvAej6prPP5BLn1yBv8" },
+  { title: "Roman Project 09", fileId: "11fTng4lx1QMlIboqHUVkg4zgqz6C4iFK" },
+  { title: "Roman Project 10", fileId: "1aa0sRGcsJmQC94goY4NG2qorS1doRPi8" },
+  { title: "Roman Project 11", fileId: "1Z-ZHc9Pjw9Y-X6CtcMY08P1KByoLLYgg" },
+  { title: "Roman Project 12", fileId: "14qOqQ8uzsPczKCvlLEJbinlbqRagi7Au" },
+  { title: "Roman Project 13", fileId: "17VUdkAj4yVNKC6FA-Y1VnJOSc23Z7WmE" },
+  { title: "Roman Project 14", fileId: "1b7DzJXelUY6hK0ax-44KhyLAwU_c8cw-" },
+  { title: "Roman Project 15", fileId: "1XFObBhj464uCunfRpPPo8DlyRYnsDmlb" },
+  { title: "Roman Project 16", fileId: "1HnyNbEbG8xkb2FfhQdD2M63uWCrNO6rC" },
+  { title: "Roman Project 17", fileId: "16hFz2Nwp9zExsR1haP8XMAwDAm5jqL4E" },
+  { title: "Roman Project 18", fileId: "1wGuwnaHTH1oP9bb-kAQwv79W4PkbMPhA" },
+  { title: "Roman Project 19", fileId: "136qQhfHOJstzmlRYO0imylVWmgFavaY-" },
+  { title: "Roman Project 20", fileId: "1NKjRSX4fNa6DStDFV9Sm2q0EbihX3oQF" },
+  { title: "Roman Project 21", fileId: "1kErE07m-yBD3eGYMfwLJPslqD0gwmmep" },
+  { title: "Roman Project 22", fileId: "1RZmpJFrjT_GWDHR03COVNK53-M5SJ4Kb" },
+  { title: "Roman Project 23", fileId: "1KEieObewbp8_HvA8JdL46X0k5eew17UK" },
+  { title: "Roman Project 24", fileId: "1wp720mY1kBaUkYONi3niXl6ZJHPZ8kNQ" },
+  { title: "Roman Project 25", fileId: "10Xms_7CKL47BxImZZbjiMgTp2E6oIVdg" },
+  { title: "Roman Project 26", fileId: "1ed1lav8xiqM_aOXvMHsoqziLno99cj3B" },
+  { title: "Roman Project 27", fileId: "1fYsBP5NF4dQz1vpITIBxlre1WdzlqRd9" },
+  { title: "Roman Project 28", fileId: "1S-hmZNzYk8aLMmxoPqYEc13bAMtbfl1d" },
+  { title: "Roman Project 29", fileId: "1DC3lFp1XOog-Jj-ghGFwVLgMso6zl-c_" },
+  { title: "Roman Project 30", fileId: "1u2A7Un9qXQXme8-x5W6yLWh2Dho4lw5K" },
+  { title: "Roman Project 31", fileId: "1oOD-VsiRONf6Lqdkxbes7KmG4lwETOe2" },
 ] as const;
 
 const hostedVideos = [
@@ -80,18 +77,6 @@ const heightCycle = [
   "h-[360px] lg:h-[460px]",
 ] as const;
 
-function fileNameFromPath(path: string) {
-  return path.split("/").pop() ?? path;
-}
-
-function titleFromFileName(fileName: string) {
-  return fileName
-    .replace(/\.[^/.]+$/, "")
-    .replace(/[-_]+/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 function buildDrivePreviewSources(fileId: string) {
   return [
     `https://drive.usercontent.google.com/thumbnail?id=${fileId}&sz=w1600`,
@@ -103,35 +88,38 @@ function buildDrivePreviewSources(fileId: string) {
 function VideoBadge() {
   return (
     <div className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-brand-accent)] text-white shadow-[0_14px_32px_rgba(0,0,0,0.2)]">
-      <svg aria-hidden="true" className="ml-0.5 h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+      <svg
+        aria-hidden="true"
+        className="ml-0.5 h-4 w-4"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path d="M8 5v14l11-7z" />
       </svg>
     </div>
   );
 }
 
-function VideoPreviewImage({
+function MediaPreviewImage({
   item,
   fallbackSrc,
 }: {
   item: GalleryMediaItem;
   fallbackSrc: string;
 }) {
-  const sources = item.previewFallbacks?.length
-    ? item.previewFallbacks
-    : item.previewSrc
-      ? [item.previewSrc]
-      : [fallbackSrc];
   const [sourceIndex, setSourceIndex] = useState(0);
+  const activeSrc = item.previewFallbacks[sourceIndex] ?? fallbackSrc;
 
   return (
     <img
       alt={item.title}
       className={`${item.heightClassName} w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]`}
-      src={sources[sourceIndex] ?? fallbackSrc}
+      src={activeSrc}
       onError={() => {
         setSourceIndex((current) =>
-          current < sources.length - 1 ? current + 1 : sources.length,
+          current < item.previewFallbacks.length - 1
+            ? current + 1
+            : item.previewFallbacks.length,
         );
       }}
     />
@@ -140,12 +128,12 @@ function VideoPreviewImage({
 
 function GalleryColumn({
   items,
+  fallbackImage,
   onOpenVideo,
-  fallbackVideoPoster,
 }: {
   items: GalleryMediaItem[];
+  fallbackImage: string;
   onOpenVideo: (item: GalleryMediaItem) => void;
-  fallbackVideoPoster: string;
 }) {
   return (
     <div className="flex flex-col gap-7">
@@ -162,15 +150,7 @@ function GalleryColumn({
             onClick={isVideo ? () => onOpenVideo(item) : undefined}
           >
             {isVideo ? <VideoBadge /> : null}
-            {isVideo ? (
-              <VideoPreviewImage item={item} fallbackSrc={fallbackVideoPoster} />
-            ) : (
-              <img
-                alt={item.title}
-                className={`${item.heightClassName} w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]`}
-                src={item.src}
-              />
-            )}
+            <MediaPreviewImage fallbackSrc={fallbackImage} item={item} />
           </button>
         );
       })}
@@ -180,22 +160,26 @@ function GalleryColumn({
 
 function MediaModal({
   item,
+  fallbackImage,
   onClose,
 }: {
   item: GalleryMediaItem | null;
+  fallbackImage: string;
   onClose: () => void;
 }) {
   if (!item) {
     return null;
   }
 
+  const isVideo = item.kind === "video";
+
   return (
     <div
+      aria-label={item.title}
+      aria-modal="true"
       className="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 px-6 py-10 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
-      aria-modal="true"
-      aria-label={item.title}
     >
       <div
         className="relative w-full max-w-[980px] bg-[#111]"
@@ -209,13 +193,22 @@ function MediaModal({
         >
           <IconClose />
         </button>
-        <iframe
-          allow="autoplay; encrypted-media; picture-in-picture"
-          className="h-[72vh] w-full bg-black"
-          referrerPolicy="strict-origin-when-cross-origin"
-          src={item.src}
-          title={item.title}
-        />
+
+        {isVideo ? (
+          <iframe
+            allow="autoplay; encrypted-media; picture-in-picture"
+            className="h-[72vh] w-full bg-black"
+            referrerPolicy="strict-origin-when-cross-origin"
+            src={item.src}
+            title={item.title}
+          />
+        ) : (
+          <img
+            alt={item.title}
+            className="max-h-[82vh] w-full object-contain bg-[#111]"
+            src={item.previewFallbacks[0] ?? fallbackImage}
+          />
+        )}
       </div>
     </div>
   );
@@ -223,64 +216,39 @@ function MediaModal({
 
 export function GalleryPage() {
   const isScrolled = useScrollState();
-  const [activeVideo, setActiveVideo] = useState<GalleryMediaItem | null>(null);
+  const [activeMedia, setActiveMedia] = useState<GalleryMediaItem | null>(null);
 
   useRevealOnScroll();
 
-  const galleryColumns = useMemo(() => {
-    const fallbackVideoPoster = Object.entries(mediaModules).find(([path]) =>
-      fileNameFromPath(path) === "MASTER_LOUNGE_CC.jpg",
-    )?.[1];
-    const items = orderedMediaNames.reduce<GalleryMediaItem[]>(
-      (collection, name, index) => {
-        const entry = Object.entries(mediaModules).find(([path]) =>
-          fileNameFromPath(path) === name,
-        );
-
-        if (!entry) {
-          return collection;
-        }
-
-        const src = entry[1];
-        const kind = /\.(mov|mp4|webm)$/i.test(name) ? "video" : "image";
-        const item: GalleryMediaItem = {
-          title: titleFromFileName(name),
-          src,
-          kind,
-          heightClassName: String(heightCycle[index % heightCycle.length]),
-        };
-
-        collection.push(item);
-        return collection;
-      },
-      [],
-    );
+  const galleryData = useMemo(() => {
+    const items: GalleryMediaItem[] = hostedImages.map((image, index) => ({
+      title: image.title,
+      src: buildDrivePreviewSources(image.fileId)[0],
+      kind: "image",
+      heightClassName: String(heightCycle[index % heightCycle.length]),
+      previewFallbacks: buildDrivePreviewSources(image.fileId),
+    }));
 
     hostedVideos.forEach((video, index) => {
-      const previewFallbacks = buildDrivePreviewSources(video.fileId);
       items.push({
         title: video.title,
         src: video.src,
-        previewSrc: previewFallbacks[0],
-        previewFallbacks,
         kind: "video",
         heightClassName: String(
-          heightCycle[(orderedMediaNames.length + index) % heightCycle.length],
+          heightCycle[(hostedImages.length + index) % heightCycle.length],
         ),
+        previewFallbacks: buildDrivePreviewSources(video.fileId),
       });
     });
 
     const columns: GalleryMediaItem[][] = [[], [], []];
-
     items.forEach((item, index) => {
       columns[index % 3].push(item);
     });
 
     return {
       columns,
-      fallbackVideoPoster:
-        fallbackVideoPoster ??
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80",
+      fallbackImage: "/og-image.png",
     };
   }, []);
 
@@ -321,12 +289,12 @@ export function GalleryPage() {
         <section className="bg-[#f7f4ef]">
           <div className="mx-auto max-w-[1340px] px-8 pb-24 sm:px-12 lg:px-16 lg:pb-32">
             <div className="grid gap-7 lg:grid-cols-3 lg:items-start">
-              {galleryColumns.columns.map((column, index) => (
+              {galleryData.columns.map((column, index) => (
                 <GalleryColumn
                   key={index}
-                  fallbackVideoPoster={galleryColumns.fallbackVideoPoster}
+                  fallbackImage={galleryData.fallbackImage}
                   items={column}
-                  onOpenVideo={setActiveVideo}
+                  onOpenVideo={setActiveMedia}
                 />
               ))}
             </div>
@@ -335,7 +303,11 @@ export function GalleryPage() {
       </main>
       <Footer variant="light" />
       <ScrollToHeroButton />
-      <MediaModal item={activeVideo} onClose={() => setActiveVideo(null)} />
+      <MediaModal
+        fallbackImage={galleryData.fallbackImage}
+        item={activeMedia}
+        onClose={() => setActiveMedia(null)}
+      />
     </div>
   );
 }

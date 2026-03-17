@@ -42,21 +42,28 @@ export function Header({
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         headerIsSolid
           ? isLight
-            ? "border-b border-black/6 bg-white/96 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-xl"
-            : "border-b border-white/8 bg-[#16120e]/96 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+            ? "border-b border-black/6 bg-white/96 shadow-[0_12px_34px_rgba(0,0,0,0.05)] backdrop-blur-xl"
+            : "border-b border-white/8 bg-[#16120e]/96 shadow-[0_14px_40px_rgba(0,0,0,0.24)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-[1910px] items-center justify-between px-8 py-2 sm:px-10 sm:py-3 lg:px-14 lg:py-2">
-        <Link
-          className={`flex items-center gap-3 ${isLight ? "text-[#17120d]" : "text-white"}`}
-          to="/"
-        >
-          <img
-            alt="Roman Contractors logo"
-            className="h-[100px] w-auto object-contain md:h-[70px]"
-            src={logoImage}
-          />
+      <div className="mx-auto flex max-w-[1910px] items-center justify-between px-5 py-2.5 sm:py-3 lg:px-10 lg:py-3">
+        <Link className={`${isLight ? "text-[#17120d]" : "text-white"}`} to="/">
+          <div className="flex items-center gap-0">
+            <img
+              alt="Roman Contractors logo"
+              className="h-[58px] w-auto object-contain sm:h-[64px] md:h-[70px]"
+              src={logoImage}
+            />
+            <span className="flex -ml-1.5 mt-2 flex-col justify-center leading-none text-[var(--color-brand-accent)]">
+              <span className="text-[15px] font-semibold uppercase tracking-[0.18em] sm:text-[16px]">
+                Roman
+              </span>
+              <span className="mt-1 text-[13px] font-medium uppercase tracking-[0.22em] sm:text-[14px]">
+                Contractors
+              </span>
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-11 lg:flex">

@@ -19,7 +19,11 @@ export function ArchitectureHomePage() {
 
   return (
     <div className="bg-[#f5f0ea] text-[#17120d]">
-      <Header isScrolled={isScrolled} navigationItems={navigationItems} />
+      <Header
+        activeLabel="Home"
+        isScrolled={isScrolled}
+        navigationItems={navigationItems}
+      />
       <main>
         <HeroSection />
         <AboutSection />
