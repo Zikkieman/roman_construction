@@ -130,26 +130,20 @@ export function Header({
       </div>
 
       <div
-        className={`absolute inset-x-0 top-full shadow-[0_30px_70px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-all duration-500 lg:hidden ${
-          isLight
-            ? "border-t border-black/8 bg-white/98"
-            : "border-t border-white/10 bg-[#120f0b]/98"
-        } ${
+        className={`absolute inset-x-0 top-full border-t border-white/10 bg-[#120f0b]/98 shadow-[0_30px_70px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-all duration-500 lg:hidden ${
           isMenuOpen
             ? "pointer-events-auto visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-2 opacity-0"
         }`}
       >
-        <nav className="mx-auto flex max-w-[1910px] flex-col gap-5 px-8 py-6 sm:px-10">
+        <nav className="mx-auto flex max-w-[1910px] flex-col gap-5 px-8 py-6 text-white sm:px-10">
           {navigationItems.map((item) => (
             <Link
               key={item.label}
-              className={`text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-300 hover:text-[var(--color-brand-accent)] ${
+              className={`block text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-300 hover:text-[var(--color-brand-accent)] ${
                 activeLabel === item.label
-                  ? "text-[var(--color-brand-accent)]"
-                  : isLight
-                    ? "text-[#17120d]"
-                    : "text-white"
+                  ? "!text-[var(--color-brand-accent)]"
+                  : "!text-white"
               }`}
               to={item.href}
               onClick={() => setIsMenuOpen(false)}
@@ -167,9 +161,7 @@ export function Header({
             onClick={() => setIsMenuOpen(false)}
           >
             <span
-              className={`transition-colors duration-300 group-hover:text-white ${
-                isLight ? "text-white" : "text-black"
-              }`}
+              className="text-black transition-colors duration-300 group-hover:text-white"
             >
               Request A Quote
             </span>
