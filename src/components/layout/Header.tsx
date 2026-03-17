@@ -54,7 +54,7 @@ export function Header({
         >
           <img
             alt="Roman Contractors logo"
-            className="h-[100px] w-auto object-contain md:h-[180px]"
+            className="h-[100px] w-auto object-contain md:h-[70px]"
             src={logoImage}
           />
         </Link>
