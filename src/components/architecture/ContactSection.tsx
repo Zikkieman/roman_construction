@@ -422,24 +422,24 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                       isPage ? 'text-[#17120d]' : 'text-white'
                     }`}
                   >
-                    <a
+                    {/* <a
                       className="transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
                       href="#contact"
                     >
                       <IconFacebook />
-                    </a>
+                    </a> */}
                     <a
                       className="transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
                       href="#contact"
                     >
                       <IconInstagram />
                     </a>
-                    <a
+                    {/* <a
                       className="transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
                       href="#contact"
                     >
                       <IconTwitter />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>

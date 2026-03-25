@@ -34,7 +34,7 @@ export function Footer({ variant = "dark" }: FooterProps) {
                   Follow Us
                 </h3>
                 <div className="mt-8 grid gap-5 text-[16px] text-[#9a9187]">
-                  {["Facebook", "Instagram", "Linkedin", "Twitter"].map(
+                  {/* {["Facebook", "Instagram", "Linkedin", "Twitter"].map(
                     (item) => (
                       <Link
                         key={item}
@@ -47,7 +47,19 @@ export function Footer({ variant = "dark" }: FooterProps) {
                         <span>{item}</span>
                       </Link>
                     ),
-                  )}
+                  )} */}
+                  {["Instagram"].map((item) => (
+                    <Link
+                      key={item}
+                      className="group inline-flex items-center gap-3 transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
+                      to="/"
+                    >
+                      <span className="text-[var(--color-brand-accent)] transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
+                      <span>{item}</span>
+                    </Link>
+                  ))}
                 </div>
               </div>
 

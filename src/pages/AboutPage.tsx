@@ -107,7 +107,7 @@ export function AboutPage() {
                 </span>
               </div>
               <h1 className="max-w-[1120px] font-sans text-[34px] font-medium leading-[1.34] tracking-[-0.05em] text-[#17120d] sm:text-[38px] lg:text-[40px]">
-                We Are <span className="font-extrabold">{COMPANY.shortName}.</span>{" "}
+                We Are <span className="font-extrabold">{COMPANY.name}.</span>{" "}
                 We Build And Deliver Well Managed Spaces With Precision
               </h1>
             </div>
@@ -225,9 +225,9 @@ export function AboutPage() {
                     {COMPANY_OVERVIEW}
                   </p>
                   <p className="mt-6 text-[17px] leading-[1.7] text-[#6f685f]">
-                    {COMPANY_OVERVIEW_EXTENDED} We focus on dependable execution,
-                    superior finishing, and professional delivery across
-                    residential, office, retail, and renovation projects.
+                    {COMPANY_OVERVIEW_EXTENDED} We focus on dependable
+                    execution, superior finishing, and professional delivery
+                    across residential, office, retail, and renovation projects.
                   </p>
                 </div>
               </div>
@@ -261,7 +261,7 @@ export function AboutPage() {
 
                 <div className="absolute bottom-[-338px] right-0 z-30 w-[240px] overflow-hidden bg-[#25211c] px-8 pb-8 pt-9 text-white">
                   <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
-                    35
+                    1
                   </div>
                   <div className="mt-6 text-[15px] font-medium uppercase leading-[1.5] tracking-[0.12em] text-white/72">
                     Years Of

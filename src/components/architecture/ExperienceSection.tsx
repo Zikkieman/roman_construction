@@ -1,5 +1,8 @@
 import { aboutPoints } from "../../data/architectureHome";
-import { COMPANY_OVERVIEW_EXTENDED, COMPANY_SHORT_OVERVIEW } from "../../data/company";
+import {
+  COMPANY_OVERVIEW_EXTENDED,
+  COMPANY_SHORT_OVERVIEW,
+} from "../../data/company";
 
 export function ExperienceSection() {
   return (
@@ -49,7 +52,7 @@ export function ExperienceSection() {
             data-reveal="true"
           >
             <p className="text-[60px] font-semibold leading-none text-white sm:text-[66px]">
-              35
+              1
             </p>
             <p className="mt-5 text-[13px] uppercase tracking-[0.18em] text-white/64">
               Years of
