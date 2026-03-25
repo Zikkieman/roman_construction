@@ -430,7 +430,9 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                     </a> */}
                     <a
                       className="transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
-                      href="#contact"
+                      href="https://www.instagram.com/romancontractorsltd?igsh=b2EyZnd1ajBmZmdy&utm_source=qr"
+                      rel="noreferrer"
+                      target="_blank"
                     >
                       <IconInstagram />
                     </a>

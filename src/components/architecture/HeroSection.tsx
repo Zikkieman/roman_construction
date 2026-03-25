@@ -50,7 +50,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-8 hidden h-[56%] w-[40px] flex-col items-center justify-end gap-7 pb-20 sm:left-10 lg:left-14 xl:flex">
+      <div className="absolute bottom-0 left-8 z-20 hidden h-[56%] w-[40px] flex-col items-center justify-end gap-7 pb-20 sm:left-10 lg:left-14 xl:flex">
         {/* <a
           aria-label="Facebook"
           className="flex size-7 items-center justify-center rounded-full bg-black text-white transition-colors duration-300 hover:bg-[#C39B7B]"
@@ -68,7 +68,9 @@ export function HeroSection() {
         <a
           aria-label="Instagram"
           className="flex size-7 items-center justify-center rounded-full bg-black text-white transition-colors duration-300 hover:bg-[#C39B7B]"
-          href="#home"
+          href="https://www.instagram.com/romancontractorsltd?igsh=b2EyZnd1ajBmZmdy&utm_source=qr"
+          rel="noreferrer"
+          target="_blank"
         >
           <svg
             aria-hidden="true"

@@ -48,18 +48,17 @@ export function Footer({ variant = "dark" }: FooterProps) {
                       </Link>
                     ),
                   )} */}
-                  {["Instagram"].map((item) => (
-                    <Link
-                      key={item}
-                      className="group inline-flex items-center gap-3 transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
-                      to="/"
-                    >
-                      <span className="text-[var(--color-brand-accent)] transition-transform duration-300 group-hover:translate-x-1">
-                        →
-                      </span>
-                      <span>{item}</span>
-                    </Link>
-                  ))}
+                  <a
+                    className="group inline-flex items-center gap-3 transition-colors duration-300 hover:text-[var(--color-brand-accent)]"
+                    href="https://www.instagram.com/romancontractorsltd?igsh=b2EyZnd1ajBmZmdy&utm_source=qr"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span className="text-[var(--color-brand-accent)] transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                    <span>Instagram</span>
+                  </a>
                 </div>
               </div>
 
