@@ -1,5 +1,6 @@
 import { IconArrow } from "../common/icons";
 import { COMPANY } from "../../data/company";
+import { Link } from "react-router-dom";
 
 export function HeroSection() {
   return (
@@ -18,7 +19,7 @@ export function HeroSection() {
 
       <div className="hero-grid pointer-events-none absolute inset-0 opacity-70" />
 
-      <div className="absolute right-[7.7%] top-[28%] hidden xl:block">
+      <div className="absolute right-[7.7%] top-[28%] z-20 hidden xl:block">
         <div className="relative flex h-[232px] w-[232px] items-center justify-center">
           <svg
             aria-hidden="true"
@@ -37,16 +38,20 @@ export function HeroSection() {
               </textPath>
             </text>
           </svg>
-          <div className="flex size-11 items-center justify-center bg-[#C39B7B] text-[#17120d]">
+          <Link
+            aria-label="Open gallery"
+            className="group relative z-10 flex size-11 cursor-pointer items-center justify-center bg-[#C39B7B] text-[#17120d] transition-colors duration-300 hover:bg-white"
+            to="/gallery"
+          >
             <svg
               aria-hidden="true"
-              className="ml-0.5 size-4"
+              className="ml-0.5 size-4 text-[#17120d] transition-colors duration-300 group-hover:text-[#C39B7B]"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
               <path d="M8 5v14l11-7z" />
             </svg>
-          </div>
+          </Link>
         </div>
       </div>
 

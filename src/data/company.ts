@@ -37,37 +37,49 @@ export const COMPANY_SERVICE_GROUPS = [
   {
     title: "Complete Interior Fit-Outs",
     description:
-      "Apartment fit-outs, office fit-outs, retail shop fit-outs, short-let interior finishing, and renovation & refurbishment.",
+      "We deliver comprehensive interior solutions from structural preparation to final detailing, including apartment fit-outs, office fit-outs, retail shop fit-outs, short-let interior finishing, and renovation & refurbishment.",
     icon: "interior",
   },
   {
     title: "Flooring",
     description:
-      "Tiles, vinyl, wooden floors, screeding, and leveling delivered with precise installation and finishing.",
+      "We provide expertly installed flooring systems for residential and commercial spaces, including tiles, vinyl, wooden floors, screeding, and leveling.",
     icon: "exterior",
   },
   {
     title: "Ceilings",
     description:
-      "POP ceilings, gypsum boards, ceiling designs, and cornices tailored to project scope and finishing standards.",
+      "Our ceiling solutions include POP ceilings, gypsum boards, ceiling designs, and cornices delivered with seamless finishing.",
     icon: "architecture",
   },
   {
     title: "Wall Finishes",
     description:
-      "Painting, wall panels, wallpapers, and decorative finishes executed with durable materials and clean detailing.",
+      "We execute painting, wall panels, wallpapers, and decorative finishes with precision application and refined detailing.",
     icon: "urban",
   },
   {
     title: "Joinery & Fixtures",
     description:
-      "Wardrobes, kitchen cabinets, TV consoles, and shelving designed for functional use and consistent finish quality.",
+      "Custom-built wardrobes, kitchen cabinets, TV consoles, and shelving crafted for functionality and modern aesthetics.",
     icon: "model",
   },
   {
-    title: "Solar & Smart Systems",
+    title: "Lighting & Electrical Finishes",
     description:
-      "Solar installation, inverter systems, battery storage, smart lighting, CCTV, access control, and remote automation.",
+      "We install light fittings, switches, spotlights, and concealed lighting with a focus on efficiency, safety, and refined execution.",
+    icon: "industrial",
+  },
+  {
+    title: "Solar Energy Solutions",
+    description:
+      "We provide solar panel installation, inverter systems, battery storage, solar system design & integration, and maintenance & system upgrades.",
+    icon: "industrial",
+  },
+  {
+    title: "Smart Home Automation",
+    description:
+      "We integrate smart lighting, automated climate control, CCTV & access control, voice integration, and remote monitoring systems.",
     icon: "industrial",
   },
 ] as const;

@@ -18,54 +18,128 @@ type GalleryMediaItem = {
 };
 
 const hostedImages = [
-  { title: "Roman Project 01", fileId: "1mJ__zB-XhbJILbS82Vpe5KUhGj1DNCfy" },
-  { title: "Roman Project 02", fileId: "1AkTOPcVIVa9YH9MQMcZns_ZNyDfqBU7E" },
-  { title: "Roman Project 03", fileId: "1KjVc4lZyXBpC_dyliX42jmQ24MTpkqdA" },
-  { title: "Roman Project 04", fileId: "19JiWnpUttLt73YYe_0m5B2IG4nto9G5p" },
-  { title: "Roman Project 05", fileId: "1cYUAiq3unVcsUw1MS4gUSBo8qR5AoBPP" },
-  { title: "Roman Project 06", fileId: "1BbOqQ_zUWMy-e8CgnmDLPj3BbvYJ6Bei" },
-  { title: "Roman Project 07", fileId: "1gESTcTH_kg8vk5wYqakbUEiyNTj1vzOX" },
-  { title: "Roman Project 08", fileId: "1cmuWGfo3nBwP3WvAej6prPP5BLn1yBv8" },
-  { title: "Roman Project 09", fileId: "11fTng4lx1QMlIboqHUVkg4zgqz6C4iFK" },
-  { title: "Roman Project 10", fileId: "1aa0sRGcsJmQC94goY4NG2qorS1doRPi8" },
-  { title: "Roman Project 11", fileId: "1Z-ZHc9Pjw9Y-X6CtcMY08P1KByoLLYgg" },
-  { title: "Roman Project 12", fileId: "14qOqQ8uzsPczKCvlLEJbinlbqRagi7Au" },
-  { title: "Roman Project 13", fileId: "17VUdkAj4yVNKC6FA-Y1VnJOSc23Z7WmE" },
-  { title: "Roman Project 14", fileId: "1b7DzJXelUY6hK0ax-44KhyLAwU_c8cw-" },
-  { title: "Roman Project 15", fileId: "1XFObBhj464uCunfRpPPo8DlyRYnsDmlb" },
-  { title: "Roman Project 16", fileId: "1HnyNbEbG8xkb2FfhQdD2M63uWCrNO6rC" },
-  { title: "Roman Project 17", fileId: "16hFz2Nwp9zExsR1haP8XMAwDAm5jqL4E" },
-  { title: "Roman Project 18", fileId: "1wGuwnaHTH1oP9bb-kAQwv79W4PkbMPhA" },
-  { title: "Roman Project 19", fileId: "136qQhfHOJstzmlRYO0imylVWmgFavaY-" },
-  { title: "Roman Project 20", fileId: "1NKjRSX4fNa6DStDFV9Sm2q0EbihX3oQF" },
-  { title: "Roman Project 21", fileId: "1kErE07m-yBD3eGYMfwLJPslqD0gwmmep" },
-  { title: "Roman Project 22", fileId: "1RZmpJFrjT_GWDHR03COVNK53-M5SJ4Kb" },
-  { title: "Roman Project 23", fileId: "1KEieObewbp8_HvA8JdL46X0k5eew17UK" },
-  { title: "Roman Project 24", fileId: "1wp720mY1kBaUkYONi3niXl6ZJHPZ8kNQ" },
-  { title: "Roman Project 25", fileId: "10Xms_7CKL47BxImZZbjiMgTp2E6oIVdg" },
-  { title: "Roman Project 26", fileId: "1ed1lav8xiqM_aOXvMHsoqziLno99cj3B" },
-  { title: "Roman Project 27", fileId: "1fYsBP5NF4dQz1vpITIBxlre1WdzlqRd9" },
-  { title: "Roman Project 28", fileId: "1S-hmZNzYk8aLMmxoPqYEc13bAMtbfl1d" },
-  { title: "Roman Project 29", fileId: "1DC3lFp1XOog-Jj-ghGFwVLgMso6zl-c_" },
-  { title: "Roman Project 30", fileId: "1u2A7Un9qXQXme8-x5W6yLWh2Dho4lw5K" },
-  { title: "Roman Project 31", fileId: "1oOD-VsiRONf6Lqdkxbes7KmG4lwETOe2" },
+  {
+    title: "Roman Project 01",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487477/family_lounge_3_ctgogw.png",
+  },
+  {
+    title: "Roman Project 02",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487473/family_lounge_2_uknmas.png",
+  },
+  {
+    title: "Roman Project 03",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487471/stair_2_lqc9oa.png",
+  },
+  {
+    title: "Roman Project 04",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487462/family_lounge_1._efj5mi.png",
+  },
+  {
+    title: "Roman Project 05",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/PHOTO-2026-02-23-03-04-43_2_nda7hn.jpg",
+  },
+  {
+    title: "Roman Project 06",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg",
+  },
+  {
+    title: "Roman Project 07",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.26_ytigvp.jpg",
+  },
+  {
+    title: "Roman Project 08",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_1_ol4qkw.jpg",
+  },
+  {
+    title: "Roman Project 09",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/WhatsApp_Image_2026-02-23_at_12.05.26_1_bwsknx.jpg",
+  },
+  {
+    title: "Roman Project 10",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/PHOTO-2026-02-23-03-04-42_jlgjzm.jpg",
+  },
+  {
+    title: "Roman Project 11",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/WhatsApp_Image_2026-02-23_at_12.05.26_2_enilkd.jpg",
+  },
+  {
+    title: "Roman Project 12",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/6032721174774615117_a3ftve.jpg",
+  },
+  {
+    title: "Roman Project 13",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg",
+  },
+  {
+    title: "Roman Project 14",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/PHOTO-2026-02-23-03-04-41_d98ful.jpg",
+  },
+  {
+    title: "Roman Project 15",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/PHOTO-2026-02-23-03-04-44_r17hsj.jpg",
+  },
+  {
+    title: "Roman Project 16",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/WhatsApp_Image_2026-02-23_at_12.05.26_3_a8muc5.jpg",
+  },
+  {
+    title: "Roman Project 17",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/WhatsApp_Image_2026-02-23_at_12.05.26_4_k8seyd.jpg",
+  },
+  {
+    title: "Roman Project 18",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/PHOTO-2026-02-23-03-04-43_byj6xb.jpg",
+  },
+  {
+    title: "Roman Project 19",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/PHOTO-2026-02-23-03-04-45_lv8qjw.jpg",
+  },
+  {
+    title: "Roman Project 20",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/KITCHEN_02_CC_bspb6u.jpg",
+  },
+  {
+    title: "Roman Project 21",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487437/WhatsApp_Image_2026-02-23_at_12.05.27_dnydbq.jpg",
+  },
+  {
+    title: "Roman Project 22",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/MASTER_LOUNGE_CC_jwhuwx.jpg",
+  },
+  {
+    title: "Roman Project 23",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/PHOTO-2026-02-23-03-04-42_2_wudpis.jpg",
+  },
+  {
+    title: "Roman Project 24",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/typical_bedroom_1_ce0bav.jpg",
+  },
+  {
+    title: "Roman Project 25",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487435/typical_bed_bk3r4e.jpg",
+  },
+  {
+    title: "Roman Project 26",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487435/WhatsApp_Image_2026-02-23_at_12.05.27_1_zdt6uj.jpg",
+  },
+  {
+    title: "Roman Project 27",
+    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487435/PHOTO-2026-02-23-03-04-44_2_jcgapz.jpg",
+  },
 ] as const;
 
 const hostedVideos = [
   {
     title: "Before and After Walkthrough",
     src: "https://drive.google.com/file/d/1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q/preview",
-    fileId: "1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q",
   },
   {
     title: "Interior Progress Video",
     src: "https://drive.google.com/file/d/151YwkiwSphUC9HOTU7tPvY3isme80RAQ/preview",
-    fileId: "151YwkiwSphUC9HOTU7tPvY3isme80RAQ",
   },
   {
     title: "Project Reveal Video",
     src: "https://drive.google.com/file/d/1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR/preview",
-    fileId: "1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR",
   },
 ] as const;
 
@@ -126,6 +200,23 @@ function MediaPreviewImage({
   );
 }
 
+function VideoPreviewFrame({ item }: { item: GalleryMediaItem }) {
+  return (
+    <div className={`${item.heightClassName} relative w-full overflow-hidden`}>
+      <iframe
+        aria-hidden="true"
+        className="pointer-events-none h-full w-full scale-[1.16] object-cover transition-transform duration-500 group-hover:scale-[1.2]"
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
+        src={`${item.src}${item.src.includes("?") ? "&" : "?"}autoplay=0`}
+        tabIndex={-1}
+        title={`${item.title} preview`}
+      />
+      <div className="absolute inset-0 bg-black/8" />
+    </div>
+  );
+}
+
 function GalleryColumn({
   items,
   fallbackImage,
@@ -140,18 +231,38 @@ function GalleryColumn({
       {items.map((item, index) => {
         const isVideo = item.kind === "video";
 
+        if (isVideo) {
+          return (
+            <div
+              key={`${item.kind}-${item.title}-${index}`}
+              className="reveal group relative overflow-hidden bg-[#eae4db] text-left"
+              data-reveal="true"
+              role="button"
+              style={{ transitionDelay: `${index * 70}ms` }}
+              tabIndex={0}
+              onClick={() => onOpenVideo(item)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  onOpenVideo(item);
+                }
+              }}
+            >
+              <VideoBadge />
+              <VideoPreviewFrame item={item} />
+            </div>
+          );
+        }
+
         return (
-          <button
+          <div
             key={`${item.kind}-${item.title}-${index}`}
             className="reveal group relative overflow-hidden bg-[#eae4db] text-left"
             data-reveal="true"
             style={{ transitionDelay: `${index * 70}ms` }}
-            type="button"
-            onClick={isVideo ? () => onOpenVideo(item) : undefined}
           >
-            {isVideo ? <VideoBadge /> : null}
             <MediaPreviewImage fallbackSrc={fallbackImage} item={item} />
-          </button>
+          </div>
         );
       })}
     </div>
@@ -223,10 +334,10 @@ export function GalleryPage() {
   const galleryData = useMemo(() => {
     const items: GalleryMediaItem[] = hostedImages.map((image, index) => ({
       title: image.title,
-      src: buildDrivePreviewSources(image.fileId)[0],
+      src: image.src,
       kind: "image",
       heightClassName: String(heightCycle[index % heightCycle.length]),
-      previewFallbacks: buildDrivePreviewSources(image.fileId),
+      previewFallbacks: [image.src],
     }));
 
     hostedVideos.forEach((video, index) => {
@@ -237,7 +348,7 @@ export function GalleryPage() {
         heightClassName: String(
           heightCycle[(hostedImages.length + index) % heightCycle.length],
         ),
-        previewFallbacks: buildDrivePreviewSources(video.fileId),
+        previewFallbacks: [],
       });
     });
 

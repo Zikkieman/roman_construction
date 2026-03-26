@@ -42,7 +42,7 @@ function AboutPageCircleBadge() {
         </defs>
         <text fill="#f7f4ef">
           <textPath href="#about-circle-path" startOffset="0%">
-            2023 architecture design award winner
+            ROMAN CONTRACTORS LIMITED
           </textPath>
         </text>
       </svg>
@@ -120,7 +120,7 @@ export function AboutPage() {
               <img
                 alt="Modern Roman architecture"
                 className="h-[340px] w-full object-cover sm:h-[460px] lg:h-[620px]"
-                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80"
+                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487462/family_lounge_1._efj5mi.png"
               />
             </div>
           </div>
@@ -157,12 +157,12 @@ export function AboutPage() {
                       <img
                         alt="Architectural ceiling geometry"
                         className="h-[360px] w-full object-cover sm:h-[430px] lg:h-[480px]"
-                        src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80"
+                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/MASTER_LOUNGE_CC_jwhuwx.jpg"
                       />
                       <img
                         alt="Glass architectural corridor"
                         className="h-[360px] w-full object-cover sm:h-[430px] lg:h-[480px]"
-                        src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80&sat=-100"
+                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg"
                       />
                     </div>
 

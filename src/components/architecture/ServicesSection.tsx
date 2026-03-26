@@ -80,15 +80,11 @@ export function ServicesSection() {
             <span className="text-lg">→</span>
           </div>
 
-          <div className="grid border border-dashed border-white/14 lg:grid-cols-3">
+          <div className="grid gap-px bg-white/14 md:grid-cols-2 xl:grid-cols-4">
             {serviceCards.map((item, index) => (
               <article
                 key={item.title}
-                className={`reveal group min-h-[332px] px-9 py-11 lg:min-h-[360px] lg:px-12 lg:py-[3.25rem] ${
-                  index < serviceCards.length - 1
-                    ? "border-b border-dashed border-white/14 lg:border-b-0 lg:border-r lg:border-dashed"
-                    : ""
-                }`}
+                className="reveal group min-h-[332px] bg-[#17130f] px-9 py-11 lg:min-h-[360px] lg:px-12 lg:py-[3.25rem]"
                 data-reveal="true"
                 style={{ transitionDelay: `${index * 90}ms` }}
               >
@@ -128,13 +124,8 @@ export function ServicesSection() {
               </div>
               <div className="flex items-end gap-2 px-2 py-7 sm:px-3">
                 <h3 className="font-sans text-[24px] font-extrabold text-[#ece7e2] lg:text-[26px]">
-                  {item.title === "Urban Architecture" ? "Urban" : "Home"}
+                  {item.title}
                 </h3>
-                <p className="pb-1 text-[15px] text-[#9f958c]">
-                  {item.title === "Urban Architecture"
-                    ? "Architecture"
-                    : "Interior"}
-                </p>
               </div>
             </article>
           ))}

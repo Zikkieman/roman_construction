@@ -90,12 +90,12 @@ export function ProjectsSection() {
         <div className="projects-marquee mt-16 overflow-hidden py-4">
           <div className="projects-marquee-track">
             {[
-              "Best Architecture Design Agency",
-              "Creative Architecture Design Agency",
-              "Creative Interior Design Agency",
-              "Best Architecture Design Agency",
-              "Creative Architecture Design Agency",
-              "Creative Interior Design Agency",
+              "Residential Fit-Out Specialists",
+              "Reliable Construction Delivery",
+              "Interior Finishing Experts",
+              "Residential Fit-Out Specialists",
+              "Reliable Construction Delivery",
+              "Interior Finishing Experts",
             ].map((item, index) => (
               <span
                 key={`${item}-${index}`}
