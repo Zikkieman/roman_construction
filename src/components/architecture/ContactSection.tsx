@@ -248,13 +248,13 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
               />
             </div>
             <img
-              alt="Dark modern building facade"
+              alt="Roman Contractors interior project"
               className={`relative z-10 h-[500px] w-full object-cover object-center grayscale contrast-[1.05] sm:h-[620px] ${
                 isPage
                   ? 'lg:h-full lg:min-h-[620px] xl:min-h-[640px]'
                   : 'lg:h-full lg:min-h-[700px] xl:min-h-[724px]'
               }`}
-              src="https://images.pexels.com/photos/29459590/pexels-photo-29459590.jpeg?cs=srgb&dl=pexels-blackstoneray-29459590.jpg&fm=jpg"
+              src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/PHOTO-2026-02-23-03-04-42_jlgjzm.jpg"
             />
           </div>
 

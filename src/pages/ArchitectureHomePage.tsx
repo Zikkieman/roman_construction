@@ -27,9 +27,9 @@ export function ArchitectureHomePage() {
       <main>
         <HeroSection />
         <AboutSection />
-        <ServicesSection />
+        {/* <ServicesSection /> */}
         <ExperienceSection />
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
         <ProcessSection />
         {/* <TestimonialsSection
           activeIndex={activeTestimonial}

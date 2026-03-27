@@ -131,15 +131,18 @@ const hostedImages = [
 const hostedVideos = [
   {
     title: "Before and After Walkthrough",
-    src: "https://drive.google.com/file/d/1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q/preview",
+    shareUrl:
+      "https://drive.google.com/file/d/1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q/view?usp=sharing",
   },
   {
     title: "Interior Progress Video",
-    src: "https://drive.google.com/file/d/151YwkiwSphUC9HOTU7tPvY3isme80RAQ/preview",
+    shareUrl:
+      "https://drive.google.com/file/d/151YwkiwSphUC9HOTU7tPvY3isme80RAQ/view?usp=sharing",
   },
   {
     title: "Project Reveal Video",
-    src: "https://drive.google.com/file/d/1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR/preview",
+    shareUrl:
+      "https://drive.google.com/file/d/1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR/view?usp=sharing",
   },
 ] as const;
 
@@ -157,6 +160,17 @@ function buildDrivePreviewSources(fileId: string) {
     `https://drive.google.com/thumbnail?id=${fileId}&sz=w1600`,
     `https://lh3.googleusercontent.com/d/${fileId}=w1600`,
   ];
+}
+
+function toDrivePreviewUrl(shareUrl: string) {
+  const match = shareUrl.match(/\/file\/d\/([^/]+)/);
+  const fileId = match?.[1];
+
+  if (!fileId) {
+    return shareUrl;
+  }
+
+  return `https://drive.google.com/file/d/${fileId}/preview`;
 }
 
 function VideoBadge() {
@@ -343,7 +357,7 @@ export function GalleryPage() {
     hostedVideos.forEach((video, index) => {
       items.push({
         title: video.title,
-        src: video.src,
+        src: toDrivePreviewUrl(video.shareUrl),
         kind: "video",
         heightClassName: String(
           heightCycle[(hostedImages.length + index) % heightCycle.length],

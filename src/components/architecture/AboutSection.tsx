@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { aboutPoints } from "../../data/architectureHome";
 import { COMPANY_OVERVIEW_EXTENDED, COMPANY_SHORT_OVERVIEW } from "../../data/company";
 
@@ -25,17 +26,17 @@ export function AboutSection() {
             <div className="relative mx-auto w-full lg:mx-0">
               <div className="overflow-hidden bg-[#1f1a15] shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
                 <img
-                  alt="Cliffside architectural residence"
+                  alt="Roman Contractors family lounge interior"
                   className="h-[300px] w-full object-cover sm:h-[360px] lg:h-[620px]"
-                  src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80"
+                  src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487477/family_lounge_3_ctgogw.png"
                 />
               </div>
 
               <div className="relative z-10 hidden overflow-hidden border border-white/6 bg-[#231d17] shadow-[0_24px_80px_rgba(0,0,0,0.28)] lg:absolute lg:-bottom-10 lg:right-[-4%] lg:block lg:w-[54%]">
                 <img
-                  alt="Modern black home exterior"
+                  alt="Roman Contractors kitchen fit-out detail"
                   className="h-[250px] w-full object-cover sm:h-[300px] lg:h-[320px]"
-                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+                  src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg"
                 />
               </div>
 
@@ -63,9 +64,9 @@ export function AboutSection() {
 
             <div className="mt-10 overflow-hidden border border-white/6 bg-[#231d17] shadow-[0_24px_80px_rgba(0,0,0,0.28)] lg:hidden">
               <img
-                alt="Modern black home exterior"
+                alt="Roman Contractors kitchen fit-out detail"
                 className="h-[300px] w-full object-cover sm:h-[360px]"
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg"
               />
             </div>
 
@@ -87,12 +88,12 @@ export function AboutSection() {
               ))}
             </div>
 
-            <a
+            <Link
               className="mt-12 inline-flex h-[60px] items-center justify-center border border-[#C39B7B] px-8 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-[#C39B7B]"
-              href="#projects"
+              to="/about-us"
             >
               Know More About Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>

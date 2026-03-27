@@ -1,4 +1,5 @@
 import { projectCards } from "../../data/architectureHome";
+import { Link } from "react-router-dom";
 import type { ProjectCard } from "../../types/architecture";
 import { IconArrow } from "../common/icons";
 
@@ -76,12 +77,12 @@ export function ProjectsSection() {
         </div>
 
         <div className="reveal mt-[4.5rem] text-center" data-reveal="true">
-          <a className="group inline-block" href="#contact">
+          <Link className="group inline-block" to="/gallery">
             <span className="relative inline-block text-[13px] font-bold uppercase tracking-[0.16em] text-[#a59b92] transition-colors duration-300 group-hover:text-[#C39B7B]">
               View All Projects
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#C39B7B] transition-all duration-300 group-hover:w-full" />
             </span>
-          </a>
+          </Link>
         </div>
 
       </div>

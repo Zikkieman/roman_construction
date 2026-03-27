@@ -244,7 +244,7 @@ export function AboutPage() {
               <img
                 alt="Soft modern interior"
                 className="h-[280px] w-full object-cover object-center sm:h-[360px] lg:h-[420px]"
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80&sat=-20&exp=10"
+                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.26_ytigvp.jpg"
               />
 
               <div className="pointer-events-none absolute inset-0 hidden lg:block">

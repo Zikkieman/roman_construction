@@ -13,7 +13,7 @@ export function ExperienceSection() {
         {/* <img
           alt=""
           className="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80"
+          src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/6032721174774615117_a3ftve.jpg"
         /> */}
       </div>
 
@@ -116,7 +116,7 @@ export function ExperienceSection() {
               <img
                 alt="Warm interior staircase"
                 className="h-[360px] w-full object-cover sm:h-[460px] lg:h-full lg:min-h-[540px]"
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487471/stair_2_lqc9oa.png"
               />
             </div>
           </div>

@@ -77,7 +77,7 @@ function App() {
       if (pageReady) {
         beginExit();
       }
-    }, 1500);
+    }, 5000);
 
     const onWindowLoad = () => {
       pageReady = true;

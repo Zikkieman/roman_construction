@@ -147,7 +147,7 @@ export const processSteps: ProcessStep[] = [
     description:
       "We define scope, priorities, timelines, and the project direction before execution begins.",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/PHOTO-2026-02-23-03-04-41_d98ful.jpg",
   },
   {
     number: "02",
@@ -155,7 +155,7 @@ export const processSteps: ProcessStep[] = [
     description:
       "We coordinate design intent, finishes, and technical decisions to keep the project clear and buildable.",
     image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/KITCHEN_02_CC_bspb6u.jpg",
   },
   {
     number: "03",
@@ -163,7 +163,7 @@ export const processSteps: ProcessStep[] = [
     description:
       "We organize drawings, measurements, and planning details needed for accurate execution on site.",
     image:
-      "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487437/WhatsApp_Image_2026-02-23_at_12.05.27_dnydbq.jpg",
   },
   {
     number: "04",
@@ -171,7 +171,7 @@ export const processSteps: ProcessStep[] = [
     description:
       "We deliver the work with close supervision, dependable workmanship, and attention to finishing quality.",
     image:
-      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487477/family_lounge_3_ctgogw.png",
   },
 ];
 
@@ -182,7 +182,7 @@ export const testimonials: Testimonial[] = [
     name: "Aisha Bello",
     role: "Residential Client",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg",
   },
   {
     quote:
@@ -190,7 +190,7 @@ export const testimonials: Testimonial[] = [
     name: "Chinedu Okafor",
     role: "Commercial Client",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/MASTER_LOUNGE_CC_jwhuwx.jpg",
   },
   {
     quote:
@@ -198,7 +198,7 @@ export const testimonials: Testimonial[] = [
     name: "Fatima Yusuf",
     role: "Private Client",
     image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/typical_bedroom_1_ce0bav.jpg",
   },
   {
     quote:
@@ -206,7 +206,7 @@ export const testimonials: Testimonial[] = [
     name: "Emeka Daniels",
     role: "Project Partner",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487473/family_lounge_2_uknmas.png",
   },
 ];
 
@@ -216,7 +216,7 @@ export const blogPosts: BlogPost[] = [
     date: "Jul 13, 2023",
     title: "What It Takes To Deliver A Well-Finished Interior Fit-Out Project",
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg",
   },
   {
     category: "Construction",
@@ -224,14 +224,14 @@ export const blogPosts: BlogPost[] = [
     title:
       "From Planning To Handover: Roman Contractors Project Delivery Approach",
     image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/PHOTO-2026-02-23-03-04-45_lv8qjw.jpg",
   },
   {
     category: "Finishing",
     date: "Jul 15, 2023",
     title: "How Quality Finishing Improves Residential And Commercial Spaces",
     image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487435/typical_bed_bk3r4e.jpg",
   },
   {
     category: "Execution",
@@ -239,7 +239,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Why Structured Coordination Matters In Construction And Fit-Out Works",
     image:
-      "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80",
+      "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/PHOTO-2026-02-23-03-04-44_r17hsj.jpg",
   },
 ];
 
