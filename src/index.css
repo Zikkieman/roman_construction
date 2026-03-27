@@ -128,9 +128,11 @@ img {
   height: clamp(6.4rem, 15vw, 8.8rem);
   width: auto;
   object-fit: contain;
+  transform-origin: center;
   filter:
     drop-shadow(0 12px 30px rgba(0, 0, 0, 0.28))
     drop-shadow(0 0 18px rgba(195, 155, 123, 0.08));
+  animation: loader-logo-pulse 2.3s ease-in-out infinite;
 }
 
 .page-loader__eyebrow {
@@ -432,6 +434,22 @@ img {
   }
 }
 
+@keyframes loader-logo-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter:
+      drop-shadow(0 12px 30px rgba(0, 0, 0, 0.28))
+      drop-shadow(0 0 18px rgba(195, 155, 123, 0.08));
+  }
+  50% {
+    transform: scale(1.045);
+    filter:
+      drop-shadow(0 14px 34px rgba(0, 0, 0, 0.32))
+      drop-shadow(0 0 28px rgba(195, 155, 123, 0.22));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -442,7 +460,8 @@ img {
   .hero-badge,
   .page-loader__grid,
   .page-loader__glow,
-  .page-loader__line-fill {
+  .page-loader__line-fill,
+  .page-loader__logo {
     animation: none !important;
     opacity: 1;
     transform: none;
