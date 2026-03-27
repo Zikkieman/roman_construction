@@ -55,7 +55,7 @@ export function ExperienceSection() {
               1
             </p>
             <p className="mt-5 text-[13px] uppercase tracking-[0.18em] text-white/64">
-              Years of
+              Year of
               <br />
               Experience
             </p>

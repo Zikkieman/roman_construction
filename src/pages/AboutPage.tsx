@@ -218,8 +218,7 @@ export function AboutPage() {
 
                 <div className="mt-16 max-w-[660px]">
                   <h2 className="font-sans text-[34px] font-medium leading-[1.24] tracking-[-0.05em] text-[#17120d] sm:text-[34px] lg:text-[40px]">
-                    Architecture &amp; Interior Is Where We Belong, We Really
-                    Love Our Job
+                    Architecture &amp; Interior Is Where We Belong
                   </h2>
                   <p className="mt-7 text-[17px] leading-[1.7] text-[#6f685f]">
                     {COMPANY_OVERVIEW}
@@ -248,17 +247,6 @@ export function AboutPage() {
               />
 
               <div className="pointer-events-none absolute inset-0 hidden lg:block">
-                <div className="absolute bottom-[-132px] right-[240px] z-20 w-[236px] bg-[#d1a57f] px-8 py-10 text-white">
-                  <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
-                    21
-                  </div>
-                  <div className="mt-5 text-[16px] font-medium uppercase leading-[1.45] tracking-[0.08em] text-white/95">
-                    Awards In
-                    <br />
-                    Total
-                  </div>
-                </div>
-
                 <div className="absolute bottom-[-338px] right-0 z-30 w-[240px] overflow-hidden bg-[#25211c] px-8 pb-8 pt-9 text-white">
                   <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
                     1
@@ -292,19 +280,19 @@ export function AboutPage() {
                 >
                   <div className="absolute left-0 top-[2px] hidden lg:block">
                     <span className="block origin-top-left rotate-90 text-[18px] font-medium uppercase tracking-[0.14em] text-[var(--color-brand-accent)]">
-                      Awards
+                      Highlights
                     </span>
                   </div>
 
                   <h2 className="font-sans text-[34px] font-medium leading-[1.2] tracking-[-0.045em] text-[#17120d] sm:text-[42px] lg:text-[36px]">
-                    Latest Recognition
+                    Delivery Highlights
                   </h2>
 
                   <div className="mt-8 border-t border-dashed border-[#ddd4ca]">
                     {awardItems.map((item, index) => (
                       <div
                         key={item.title}
-                        className={`grid grid-cols-[1fr_auto] items-center gap-6 py-7 sm:grid-cols-[180px_1fr] lg:grid-cols-[160px_1fr] ${
+                        className={`grid grid-cols-1 gap-3 py-7 sm:grid-cols-[180px_1fr] sm:items-center lg:grid-cols-[180px_1fr] ${
                           index < awardItems.length - 1
                             ? "border-b border-dashed border-[#e3dad0]"
                             : ""
@@ -313,13 +301,8 @@ export function AboutPage() {
                         <div className="text-[18px] font-medium text-[#5d554e]">
                           {item.year}
                         </div>
-                        <div className="flex items-center justify-between gap-6">
-                          <span className="text-[18px] font-bold text-[var(--color-brand-accent)]">
-                            {item.title.split(" ")[0]}
-                          </span>
-                          <span className="text-right text-[20px] font-extrabold tracking-[-0.03em] text-[#5b544d] sm:text-[18px] lg:min-w-[230px] lg:text-left">
-                            {item.title.replace(/^\S+\s/, "")}
-                          </span>
+                        <div className="text-[20px] font-extrabold tracking-[-0.03em] text-[#5b544d] sm:text-[18px]">
+                          {item.title}
                         </div>
                       </div>
                     ))}
@@ -331,18 +314,7 @@ export function AboutPage() {
                   data-reveal="true"
                   style={{ transitionDelay: "120ms" }}
                 >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(218,208,197,0.75)_1.6px,transparent_0)] bg-[length:16px_16px]" />
-
-                  <div className="absolute left-[4%] top-0 z-20 w-[58%] bg-[#d1a57f] px-8 py-9 text-white sm:w-[52%] lg:hidden">
-                    <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
-                      21
-                    </div>
-                    <div className="mt-5 text-[16px] font-medium uppercase leading-[1.45] tracking-[0.08em] text-white/95">
-                      Awards In
-                      <br />
-                      Total
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(218,208,197,0.3)_1.6px,transparent_0)] bg-[length:16px_16px]" />
 
                   <div className="absolute bottom-[16px] right-0 z-30 w-[48%] overflow-hidden bg-[#25211c] px-8 pb-7 pt-8 text-white sm:w-[42%] lg:hidden">
                     <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">

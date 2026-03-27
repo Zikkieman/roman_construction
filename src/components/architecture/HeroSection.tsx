@@ -12,7 +12,7 @@ export function HeroSection() {
         <img
           alt="Architecture hero"
           className="h-full w-full object-cover object-center opacity-70"
-          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80"
+          src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487477/family_lounge_3_ctgogw.png"
         />
         <div className="absolute inset-0 bg-black/55" />
       </div>

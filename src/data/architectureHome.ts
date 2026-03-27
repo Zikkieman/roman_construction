@@ -81,10 +81,10 @@ export const highlightCards: HighlightCard[] = [
 ];
 
 export const awardItems: AwardItem[] = [
-  { title: "1x Interior Fit-Out Excellence", year: "2023" },
-  { title: "2x Project Delivery Recognition", year: "2022, 2021" },
-  { title: "3x Finishing Quality Commendation", year: "2020, 2019" },
-  { title: "4x Trusted Contractor Mention", year: "2017" },
+  { title: "Residential Interior Fit-Outs", year: "Project Scope" },
+  { title: "Office And Retail Execution", year: "Delivery Focus" },
+  { title: "Finishing Quality And Detailing", year: "Core Strength" },
+  { title: "Abuja Based Professional Delivery", year: "Operating Base" },
 ];
 
 export const projectCards: ProjectCard[] = [
