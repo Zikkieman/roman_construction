@@ -30,7 +30,7 @@ export function ArchitectureHomePage() {
         {/* <ServicesSection /> */}
         <ExperienceSection />
         {/* <ProjectsSection /> */}
-        <ProcessSection />
+        {/* <ProcessSection /> */}
         {/* <TestimonialsSection
           activeIndex={activeTestimonial}
           setActiveIndex={setActiveTestimonial}
