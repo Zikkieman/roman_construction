@@ -15,7 +15,7 @@ export const COMPANY_OVERVIEW =
   "Roman Contractors is a contract-based construction and interior fit-out company committed to delivering high-quality, well managed building solutions with precision, integrity, and professionalism.";
 
 export const COMPANY_SHORT_OVERVIEW =
-  "Roman Contractors delivers construction and interior fit-out solutions with precision, professionalism, and reliable project execution.";
+  "At Roman Contractors, we deliver high-quality construction services and interior fit-out solutions with precision, professionalism, and dependable project execution.";
 
 export const COMPANY_FOOTER_BLURB =
   "Roman Contractors delivers reliable construction and interior fit-out solutions with precision and professionalism.";

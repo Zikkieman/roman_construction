@@ -35,10 +35,6 @@ const hostedImages = [
     src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487462/family_lounge_1._efj5mi.png",
   },
   {
-    title: "Roman Project 05",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/PHOTO-2026-02-23-03-04-43_2_nda7hn.jpg",
-  },
-  {
     title: "Roman Project 06",
     src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg",
   },
@@ -81,10 +77,6 @@ const hostedImages = [
   {
     title: "Roman Project 16",
     src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/WhatsApp_Image_2026-02-23_at_12.05.26_3_a8muc5.jpg",
-  },
-  {
-    title: "Roman Project 17",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/WhatsApp_Image_2026-02-23_at_12.05.26_4_k8seyd.jpg",
   },
   {
     title: "Roman Project 18",

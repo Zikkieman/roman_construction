@@ -83,7 +83,7 @@ export function ExperienceSection() {
             data-reveal="true"
           >
             <p className="max-w-[560px] text-[17px] leading-[1.85] text-[#b0a69d]">
-              {COMPANY_SHORT_OVERVIEW} {COMPANY_OVERVIEW_EXTENDED}
+              {COMPANY_SHORT_OVERVIEW}
             </p>
 
             <div className="mt-10 grid gap-7">

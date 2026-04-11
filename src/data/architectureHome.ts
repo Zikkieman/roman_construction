@@ -18,10 +18,10 @@ export const navigationItems: NavigationItem[] = [
 ];
 
 export const aboutPoints: string[] = [
-  "Structured project execution from concept to completion",
-  "Skilled workmanship with dependable finishing standards",
-  "Client-focused coordination with transparent communication",
-  "Reliable delivery across construction and interior fit-out works",
+  "Structured, efficient project management and execution",
+  "Skilled craftsmanship with high-end, durable finishing",
+  "Clear, transparent communication throughout every phase",
+  "Reliable delivery across construction and interior fit-out services",
 ];
 
 export const serviceCards: ServiceCard[] = [
