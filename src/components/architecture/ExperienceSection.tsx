@@ -1,8 +1,5 @@
+import { Link } from "react-router-dom";
 import { aboutPoints } from "../../data/architectureHome";
-import {
-  COMPANY_OVERVIEW_EXTENDED,
-  COMPANY_SHORT_OVERVIEW,
-} from "../../data/company";
 
 export function ExperienceSection() {
   return (
@@ -83,29 +80,35 @@ export function ExperienceSection() {
             data-reveal="true"
           >
             <p className="max-w-[560px] text-[17px] leading-[1.85] text-[#b0a69d]">
-              {COMPANY_SHORT_OVERVIEW}
+              What sets us apart is our commitment to client-focused
+              coordination and transparent communication. We keep you informed
+              at every stage, aligning our process with your vision to ensure a
+              smooth, stress-free experience.
             </p>
 
-            <div className="mt-10 grid gap-7">
-              {aboutPoints.slice(0, 3).map((point) => (
-                <div key={point} className="flex items-start gap-4">
-                  <div className="mt-1 flex items-center gap-3 text-[#C39B7B]">
-                    <span className="block h-[8px] w-[8px] bg-[#C39B7B]" />
-                    <span className="text-sm">→</span>
+            <div className="mt-10 grid gap-4">
+              {aboutPoints.slice(0, 3).map((point, index) => (
+                <div
+                  key={point}
+                  className="group relative min-h-[132px] overflow-hidden bg-[#211c17] px-6 py-6 transition-colors duration-300 hover:bg-[#2b241d]"
+                >
+                  <div className="pointer-events-none absolute right-4 top-3 text-[50px] font-extrabold leading-none tracking-[-0.08em] text-white/10 transition-colors duration-300 group-hover:text-[#C39B7B]/12">
+                    0{index + 1}
                   </div>
-                  <p className="text-[18px] font-semibold leading-[1.55] text-[#d6d0c8]">
+                  <p className="relative z-10 max-w-[360px] text-[16px] font-semibold leading-[1.55] text-[#d6d0c8] transition-colors duration-300 group-hover:text-white">
                     {point}
                   </p>
+                  <span className="absolute bottom-0 left-0 h-1 w-14 bg-[#C39B7B] transition-all duration-300 group-hover:w-full" />
                 </div>
               ))}
             </div>
 
-            <a
+            <Link
               className="mt-12 inline-flex h-[60px] items-center justify-center border border-[#C39B7B] px-8 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-[#C39B7B]"
-              href="#contact"
+              to="/gallery"
             >
-              Our Core Features
-            </a>
+              Our Projects
+            </Link>
           </div>
 
           <div
