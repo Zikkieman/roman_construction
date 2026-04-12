@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { aboutPoints } from "../../data/architectureHome";
-import { COMPANY_OVERVIEW_EXTENDED, COMPANY_SHORT_OVERVIEW } from "../../data/company";
+import {
+  COMPANY_OVERVIEW_EXTENDED,
+  COMPANY_SHORT_OVERVIEW,
+} from "../../data/company";
 
 export function AboutSection() {
   return (
@@ -71,7 +74,17 @@ export function AboutSection() {
             </div>
 
             <p className="mt-10 max-w-[670px] text-[17px] leading-[1.9] text-[#ada39a]">
-              {COMPANY_SHORT_OVERVIEW} {COMPANY_OVERVIEW_EXTENDED}
+              At Roman Contractors, we deliver high-quality construction
+              services and interior fit-out solutions with precision,
+              professionalism, and dependable project execution. As a trusted
+              design-build contractor, we provide seamless, end-to-end project
+              management—guiding your project from initial concept and planning
+              through to final delivery. We understand that successful
+              construction projects demand more than just skill—they require
+              structure, clarity, and control. That’s why our approach is built
+              on disciplined project execution, ensuring timelines are met,
+              budgets are respected, and every detail is completed to the
+              highest standard.
             </p>
 
             <div className="mt-10 grid max-w-[760px] gap-7">
