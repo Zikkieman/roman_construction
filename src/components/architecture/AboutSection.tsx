@@ -87,16 +87,19 @@ export function AboutSection() {
               highest standard.
             </p>
 
-            <div className="mt-10 grid max-w-[760px] gap-7">
-              {aboutPoints.map((point) => (
-                <div key={point} className="flex items-start gap-4">
-                  <div className="mt-1 flex items-center gap-3 text-[#C39B7B]">
-                    <span className="block h-[8px] w-[8px] bg-[#C39B7B]" />
-                    <span className="text-sm">→</span>
+            <div className="mt-10 grid max-w-[760px] gap-4 sm:grid-cols-2">
+              {aboutPoints.map((point, index) => (
+                <div
+                  key={point}
+                  className="group relative min-h-[152px] overflow-hidden bg-[#211c17] px-6 py-6 transition-colors duration-300 hover:bg-[#2b241d]"
+                >
+                  <div className="pointer-events-none absolute right-4 top-3 text-[54px] font-extrabold leading-none tracking-[-0.08em] text-white/10 transition-colors duration-300 group-hover:text-[#C39B7B]/12">
+                    0{index + 1}
                   </div>
-                  <p className="text-[17px] font-semibold leading-[1.6] text-[#cfc7bf]">
+                  <p className="relative z-10 max-w-[260px] text-[16px] font-semibold leading-[1.55] text-[#cfc7bf] transition-colors duration-300 group-hover:text-white">
                     {point}
                   </p>
+                  <span className="absolute bottom-0 left-0 h-1 w-14 bg-[#C39B7B] transition-all duration-300 group-hover:w-full" />
                 </div>
               ))}
             </div>
