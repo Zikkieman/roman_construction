@@ -4,8 +4,6 @@ import { awardItems } from "../data/architectureHome";
 import {
   COMPANY,
   COMPANY_MISSION_POINTS,
-  COMPANY_OVERVIEW,
-  COMPANY_OVERVIEW_EXTENDED,
   COMPANY_VISION,
 } from "../data/company";
 import { ScrollToHeroButton } from "../components/common/ScrollToHeroButton";
@@ -24,6 +22,15 @@ const aboutAccordions = [
     title: "Our Vision",
     body: COMPANY_VISION,
   },
+];
+
+const aboutPageOverviewParagraphs = [
+  "At Roman Contractors, we deliver high-quality construction services and interior fit-out solutions with precision, professionalism, and dependable project execution.",
+  "As a trusted design-build contractor, we provide seamless, end-to-end project management, guiding your project from initial concept and planning through to final delivery.",
+  "We understand that successful construction projects demand more than just skill, they require structure, clarity, and control. That's why our approach is built on disciplined project execution, ensuring timelines are met, budgets are respected, and every detail is completed to the highest standard.",
+  "From residential builds to commercial interior fit-outs, our team combines expert craftsmanship with meticulous attention to detail to deliver results that are both durable and visually refined.",
+  "What sets us apart is our commitment to client-focused coordination and transparent communication. We keep you informed at every stage, aligning our process with your vision to ensure a smooth, stress-free experience.",
+  "Whether you need a reliable partner for construction, renovation, or interior fit-out projects, Roman Contractors delivers consistent, high-quality outcomes you can trust.",
 ];
 
 function AboutPageCircleBadge() {
@@ -133,43 +140,27 @@ export function AboutPage() {
           <div className="mx-auto max-w-[1340px] px-8 pb-24 sm:px-12 lg:px-16 lg:pb-32">
             <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
               <div className="reveal lg:pr-12" data-reveal="true">
-                <p className="max-w-[660px] text-[17px] leading-[1.7] text-[#6f685f]">
-                  {COMPANY_OVERVIEW} {COMPANY_OVERVIEW_EXTENDED}
-                </p>
-
-                <div className="mt-10 grid gap-7">
-                  {COMPANY_MISSION_POINTS.map((point) => (
-                    <div key={point} className="flex items-start gap-4">
-                      <div className="mt-1 flex items-center gap-3 text-[#c7b2a0]">
-                        <span className="block h-[8px] w-[8px] bg-[var(--color-brand-light)]" />
-                        <span className="text-sm">→</span>
-                      </div>
-                      <p className="text-[17px] font-semibold leading-[1.55] text-[#7c746b]">
-                        {point}
-                      </p>
-                    </div>
+                <div className="max-w-[690px] space-y-6 text-[17px] leading-[1.75] text-[#6f685f]">
+                  {aboutPageOverviewParagraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
 
-                <div className="mt-18 md:mt-24">
-                  <div className="relative overflow-hidden bg-[#e7e1d9]">
-                    <div className="grid grid-cols-2 gap-7">
-                      <img
-                        alt="Architectural ceiling geometry"
-                        className="h-[360px] w-full object-cover sm:h-[430px] lg:h-[480px]"
-                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/MASTER_LOUNGE_CC_jwhuwx.jpg"
-                      />
-                      <img
-                        alt="Glass architectural corridor"
-                        className="h-[360px] w-full object-cover sm:h-[430px] lg:h-[480px]"
-                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg"
-                      />
+                <div className="mt-12 grid gap-4 sm:grid-cols-2">
+                  {COMPANY_MISSION_POINTS.map((point, index) => (
+                    <div
+                      key={point}
+                      className="group relative min-h-[152px] overflow-hidden bg-[#ece7df] px-6 py-6 transition-colors duration-300 hover:bg-[#25211c]"
+                    >
+                      <div className="pointer-events-none absolute right-4 top-3 text-[54px] font-extrabold leading-none tracking-[-0.08em] text-[#e4ded6] opacity-70 transition-colors duration-300 group-hover:text-white/8 group-hover:opacity-100">
+                        0{index + 1}
+                      </div>
+                      <p className="relative z-10 max-w-[240px] text-[16px] font-semibold leading-[1.55] text-[#6f685f] transition-colors duration-300 group-hover:text-[#ece7e2]">
+                        {point}
+                      </p>
+                      <span className="absolute bottom-0 left-0 h-1 w-14 bg-[var(--color-brand-accent)] transition-all duration-300 group-hover:w-full" />
                     </div>
-
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <AboutPageCircleBadge />
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
@@ -216,18 +207,25 @@ export function AboutPage() {
                   })}
                 </div>
 
-                <div className="mt-16 max-w-[660px]">
-                  <h2 className="font-sans text-[34px] font-medium leading-[1.24] tracking-[-0.05em] text-[#17120d] sm:text-[34px] lg:text-[40px]">
-                    Architecture &amp; Interior Is Where We Belong
-                  </h2>
-                  <p className="mt-7 text-[17px] leading-[1.7] text-[#6f685f]">
-                    {COMPANY_OVERVIEW}
-                  </p>
-                  <p className="mt-6 text-[17px] leading-[1.7] text-[#6f685f]">
-                    {COMPANY_OVERVIEW_EXTENDED} We focus on dependable
-                    execution, superior finishing, and professional delivery
-                    across residential, office, retail, and renovation projects.
-                  </p>
+                <div className="mt-14">
+                  <div className="relative overflow-hidden bg-[#e7e1d9]">
+                    <div className="grid grid-cols-2 gap-5 sm:gap-7">
+                      <img
+                        alt="Roman Contractors master lounge interior"
+                        className="h-[320px] w-full object-cover sm:h-[390px] lg:h-[460px]"
+                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/MASTER_LOUNGE_CC_jwhuwx.jpg"
+                      />
+                      <img
+                        alt="Roman Contractors interior finishing detail"
+                        className="h-[320px] w-full object-cover sm:h-[390px] lg:h-[460px]"
+                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg"
+                      />
+                    </div>
+
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <AboutPageCircleBadge />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
