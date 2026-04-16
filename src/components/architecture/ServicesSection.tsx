@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { highlightCards, serviceCards } from "../../data/architectureHome";
+import { serviceSlugFromTitle } from "../../data/serviceGallery";
 import { IconArrow } from "../common/icons";
 
 function ServiceIcon({ title }: { title: string }) {
@@ -64,12 +66,12 @@ export function ServicesSection() {
             <span className="text-[#ece7e2]"> For You</span>
           </h2>
 
-          <a className="group pt-2" href="#contact">
+          <Link className="group pt-2" to="/services">
             <span className="relative inline-block text-[13px] font-bold uppercase tracking-[0.14em] text-[#9e948b] transition-colors duration-300 group-hover:text-[#C39B7B]">
               View All Services
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#C39B7B] transition-all duration-300 group-hover:w-full" />
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="relative mt-14">
@@ -82,11 +84,12 @@ export function ServicesSection() {
 
           <div className="grid gap-px bg-white/14 md:grid-cols-2 xl:grid-cols-4">
             {serviceCards.map((item, index) => (
-              <article
+              <Link
                 key={item.title}
                 className="reveal group min-h-[332px] bg-[#17130f] px-9 py-11 lg:min-h-[360px] lg:px-12 lg:py-[3.25rem]"
                 data-reveal="true"
                 style={{ transitionDelay: `${index * 90}ms` }}
+                to={`/services/${serviceSlugFromTitle(item.title)}`}
               >
                 <div className="text-[#C39B7B]">
                   <ServiceIcon title={item.title} />
@@ -100,7 +103,7 @@ export function ServicesSection() {
                 <div className="mt-10 text-[#C39B7B] transition-transform duration-300 group-hover:translate-x-1">
                   <IconArrow />
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

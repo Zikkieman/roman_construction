@@ -5,6 +5,7 @@ import { AboutPage } from "./pages/AboutPage";
 import { ArchitectureHomePage } from "./pages/ArchitectureHomePage";
 import { ContactPage } from "./pages/ContactPage";
 import { GalleryPage } from "./pages/GalleryPage";
+import { ServiceGalleryPage } from "./pages/ServiceGalleryPage";
 import { ServicesPage } from "./pages/ServicesPage";
 
 function ScrollManager() {
@@ -116,6 +117,7 @@ function App() {
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/:serviceSlug" element={<ServiceGalleryPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </>

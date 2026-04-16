@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { COMPANY_SERVICE_GROUPS } from "../data/company";
+import { serviceSlugFromTitle } from "../data/serviceGallery";
 import { ScrollToHeroButton } from "../components/common/ScrollToHeroButton";
 import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
@@ -129,26 +130,27 @@ function ServicesPageGrid() {
       <div className="mx-auto max-w-[1340px] px-8 pb-20 sm:px-12 lg:px-16 lg:pb-28">
         <div className="grid gap-6 lg:grid-cols-3">
           {servicePageCards.map((item, index) => (
-            <article
+            <Link
               key={item.title}
-              className="reveal relative min-h-[378px] overflow-hidden bg-[var(--color-brand-light)] px-12 pb-12 pt-12"
+              className="reveal group relative min-h-[378px] overflow-hidden bg-[var(--color-brand-light)] px-12 pb-12 pt-12 transition-transform duration-300 hover:-translate-y-1"
               data-reveal="true"
               style={{ transitionDelay: `${index * 70}ms` }}
+              to={`/services/${serviceSlugFromTitle(item.title)}`}
             >
               <div className="pointer-events-none absolute inset-y-0 left-0 w-[48%] bg-[radial-gradient(circle_at_1.5px_1.5px,rgba(255,255,255,0.8)_1.6px,transparent_0)] bg-[length:16px_16px]" />
               <div className="relative z-10 text-[var(--color-brand-accent)]">
                 <ServicePageIcon icon={item.icon} />
               </div>
-              <h2 className="relative z-10 mt-10 font-sans text-[25px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#17120d]">
+              <h2 className="relative z-10 mt-10 font-sans text-[25px] font-extrabold leading-[1.2] tracking-[-0.03em] text-[#17120d] transition-colors duration-300 group-hover:text-[var(--color-brand-accent)]">
                 {item.title}
               </h2>
               <p className="relative z-10 mt-8 max-w-[292px] text-[17px] leading-[1.65] text-[#6f685f]">
                 {item.description}
               </p>
-              <div className="relative z-10 mt-10 text-[28px] leading-none text-[var(--color-brand-accent)]">
+              <div className="relative z-10 mt-10 text-[28px] leading-none text-[var(--color-brand-accent)] transition-transform duration-300 group-hover:translate-x-1">
                 →
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
