@@ -250,7 +250,7 @@ export function AboutPage() {
                     1
                   </div>
                   <div className="mt-6 text-[15px] font-medium uppercase leading-[1.5] tracking-[0.12em] text-white/72">
-                    Years Of
+                    Year Of
                     <br />
                     Experience
                   </div>
@@ -316,10 +316,10 @@ export function AboutPage() {
 
                   <div className="absolute bottom-[16px] right-0 z-30 w-[48%] overflow-hidden bg-[#25211c] px-8 pb-7 pt-8 text-white sm:w-[42%] lg:hidden">
                     <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
-                      35
+                      1
                     </div>
                     <div className="mt-6 text-[15px] font-medium uppercase leading-[1.45] tracking-[0.12em] text-white/72">
-                      Years Of
+                      Year Of
                       <br />
                       Experience
                     </div>
