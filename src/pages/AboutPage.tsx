@@ -25,12 +25,12 @@ const aboutAccordions = [
 ];
 
 const aboutPageOverviewParagraphs = [
-  "At Roman Contractors, we deliver high-quality construction services and interior fit-out solutions with precision, professionalism, and dependable project execution.",
-  "As a trusted design-build contractor, we provide seamless, end-to-end project management, guiding your project from initial concept and planning through to final delivery.",
+  "At Roman Contractors, we deliver high quality construction services and interior fit out solutions with precision, professionalism, and dependable project execution.",
+  "As a trusted design build contractor, we provide seamless, end to end project management, guiding your project from initial concept and planning through to final delivery.",
   "We understand that successful construction projects demand more than just skill, they require structure, clarity, and control. That's why our approach is built on disciplined project execution, ensuring timelines are met, budgets are respected, and every detail is completed to the highest standard.",
-  "From residential builds to commercial interior fit-outs, our team combines expert craftsmanship with meticulous attention to detail to deliver results that are both durable and visually refined.",
-  "What sets us apart is our commitment to client-focused coordination and transparent communication. We keep you informed at every stage, aligning our process with your vision to ensure a smooth, stress-free experience.",
-  "Whether you need a reliable partner for construction, renovation, or interior fit-out projects, Roman Contractors delivers consistent, high-quality outcomes you can trust.",
+  "From residential builds to commercial interior fit outs, our team combines expert craftsmanship with meticulous attention to detail to deliver results that are both durable and visually refined.",
+  "What sets us apart is our commitment to client focused coordination and transparent communication. We keep you informed at every stage, aligning our process with your vision to ensure a smooth, stress free experience.",
+  "Whether you need a reliable partner for construction, renovation, or interior fit out projects, Roman Contractors delivers consistent, high quality outcomes you can trust.",
 ];
 
 function AboutPageCircleBadge() {
@@ -47,9 +47,9 @@ function AboutPageCircleBadge() {
             d="M 73,73 m -52,0 a 52,52 0 1,1 104,0 a 52,52 0 1,1 -104,0"
           />
         </defs>
-        <text fill="#f7f4ef">
+        <text fill="#d6a26c">
           <textPath href="#about-circle-path" startOffset="0%">
-            ROMAN CONTRACTORS LIMITED
+            ROMAN CONTRACTORS LTD
           </textPath>
         </text>
       </svg>
@@ -127,7 +127,7 @@ export function AboutPage() {
               <img
                 alt="Modern Roman architecture"
                 className="h-[340px] w-full object-cover sm:h-[460px] lg:h-[620px]"
-                src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859446/romancontractors/complete%20interior/andre-francois-mckenzie-XlGwDBZh_mM-unsplash_gi1pad.jpg"
+                src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857262/romancontractors/solar/evgeniy-alyoshin-2ASQyjafflo-unsplash_jnscv8.jpg"
               />
             </div>
           </div>
@@ -213,12 +213,12 @@ export function AboutPage() {
                       <img
                         alt="Roman Contractors master lounge interior"
                         className="h-[320px] w-full object-cover sm:h-[390px] lg:h-[460px]"
-                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/MASTER_LOUNGE_CC_jwhuwx.jpg"
+                        src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857199/romancontractors/tiles/darren-richardson-1zKFtv-TmWM-unsplash_mx234e.jpg"
                       />
                       <img
                         alt="Roman Contractors interior finishing detail"
                         className="h-[320px] w-full object-cover sm:h-[390px] lg:h-[460px]"
-                        src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg"
+                        src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859662/romancontractors/painting/thomas-despeyroux-7gYjhBadDsQ-unsplash_ddx6zy.jpg"
                       />
                     </div>
 
@@ -246,12 +246,11 @@ export function AboutPage() {
 
               <div className="pointer-events-none absolute inset-0 hidden lg:block">
                 <div className="absolute bottom-[-338px] right-0 z-30 w-[240px] overflow-hidden bg-[#25211c] px-8 pb-8 pt-9 text-white">
-                  <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
+                  {/* <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
                     1
-                  </div>
-                  <div className="mt-6 text-[15px] font-medium uppercase leading-[1.5] tracking-[0.12em] text-white/72">
-                    Year Of
-                    <br />
+                  </div> */}
+                  <div className="mt-6 text-2xl font-medium uppercase leading-[1.5] tracking-[0.12em] text-white">
+                    Years Of
                     Experience
                   </div>
                   <svg
@@ -315,13 +314,11 @@ export function AboutPage() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(218,208,197,0.3)_1.6px,transparent_0)] bg-[length:16px_16px]" />
 
                   <div className="absolute bottom-[16px] right-0 z-30 w-[48%] overflow-hidden bg-[#25211c] px-8 pb-7 pt-8 text-white sm:w-[42%] lg:hidden">
-                    <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
+                    {/* <div className="text-[58px] font-medium leading-none tracking-[-0.05em]">
                       1
-                    </div>
-                    <div className="mt-6 text-[15px] font-medium uppercase leading-[1.45] tracking-[0.12em] text-white/72">
-                      Year Of
-                      <br />
-                      Experience
+                    </div> */}
+                    <div className="mt-6 text-md font-medium uppercase leading-[1.45] tracking-[0.12em] text-white">
+                      Years Of Experience
                     </div>
                   </div>
                 </div>

@@ -35,13 +35,18 @@ export function ExperienceSection() {
         <div className="grid gap-y-10 lg:grid-cols-[280px_minmax(0,1fr)_360px] lg:items-stretch lg:gap-x-12 xl:grid-cols-[300px_minmax(0,1fr)_390px] xl:gap-x-16">
           <div className="reveal lg:col-span-2" data-reveal="true">
             <h2 className="max-w-[1120px] font-sans text-[34px] font-extrabold leading-[1.28] tracking-[-0.05em] text-[#ece7e2] sm:text-[32px] lg:text-[40px] xl:text-[46px]">
+              <span className="text-[#ece7e2]">Form &amp; Function </span>
+              <br />
+            </h2>
+              <span className="text-[#ece7e2]">Crafting Exquisite Spaces with Flair Design</span>
+            {/* <h2 className="max-w-[1120px] font-sans text-[34px] font-extrabold leading-[1.28] tracking-[-0.05em] text-[#ece7e2] sm:text-[32px] lg:text-[40px] xl:text-[46px]">
               <span className="text-[#ece7e2]">Form &amp; Function: </span>
               <span className="experience-outline-text">
                 Crafting Exquisite Spaces
               </span>
               <br />
               <span className="text-[#ece7e2]">with Flair Design</span>
-            </h2>
+            </h2> */}
           </div>
 
           <div
@@ -80,13 +85,13 @@ export function ExperienceSection() {
             data-reveal="true"
           >
             <p className="max-w-[560px] text-[17px] leading-[1.85] text-[#b0a69d]">
-              What sets us apart is our commitment to client-focused
+              What sets us apart is our commitment to client focused
               coordination and transparent communication. We keep you informed
               at every stage, aligning our process with your vision to ensure a
-              smooth, stress-free experience.
+              smooth, stress free experience.
             </p>
 
-            <div className="mt-10 grid gap-4">
+            {/* <div className="mt-10 grid gap-4">
               {aboutPoints.slice(0, 3).map((point, index) => (
                 <div
                   key={point}
@@ -101,7 +106,7 @@ export function ExperienceSection() {
                   <span className="absolute bottom-0 left-0 h-1 w-14 bg-[#C39B7B] transition-all duration-300 group-hover:w-full" />
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <Link
               className="mt-12 inline-flex h-[60px] items-center justify-center border border-[#C39B7B] px-8 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-[#C39B7B]"

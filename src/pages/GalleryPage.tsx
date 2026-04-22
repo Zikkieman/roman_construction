@@ -35,18 +35,6 @@ const hostedImages = [
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859412/romancontractors/floor/neon-wang-KaA8vQB9Hdg-unsplash_beh7xh.jpg",
   },
   {
-    title: "Roman Project 06",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859412/romancontractors/floor/zeeshan-alam-VEF2IVr4iFQ-unsplash_ornkum.jpg",
-  },
-  {
-    title: "Roman Project 07",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859406/romancontractors/floor/background-foto-pixell-design-I4jkokpwh4o-unsplash_acbsso.jpg",
-  },
-  {
-    title: "Roman Project 08",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859387/romancontractors/floor/yivan-LG9wz6-ht_A-unsplash_f59qjp.jpg",
-  },
-  {
     title: "Roman Project 09",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859611/romancontractors/joinery/aalo-lens-XhMzBZrpQT4-unsplash_wu2hac.jpg",
   },
@@ -63,16 +51,8 @@ const hostedImages = [
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859637/romancontractors/painting/an_vision-Q6jhKQoEtSA-unsplash_bwpej1.jpg",
   },
   {
-    title: "Roman Project 13",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859468/romancontractors/painting/annie-spratt-712YAykhAD8-unsplash_pz4xy9.jpg",
-  },
-  {
     title: "Roman Project 14",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859620/romancontractors/joinery/eke-interior-Ud4rRqr0vFA-unsplash_hxuv8j.jpg",
-  },
-  {
-    title: "Roman Project 15",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859483/romancontractors/painting/annie-spratt-njsRI3pTB6g-unsplash_go6djk.jpg",
   },
   {
     title: "Roman Project 16",
@@ -99,10 +79,6 @@ const hostedImages = [
     src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/MASTER_LOUNGE_CC_jwhuwx.jpg",
   },
   {
-    title: "Roman Project 23",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857192/romancontractors/tiles/jon-stebbe-J9Gn8pV7tuI-unsplash_pdt87x.jpg",
-  },
-  {
     title: "Roman Project 24",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859439/romancontractors/complete%20interior/jason-briscoe-UV81E0oXXWQ-unsplash_izfrdd.jpg",
   },
@@ -121,21 +97,21 @@ const hostedImages = [
 ] as const;
 
 const hostedVideos = [
-  {
-    title: "Before and After Walkthrough",
-    shareUrl:
-      "https://drive.google.com/file/d/1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q/view?usp=sharing",
-  },
-  {
-    title: "Interior Progress Video",
-    shareUrl:
-      "https://drive.google.com/file/d/151YwkiwSphUC9HOTU7tPvY3isme80RAQ/view?usp=sharing",
-  },
-  {
-    title: "Project Reveal Video",
-    shareUrl:
-      "https://drive.google.com/file/d/1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR/view?usp=sharing",
-  },
+  // {
+  //   title: "Before and After Walkthrough",
+  //   shareUrl:
+  //     "https://drive.google.com/file/d/1WeueTsaFMFKJGrIjPlpYjmCDruKIex4Q/view?usp=sharing",
+  // },
+  // {
+  //   title: "Interior Progress Video",
+  //   shareUrl:
+  //     "https://drive.google.com/file/d/151YwkiwSphUC9HOTU7tPvY3isme80RAQ/view?usp=sharing",
+  // },
+  // {
+  //   title: "Project Reveal Video",
+  //   shareUrl:
+  //     "https://drive.google.com/file/d/1KyBIKfSABbFJdfP71ieuODPN4NmXcPjR/view?usp=sharing",
+  // },
 ] as const;
 
 const heightCycle = [

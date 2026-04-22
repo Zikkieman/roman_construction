@@ -1,5 +1,5 @@
 export const serviceSlugs = {
-  completeInteriorFitOuts: "complete-interior-fit-outs",
+  completeInteriorFitOuts: "complete-interior-fit outs",
   flooring: "flooring",
   ceilings: "ceilings",
   wallFinishes: "wall-finishes",
@@ -12,12 +12,12 @@ export const serviceSlugs = {
 export type ServiceSlug = (typeof serviceSlugs)[keyof typeof serviceSlugs];
 
 const serviceTitleSlugs: Record<string, ServiceSlug> = {
-  "Complete Interior Fit-Outs": serviceSlugs.completeInteriorFitOuts,
+  "Complete Interior Fit Outs": serviceSlugs.completeInteriorFitOuts,
   Flooring: serviceSlugs.flooring,
   Ceilings: serviceSlugs.ceilings,
-  "Wall Finishes": serviceSlugs.wallFinishes,
+  "Wall Finishing": serviceSlugs.wallFinishes,
   "Joinery & Fixtures": serviceSlugs.joineryFixtures,
-  "Lighting & Electrical Finishes": serviceSlugs.lightingElectricalFinishes,
+  "Lighting & Electrical Finishing": serviceSlugs.lightingElectricalFinishes,
   "Solar Energy Solutions": serviceSlugs.solarEnergySolutions,
   "Smart Home Automation": serviceSlugs.smartHomeAutomation,
 };
@@ -30,7 +30,7 @@ export type ServiceGalleryImage = {
 
 export const serviceGalleryImages: ServiceGalleryImage[] = [
   {
-    title: "Family Lounge Fit-Out",
+    title: "Family Lounge Fit Out",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859446/romancontractors/complete%20interior/andre-francois-mckenzie-XlGwDBZh_mM-unsplash_gi1pad.jpg",
     service: serviceSlugs.completeInteriorFitOuts,
   },
@@ -90,11 +90,6 @@ export const serviceGalleryImages: ServiceGalleryImage[] = [
     service: serviceSlugs.flooring,
   },
   {
-    title: "Tiling 08",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857189/romancontractors/tiles/scott-webb-tMuYJL96A_I-unsplash_qihmju.jpg",
-    service: serviceSlugs.flooring,
-  },
-  {
     title: "Tiling 09",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859384/romancontractors/wall/alexander-fife-rDSwQ_6XFUs-unsplash_ig8si9.jpg",
     service: serviceSlugs.flooring,
@@ -115,6 +110,11 @@ export const serviceGalleryImages: ServiceGalleryImage[] = [
     service: serviceSlugs.ceilings,
   },
   {
+    title: "Ceiling 03",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857189/romancontractors/tiles/scott-webb-tMuYJL96A_I-unsplash_qihmju.jpg",
+    service: serviceSlugs.ceilings,
+  },
+  {
     title: "Joinery 01",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859622/romancontractors/joinery/alona-gross-f61KO4nDeJA-unsplash_kbaafm.jpg",
     service: serviceSlugs.joineryFixtures,
@@ -127,11 +127,6 @@ export const serviceGalleryImages: ServiceGalleryImage[] = [
   {
     title: "Joinery 03",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859612/romancontractors/joinery/lotus-design-n-print-9b7wGJQaScw-unsplash_fcjczq.jpg",
-    service: serviceSlugs.joineryFixtures,
-  },
-  {
-    title: "Joinery 04",
-    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859611/romancontractors/joinery/aalo-lens-XhMzBZrpQT4-unsplash_wu2hac.jpg",
     service: serviceSlugs.joineryFixtures,
   },
   {
@@ -164,10 +159,15 @@ export const serviceGalleryImages: ServiceGalleryImage[] = [
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859637/romancontractors/painting/an_vision-Q6jhKQoEtSA-unsplash_bwpej1.jpg",
     service: serviceSlugs.wallFinishes,
   },
+   {
+    title: "Joinery 04",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859611/romancontractors/joinery/aalo-lens-XhMzBZrpQT4-unsplash_wu2hac.jpg",
+    service: serviceSlugs.wallFinishes,
+  },
   {
-    title: "Electrical 01",
+    title: "Smart Home Automation 01",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776870836/romancontractors/electricals/erik-mclean-fSLI8RdCdyk-unsplash_d6qojg.jpg",
-    service: serviceSlugs.lightingElectricalFinishes,
+    service: serviceSlugs.smartHomeAutomation,
   },
   {
     title: "Solar 01",
@@ -230,7 +230,7 @@ export const serviceGalleryImages: ServiceGalleryImage[] = [
   //   ],
   // },
   // {
-  //   title: "Interior Fit-Out Detail",
+  //   title: "Interior Fit Out Detail",
   //   src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/WhatsApp_Image_2026-02-23_at_12.05.26_2_enilkd.jpg",
   //   services: [
   //     serviceSlugs.completeInteriorFitOuts,
@@ -312,7 +312,7 @@ export const serviceGalleryImages: ServiceGalleryImage[] = [
   //   ],
   // },
   // {
-  //   title: "Kitchen And Dining Fit-Out",
+  //   title: "Kitchen And Dining Fit Out",
   //   src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487437/WhatsApp_Image_2026-02-23_at_12.05.27_dnydbq.jpg",
   //   services: [
   //     serviceSlugs.completeInteriorFitOuts,
@@ -333,7 +333,7 @@ export const serviceGalleryImages: ServiceGalleryImage[] = [
   //   ],
   // },
   // {
-  //   title: "Bedroom Fit-Out",
+  //   title: "Bedroom Fit Out",
   //   src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/typical_bedroom_1_ce0bav.jpg",
   //   services: [
   //     serviceSlugs.completeInteriorFitOuts,

@@ -132,16 +132,20 @@ export function HeroSection() {
         <div className="max-w-[900px]">
           {/* <SectionEyebrow>Architecture Home</SectionEyebrow> */}
           <h1 className="mt-11 max-w-[900px] font-sans text-[45px] font-extrabold leading-[1.30] tracking-[-0.06em] text-[#ece7e2]  lg:text-[55px]">
+            Roman Contractors
+          </h1>
+            <span className="text-white text-2xl">Delivering Projects with Precision & Excellence</span>
+          {/* <h1 className="mt-11 max-w-[900px] font-sans text-[45px] font-extrabold leading-[1.30] tracking-[-0.06em] text-[#ece7e2]  lg:text-[55px]">
             Roman Contractors: Delivering
             <br />
             <span className="text-[#ece7e2] mt-5">Projects with </span>
             <span className="hero-outline-text">Precision & </span>
             <br />
             <span className="hero-outline-text">Excellence</span>
-          </h1>
+          </h1> */}
           <p className="mt-7 max-w-[640px] text-[16px] leading-[2] text-white/76">
             We understand that successful construction projects demand more than
-            just skill—they require structure, clarity, and control. That’s why
+            just skill, they require structure, clarity, and control. That’s why
             our approach is built on disciplined project execution, ensuring
             timelines are met, budgets are respected, and every detail is
             completed to the highest standard.

@@ -132,7 +132,7 @@ function ServicesPageGrid() {
           {servicePageCards.map((item, index) => (
             <Link
               key={item.title}
-              className="reveal group relative min-h-[378px] overflow-hidden bg-[var(--color-brand-light)] px-12 pb-12 pt-12 transition-transform duration-300 hover:-translate-y-1"
+              className="reveal flex justify-between flex-col group relative min-h-[378px] overflow-hidden bg-[var(--color-brand-light)] px-12 pb-12 pt-12 transition-transform duration-300 hover:-translate-y-1"
               data-reveal="true"
               style={{ transitionDelay: `${index * 70}ms` }}
               to={`/services/${serviceSlugFromTitle(item.title)}`}
@@ -193,7 +193,7 @@ export function ServicesPage() {
                 </span>
               </div>
               <h1 className="max-w-[820px] font-sans text-[32px] font-semibold leading-[1.28] tracking-[-0.045em] text-[#17120d] sm:text-[38px] lg:text-[42px]">
-                We execute fit-out and finishing contracts from the beginning
+                We execute fit out and finishing contracts from the beginning
                 <br />
                 to the final delivery of your project.
               </h1>

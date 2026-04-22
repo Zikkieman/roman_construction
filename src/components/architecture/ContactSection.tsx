@@ -249,7 +249,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
             </div>
             <img
               alt="Roman Contractors interior project"
-              className={`relative z-10 h-[500px] w-full object-cover object-center grayscale contrast-[1.05] sm:h-[620px] ${
+              className={`relative z-10 h-[500px] w-full object-cover object-center contrast-[1.05] sm:h-[620px] ${
                 isPage
                   ? 'lg:h-full lg:min-h-[620px] xl:min-h-[640px]'
                   : 'lg:h-full lg:min-h-[700px] xl:min-h-[724px]'
@@ -290,14 +290,12 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
               >
                 {isPage ? (
                   <>
-                    Contact Us Anytime, We Are
-                    <br />
-                    Always There For You
+                    Contact Us Anytime
                   </>
                 ) : (
                   <>
-                    <span className="contact-outline-text">Contact,</span>
-                    <span className={titleClassName}> Let&apos;s Talk</span>
+                    <span className="contact-outline-text">Contact Us</span>
+                    <span className={titleClassName}> Anytime</span>
                   </>
                 )}
               </h2>

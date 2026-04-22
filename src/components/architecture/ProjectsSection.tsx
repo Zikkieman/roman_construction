@@ -91,10 +91,10 @@ export function ProjectsSection() {
         <div className="projects-marquee mt-16 overflow-hidden py-4">
           <div className="projects-marquee-track">
             {[
-              "Residential Fit-Out Specialists",
+              "Residential Fit Out Specialists",
               "Reliable Construction Delivery",
               "Interior Finishing Experts",
-              "Residential Fit-Out Specialists",
+              "Residential Fit Out Specialists",
               "Reliable Construction Delivery",
               "Interior Finishing Experts",
             ].map((item, index) => (

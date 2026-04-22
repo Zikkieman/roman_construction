@@ -19,14 +19,14 @@ export const navigationItems: NavigationItem[] = [
 
 export const aboutPoints: string[] = [
   "Structured, efficient project management and execution",
-  "Skilled craftsmanship with high-end, durable finishing",
+  "Skilled craftsmanship with high end, durable finishing",
   "Clear, transparent communication throughout every phase",
-  "Reliable delivery across construction and interior fit-out services",
+  "Reliable delivery across construction and interior fit out services",
 ];
 
 export const serviceCards: ServiceCard[] = [
   {
-    title: "Complete Interior Fit-Outs",
+    title: "Complete Interior Fit Outs",
     description:
       "Comprehensive interior solutions from structural preparation to final detailing for residential and commercial spaces.",
   },
@@ -41,9 +41,9 @@ export const serviceCards: ServiceCard[] = [
       "POP ceilings, gypsum boards, cornices, and ceiling designs finished with clean execution.",
   },
   {
-    title: "Wall Finishes",
+    title: "Wall Finishing",
     description:
-      "Painting, wall panels, wallpapers, and decorative finishes delivered with precise application.",
+      "Painting, wall panels, wallpapers, and decorative finishing delivered with precise application.",
   },
   {
     title: "Joinery & Fixtures",
@@ -51,7 +51,7 @@ export const serviceCards: ServiceCard[] = [
       "Wardrobes, kitchen cabinets, TV consoles, and shelving crafted for function and clean aesthetics.",
   },
   {
-    title: "Lighting & Electrical Finishes",
+    title: "Lighting & Electrical Finishing",
     description:
       "Light fittings, switches, spotlights, and concealed lighting integrated with refined finishing.",
   },
@@ -81,15 +81,15 @@ export const highlightCards: HighlightCard[] = [
 ];
 
 export const awardItems: AwardItem[] = [
-  { title: "Residential Interior Fit-Outs", year: "Project Scope" },
+  { title: "Residential Interior Fit Outs", year: "Project Scope" },
   { title: "Office And Retail Execution", year: "Delivery Focus" },
-  { title: "Finishing Quality And Detailing", year: "Core Strength" },
+  { title: "Finishing, Quality And Detailing", year: "Core Strength" },
   { title: "Abuja Based Professional Delivery", year: "Operating Base" },
 ];
 
 export const projectCards: ProjectCard[] = [
   {
-    title: "Kitchen Fit-Out",
+    title: "Kitchen Fit Out",
     category: "Interior",
     image:
       "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg",
@@ -122,7 +122,7 @@ export const projectCards: ProjectCard[] = [
   },
   {
     title: "Kitchen Finishing",
-    category: "Fit-Out",
+    category: "Fit Out",
     image:
       "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/KITCHEN_02_CC_bspb6u.jpg",
     column: 3,
@@ -153,7 +153,7 @@ export const processSteps: ProcessStep[] = [
     number: "02",
     title: "Guide The Design",
     description:
-      "We coordinate design intent, finishes, and technical decisions to keep the project clear and buildable.",
+      "We coordinate design intent, finishing, and technical decisions to keep the project clear and buildable.",
     image:
       "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/KITCHEN_02_CC_bspb6u.jpg",
   },
@@ -178,7 +178,7 @@ export const processSteps: ProcessStep[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Roman Contractors handled our fit-out with strong coordination, clear communication, and a finishing quality that matched what was promised.",
+      "Roman Contractors handled our fit out with strong coordination, clear communication, and a finishing quality that matched what was promised.",
     name: "Aisha Bello",
     role: "Residential Client",
     image:
@@ -212,9 +212,9 @@ export const testimonials: Testimonial[] = [
 
 export const blogPosts: BlogPost[] = [
   {
-    category: "Fit-Out",
+    category: "Fit Out",
     date: "Jul 13, 2023",
-    title: "What It Takes To Deliver A Well-Finished Interior Fit-Out Project",
+    title: "What It Takes To Deliver A Well-Finished Interior Fit Out Project",
     image:
       "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg",
   },
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
     category: "Execution",
     date: "Jul 16, 2023",
     title:
-      "Why Structured Coordination Matters In Construction And Fit-Out Works",
+      "Why Structured Coordination Matters In Construction And Fit Out Works",
     image:
       "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/PHOTO-2026-02-23-03-04-44_r17hsj.jpg",
   },
@@ -245,9 +245,9 @@ export const blogPosts: BlogPost[] = [
 
 export const marqueeItems: string[] = [
   "Trusted Construction Partner",
-  "Reliable Interior Fit-Out Company",
+  "Reliable Interior Fit Out Company",
   "Professional Project Delivery Team",
   "Quality Finishing And Execution",
   "Structured Construction Coordination",
-  "Dependable Fit-Out And Building Solutions",
+  "Dependable Fit Out And Building Solutions",
 ];
