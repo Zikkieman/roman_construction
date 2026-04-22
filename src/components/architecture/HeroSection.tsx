@@ -12,7 +12,7 @@ export function HeroSection() {
         <img
           alt="Architecture hero"
           className="h-full w-full object-cover object-center opacity-70"
-          src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487477/family_lounge_3_ctgogw.png"
+          src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859446/romancontractors/complete%20interior/andre-francois-mckenzie-XlGwDBZh_mM-unsplash_gi1pad.jpg"
         />
         <div className="absolute inset-0 bg-black/55" />
       </div>
@@ -135,7 +135,7 @@ export function HeroSection() {
             Roman Contractors: Delivering
             <br />
             <span className="text-[#ece7e2] mt-5">Projects with </span>
-            <span className="hero-outline-text">Precision</span>
+            <span className="hero-outline-text">Precision & </span>
             <br />
             <span className="hero-outline-text">Excellence</span>
           </h1>

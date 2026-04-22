@@ -254,7 +254,7 @@ export function ContactSection({ variant = 'home' }: ContactSectionProps) {
                   ? 'lg:h-full lg:min-h-[620px] xl:min-h-[640px]'
                   : 'lg:h-full lg:min-h-[700px] xl:min-h-[724px]'
               }`}
-              src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/PHOTO-2026-02-23-03-04-42_jlgjzm.jpg"
+              src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859424/romancontractors/floor/jessica-hearn-4w1-fhuBO00-unsplash_zlsgaq.jpg"
             />
           </div>
 

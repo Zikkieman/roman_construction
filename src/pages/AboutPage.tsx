@@ -127,7 +127,7 @@ export function AboutPage() {
               <img
                 alt="Modern Roman architecture"
                 className="h-[340px] w-full object-cover sm:h-[460px] lg:h-[620px]"
-                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487462/family_lounge_1._efj5mi.png"
+                src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859446/romancontractors/complete%20interior/andre-francois-mckenzie-XlGwDBZh_mM-unsplash_gi1pad.jpg"
               />
             </div>
           </div>
@@ -241,7 +241,7 @@ export function AboutPage() {
               <img
                 alt="Soft modern interior"
                 className="h-[280px] w-full object-cover object-center sm:h-[360px] lg:h-[420px]"
-                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.26_ytigvp.jpg"
+                src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859668/romancontractors/painting/luca-romano-4gopZjL1bSg-unsplash_zo3zdo.jpg"
               />
 
               <div className="pointer-events-none absolute inset-0 hidden lg:block">

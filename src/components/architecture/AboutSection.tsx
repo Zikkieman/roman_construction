@@ -31,7 +31,7 @@ export function AboutSection() {
                 <img
                   alt="Roman Contractors family lounge interior"
                   className="h-[300px] w-full object-cover sm:h-[360px] lg:h-[620px]"
-                  src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487477/family_lounge_3_ctgogw.png"
+                  src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857203/romancontractors/tiles/bence-balla-schottner-VCKYuQ6R-28-unsplash_scutgy.jpg"
                 />
               </div>
 
@@ -39,7 +39,7 @@ export function AboutSection() {
                 <img
                   alt="Roman Contractors kitchen fit-out detail"
                   className="h-[250px] w-full object-cover sm:h-[300px] lg:h-[320px]"
-                  src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg"
+                  src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859384/romancontractors/wall/alexander-fife-rDSwQ_6XFUs-unsplash_ig8si9.jpg"
                 />
               </div>
 
@@ -69,7 +69,7 @@ export function AboutSection() {
               <img
                 alt="Roman Contractors kitchen fit-out detail"
                 className="h-[300px] w-full object-cover sm:h-[360px]"
-                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg"
+                src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859384/romancontractors/wall/alexander-fife-rDSwQ_6XFUs-unsplash_ig8si9.jpg"
               />
             </div>
 

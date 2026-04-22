@@ -20,67 +20,67 @@ type GalleryMediaItem = {
 const hostedImages = [
   {
     title: "Roman Project 01",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487477/family_lounge_3_ctgogw.png",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859668/romancontractors/painting/luca-romano-4gopZjL1bSg-unsplash_zo3zdo.jpg",
   },
   {
     title: "Roman Project 02",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487473/family_lounge_2_uknmas.png",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859411/romancontractors/floor/rhema-kallianpur-jbJ-_hw2yag-unsplash_dqjzai.jpg",
   },
   {
     title: "Roman Project 03",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487471/stair_2_lqc9oa.png",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859415/romancontractors/floor/point3d-commercial-imaging-ltd-8RXUZg5h_QA-unsplash_h73eyk.jpg",
   },
   {
     title: "Roman Project 04",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487462/family_lounge_1._efj5mi.png",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859412/romancontractors/floor/neon-wang-KaA8vQB9Hdg-unsplash_beh7xh.jpg",
   },
   {
     title: "Roman Project 06",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_ickhth.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859412/romancontractors/floor/zeeshan-alam-VEF2IVr4iFQ-unsplash_ornkum.jpg",
   },
   {
     title: "Roman Project 07",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.26_ytigvp.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859406/romancontractors/floor/background-foto-pixell-design-I4jkokpwh4o-unsplash_acbsso.jpg",
   },
   {
     title: "Roman Project 08",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487441/WhatsApp_Image_2026-02-23_at_12.05.25_1_ol4qkw.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859387/romancontractors/floor/yivan-LG9wz6-ht_A-unsplash_f59qjp.jpg",
   },
   {
     title: "Roman Project 09",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/WhatsApp_Image_2026-02-23_at_12.05.26_1_bwsknx.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859611/romancontractors/joinery/aalo-lens-XhMzBZrpQT4-unsplash_wu2hac.jpg",
   },
   {
     title: "Roman Project 10",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/PHOTO-2026-02-23-03-04-42_jlgjzm.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859612/romancontractors/joinery/lotus-design-n-print-9b7wGJQaScw-unsplash_fcjczq.jpg",
   },
   {
     title: "Roman Project 11",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487440/WhatsApp_Image_2026-02-23_at_12.05.26_2_enilkd.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857262/romancontractors/solar/evgeniy-alyoshin-2ASQyjafflo-unsplash_jnscv8.jpg",
   },
   {
     title: "Roman Project 12",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/6032721174774615117_a3ftve.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859637/romancontractors/painting/an_vision-Q6jhKQoEtSA-unsplash_bwpej1.jpg",
   },
   {
     title: "Roman Project 13",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859468/romancontractors/painting/annie-spratt-712YAykhAD8-unsplash_pz4xy9.jpg",
   },
   {
     title: "Roman Project 14",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/PHOTO-2026-02-23-03-04-41_d98ful.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859620/romancontractors/joinery/eke-interior-Ud4rRqr0vFA-unsplash_hxuv8j.jpg",
   },
   {
     title: "Roman Project 15",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/PHOTO-2026-02-23-03-04-44_r17hsj.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859483/romancontractors/painting/annie-spratt-njsRI3pTB6g-unsplash_go6djk.jpg",
   },
   {
     title: "Roman Project 16",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/WhatsApp_Image_2026-02-23_at_12.05.26_3_a8muc5.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859470/romancontractors/painting/zac-gudakov-7K4LiMm0u14-unsplash_mkvp08.jpg",
   },
   {
     title: "Roman Project 18",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/PHOTO-2026-02-23-03-04-43_byj6xb.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857189/romancontractors/tiles/scott-webb-tMuYJL96A_I-unsplash_qihmju.jpg",
   },
   {
     title: "Roman Project 19",
@@ -88,11 +88,11 @@ const hostedImages = [
   },
   {
     title: "Roman Project 20",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487438/KITCHEN_02_CC_bspb6u.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857199/romancontractors/tiles/darren-richardson-1zKFtv-TmWM-unsplash_mx234e.jpg",
   },
   {
     title: "Roman Project 21",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487437/WhatsApp_Image_2026-02-23_at_12.05.27_dnydbq.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857203/romancontractors/tiles/bence-balla-schottner-VCKYuQ6R-28-unsplash_scutgy.jpg",
   },
   {
     title: "Roman Project 22",
@@ -100,23 +100,23 @@ const hostedImages = [
   },
   {
     title: "Roman Project 23",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/PHOTO-2026-02-23-03-04-42_2_wudpis.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857192/romancontractors/tiles/jon-stebbe-J9Gn8pV7tuI-unsplash_pdt87x.jpg",
   },
   {
     title: "Roman Project 24",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487436/typical_bedroom_1_ce0bav.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859439/romancontractors/complete%20interior/jason-briscoe-UV81E0oXXWQ-unsplash_izfrdd.jpg",
   },
   {
     title: "Roman Project 25",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487435/typical_bed_bk3r4e.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859380/romancontractors/wall/toa-heftiba-PUMw1z67VmQ-unsplash_fqpney.jpg",
   },
   {
     title: "Roman Project 26",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487435/WhatsApp_Image_2026-02-23_at_12.05.27_1_zdt6uj.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776857234/romancontractors/ceiling/chris-johnson-mbtMKIlcNHA-unsplash_fux0rm.jpg",
   },
   {
     title: "Roman Project 27",
-    src: "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487435/PHOTO-2026-02-23-03-04-44_2_jcgapz.jpg",
+    src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776870836/romancontractors/electricals/erik-mclean-fSLI8RdCdyk-unsplash_d6qojg.jpg",
   },
 ] as const;
 

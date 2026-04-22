@@ -48,11 +48,11 @@ export function ExperienceSection() {
             className="reveal order-3 relative overflow-hidden bg-[#26231f] px-9 py-10 text-white lg:order-none lg:row-start-2"
             data-reveal="true"
           >
-            <p className="text-[60px] font-semibold leading-none text-white sm:text-[66px]">
+            {/* <p className="text-[60px] font-semibold leading-none text-white sm:text-[66px]">
               1
-            </p>
-            <p className="mt-5 text-[13px] uppercase tracking-[0.18em] text-white/64">
-              Year of
+            </p> */}
+            <p className="mt-5 text-3xl uppercase tracking-[0.18em] text-white">
+              Years of
               <br />
               Experience
             </p>
@@ -119,7 +119,7 @@ export function ExperienceSection() {
               <img
                 alt="Warm interior staircase"
                 className="h-[360px] w-full object-cover sm:h-[460px] lg:h-full lg:min-h-[540px]"
-                src="https://res.cloudinary.com/dja8mx05m/image/upload/v1774487471/stair_2_lqc9oa.png"
+                src="https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859412/romancontractors/floor/neon-wang-KaA8vQB9Hdg-unsplash_beh7xh.jpg"
               />
             </div>
           </div>
