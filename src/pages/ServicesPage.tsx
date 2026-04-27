@@ -193,10 +193,18 @@ export function ServicesPage() {
                 </span>
               </div>
               <h1 className="max-w-[820px] font-sans text-[32px] font-semibold leading-[1.28] tracking-[-0.045em] text-[#17120d] sm:text-[38px] lg:text-[42px]">
-                We execute fit out and finishing contracts from the beginning
-                <br />
-                to the final delivery of your project.
+                Our Services
               </h1>
+              <p className="mt-6 max-w-[860px] text-[17px] leading-[1.75] text-[#6f685f]">
+                We offer a comprehensive range of construction and interior
+                fit-out services designed to deliver well-executed, practical,
+                and high-quality results. From initial planning to final
+                finishing, our approach is structured, efficient, and focused
+                on meeting project requirements with clarity and consistency.
+                Each service is carried out with attention to detail, ensuring
+                reliable delivery across both residential and commercial
+                projects.
+              </p>
             </div>
           </div>
         </section>

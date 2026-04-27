@@ -144,11 +144,12 @@ export function HeroSection() {
             <span className="hero-outline-text">Excellence</span>
           </h1> */}
           <p className="mt-7 max-w-[640px] text-[16px] leading-[2] text-white/76">
-            We understand that successful construction projects demand more than
-            just skill, they require structure, clarity, and control. That’s why
-            our approach is built on disciplined project execution, ensuring
-            timelines are met, budgets are respected, and every detail is
-            completed to the highest standard.
+            We understand that successful construction goes beyond skill, it
+            requires structure, clarity, and proper control at every stage. Our
+            approach is built on disciplined project execution, with clear
+            planning, careful coordination, and consistent oversight to ensure
+            timelines are met, budgets are managed responsibly, and every
+            detail is delivered to a high standard.
           </p>
           <a
             className="mt-8 inline-flex h-[60px] items-center justify-center border border-[#C39B7B] px-10 text-[16px] font-bold text-white transition-colors duration-300 hover:bg-[#C39B7B]"

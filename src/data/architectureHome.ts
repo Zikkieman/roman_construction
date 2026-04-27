@@ -19,14 +19,14 @@ export const navigationItems: NavigationItem[] = [
 
 export const aboutPoints: string[] = [
   "Structured, efficient project management and execution",
-  "Skilled craftsmanship with high end, durable finishing",
+  "Skilled craftsmanship with high-end, durable finishing",
   "Clear, transparent communication throughout every phase",
-  "Reliable delivery across construction and interior fit out services",
+  "Reliable delivery across construction and interior fit-out services",
 ];
 
 export const serviceCards: ServiceCard[] = [
   {
-    title: "Complete Interior Fit Outs",
+    title: "Complete Interior Fit-Outs",
     description:
       "Comprehensive interior solutions from structural preparation to final detailing for residential and commercial spaces.",
   },
@@ -41,9 +41,9 @@ export const serviceCards: ServiceCard[] = [
       "POP ceilings, gypsum boards, cornices, and ceiling designs finished with clean execution.",
   },
   {
-    title: "Wall Finishing",
+    title: "Wall Finishes",
     description:
-      "Painting, wall panels, wallpapers, and decorative finishing delivered with precise application.",
+      "Painting, wall panels, wallpapers, and decorative finishes delivered with precise application.",
   },
   {
     title: "Joinery & Fixtures",
@@ -51,7 +51,7 @@ export const serviceCards: ServiceCard[] = [
       "Wardrobes, kitchen cabinets, TV consoles, and shelving crafted for function and clean aesthetics.",
   },
   {
-    title: "Lighting & Electrical Finishing",
+    title: "Lighting & Electrical Finishes",
     description:
       "Light fittings, switches, spotlights, and concealed lighting integrated with refined finishing.",
   },
@@ -81,7 +81,7 @@ export const highlightCards: HighlightCard[] = [
 ];
 
 export const awardItems: AwardItem[] = [
-  { title: "Residential Interior Fit Outs", year: "Project Scope" },
+  { title: "Residential Interior Fit-Outs", year: "Project Scope" },
   { title: "Office And Retail Execution", year: "Delivery Focus" },
   { title: "Finishing, Quality And Detailing", year: "Core Strength" },
   { title: "Abuja Based Professional Delivery", year: "Operating Base" },
@@ -89,7 +89,7 @@ export const awardItems: AwardItem[] = [
 
 export const projectCards: ProjectCard[] = [
   {
-    title: "Kitchen Fit Out",
+    title: "Kitchen Fit-Out",
     category: "Interior",
     image:
       "https://res.cloudinary.com/dja8mx05m/image/upload/v1774487439/KITCHEN_01_CC_nb7up7.jpg",
@@ -178,7 +178,7 @@ export const processSteps: ProcessStep[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Roman Contractors handled our fit out with strong coordination, clear communication, and a finishing quality that matched what was promised.",
+      "Roman Contractors handled our fit-out with strong coordination, clear communication, and a finishing quality that matched what was promised.",
     name: "Aisha Bello",
     role: "Residential Client",
     image:

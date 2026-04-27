@@ -1,5 +1,5 @@
 export const serviceSlugs = {
-  completeInteriorFitOuts: "complete-interior-fit outs",
+  completeInteriorFitOuts: "complete-interior-fit-outs",
   flooring: "flooring",
   ceilings: "ceilings",
   wallFinishes: "wall-finishes",
@@ -12,12 +12,12 @@ export const serviceSlugs = {
 export type ServiceSlug = (typeof serviceSlugs)[keyof typeof serviceSlugs];
 
 const serviceTitleSlugs: Record<string, ServiceSlug> = {
-  "Complete Interior Fit Outs": serviceSlugs.completeInteriorFitOuts,
+  "Complete Interior Fit-Outs": serviceSlugs.completeInteriorFitOuts,
   Flooring: serviceSlugs.flooring,
   Ceilings: serviceSlugs.ceilings,
-  "Wall Finishing": serviceSlugs.wallFinishes,
+  "Wall Finishes": serviceSlugs.wallFinishes,
   "Joinery & Fixtures": serviceSlugs.joineryFixtures,
-  "Lighting & Electrical Finishing": serviceSlugs.lightingElectricalFinishes,
+  "Lighting & Electrical Finishes": serviceSlugs.lightingElectricalFinishes,
   "Solar Energy Solutions": serviceSlugs.solarEnergySolutions,
   "Smart Home Automation": serviceSlugs.smartHomeAutomation,
 };
@@ -30,7 +30,7 @@ export type ServiceGalleryImage = {
 
 export const serviceGalleryImages: ServiceGalleryImage[] = [
   {
-    title: "Family Lounge Fit Out",
+    title: "Family Lounge Fit-Out",
     src: "https://res.cloudinary.com/ddeh31zhy/image/upload/v1776859446/romancontractors/complete%20interior/andre-francois-mckenzie-XlGwDBZh_mM-unsplash_gi1pad.jpg",
     service: serviceSlugs.completeInteriorFitOuts,
   },

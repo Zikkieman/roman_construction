@@ -5,7 +5,6 @@ import { IconClose } from "../components/common/icons";
 import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
 import { navigationItems } from "../data/architectureHome";
-import { COMPANY_OVERVIEW } from "../data/company";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 import { useScrollState } from "../hooks/useScrollState";
 
@@ -373,7 +372,9 @@ export function GalleryPage() {
                 Gallery
               </h1>
               <p className="mt-5 max-w-[700px] text-[17px] leading-[1.7] text-[#6f685f]">
-                {COMPANY_OVERVIEW}
+                Explore a selection of our completed projects, showcasing the
+                quality, attention to detail, and consistency that define our
+                work.
               </p>
             </div>
           </div>

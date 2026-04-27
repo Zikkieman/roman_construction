@@ -25,12 +25,11 @@ const aboutAccordions = [
 ];
 
 const aboutPageOverviewParagraphs = [
-  "At Roman Contractors, we deliver high quality construction services and interior fit out solutions with precision, professionalism, and dependable project execution.",
-  "As a trusted design build contractor, we provide seamless, end to end project management, guiding your project from initial concept and planning through to final delivery.",
-  "We understand that successful construction projects demand more than just skill, they require structure, clarity, and control. That's why our approach is built on disciplined project execution, ensuring timelines are met, budgets are respected, and every detail is completed to the highest standard.",
-  "From residential builds to commercial interior fit outs, our team combines expert craftsmanship with meticulous attention to detail to deliver results that are both durable and visually refined.",
-  "What sets us apart is our commitment to client focused coordination and transparent communication. We keep you informed at every stage, aligning our process with your vision to ensure a smooth, stress free experience.",
-  "Whether you need a reliable partner for construction, renovation, or interior fit out projects, Roman Contractors delivers consistent, high quality outcomes you can trust.",
+  "Roman Contractors is a construction and interior fit-out company focused on delivering well-executed, high-quality projects with professionalism and consistency. We operate as a design-build contractor, managing projects from initial concept and planning through to final delivery, ensuring a clear and coordinated process at every stage.",
+  "Our approach is built on structure, clarity, and control. We prioritise proper planning, disciplined execution, and close project oversight to keep timelines on track, manage costs responsibly, and maintain a high standard of work throughout. This allows us to deliver projects that are not only completed efficiently, but also built to last.",
+  "Across residential and commercial spaces, we combine skilled craftsmanship with careful attention to detail to create environments that are functional, durable, and well-finished. We understand the importance of getting both the technical and visual aspects right, ensuring each project meets practical needs while maintaining a refined outcome.",
+  "We place strong emphasis on communication and client coordination, keeping clients informed and aligned at every stage to ensure a smooth and reliable process. At the core of our operations is a commitment to developing and working with quality homegrown talent. We actively engage and support locally based professionals and artisans, ensuring that our projects reflect both strong technical expertise and a genuine investment in the communities we serve.",
+  "At Roman Contractors, our focus remains clear, to deliver quality work, manage projects properly, and build lasting trust through consistent performance.",
 ];
 
 function AboutPageCircleBadge() {
